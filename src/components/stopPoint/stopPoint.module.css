@@ -1,0 +1,172 @@
+:root {
+	--corporate-red: rgb(216, 48, 31);
+	--corporate-black: rgb(25, 26, 27);
+	--bus-stop-dark-grey: rgb(95, 99, 102);
+	--bus-stop-light-grey: rgb(222, 220, 210);
+	--corporate-white: rgb(241, 239, 235);
+	--corporate-blue: rgb(0, 71, 134);
+	--night-bus-blue: rgb(195, 216, 237);
+	/* assume base size of 16px, and 16px = 12pt, and widths / 100, so mult is 1/1200 */
+	--font-scale: 1200 * 3.75;
+}
+
+.indicators {
+	margin-bottom: 0.2em;
+	width: 4.57em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	& > .letterWrapper {
+		border-radius: 100%;
+		border: 1px solid black;
+		display: flex;
+		width: 2.5em;
+		height: 2.5em;
+		justify-content: center;
+		align-items: center;
+		color: var(--corporate-white);
+		background: var(--corporate-red);
+		& > .single {
+			font-size: calc(623em / var(--font-scale));
+		}
+		& > .singleW {
+			font-size: calc(551em / var(--font-scale));
+		}
+		& > .double {
+			font-size: calc(400em / var(--font-scale));
+		}
+		& > .triple {
+			font-size: calc(308em / var(--font-scale));
+		}
+	}
+
+	& > .compassWrapper {
+		border-radius: 100%;
+		color: var(--bus-stop-dark-grey);
+		background: var(--bus-stop-light-grey);
+		width: 1.5em;
+		height: 1.5em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		& > .compass {
+			font-size: calc(350em / var(--font-scale));
+			margin-bottom: -0.06em;
+			margin-right: -0.1em;
+		}
+	}
+	& > .dirse {
+		transform: rotate(45deg);
+	}
+	& > .dirs {
+		transform: rotate(90deg);
+	}
+	& > .dirsw {
+		transform: rotate(135deg);
+	}
+	& > .dirw {
+		transform: rotate(180deg);
+	}
+	& > .dirnw {
+		transform: rotate(225deg);
+	}
+	& > .dirn {
+		transform: rotate(270deg);
+	}
+	& > .dirne {
+		transform: rotate(315deg);
+	}
+}
+
+.stopView {
+	background: var(--corporate-white);
+	border: 1px solid var(--corporate-black);
+	color: var(--corporate-black);
+	width: 4.57em;
+	border-radius: 0.05em;
+	overflow: hidden;
+}
+
+.logoPanel {
+	background: var(--corporate-white);
+	border-bottom: 1px solid var(--corporate-black);
+	color: var(--corporate-white);
+	height: 4em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	& > .logoTitleBar {
+		padding: 0.15em 2.2em;
+		background: var(--corporate-red);
+		font-size: calc(131em / var(--font-scale));
+	}
+	& > .logoRoundel {
+		width: 3em;
+		height: 3em;
+		position: absolute;
+		border: 0.5em solid var(--corporate-red);
+		border-radius: 100%;
+	}
+}
+
+.namePanel {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: var(--bus-stop-dark-grey);
+	border-bottom: 1px solid var(--corporate-black);
+	color: var(--corporate-white);
+	height: 1.25em;
+	& > .nameLine {
+		font-size: calc(131em / var(--font-scale));
+	}
+	& > .nameSmallerLine {
+		font-size: calc(94em / var(--font-scale));
+	}
+}
+
+.towardsPanel {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: var(--bus-stop-light-grey);
+	border-bottom: 1px solid var(--corporate-black);
+	height: 1.25em;
+	& > .towardsLine {
+		font-size: calc(94em / var(--font-scale));
+	}
+	& > .towardsLargerLine {
+		font-size: calc(131em / var(--font-scale));
+	}
+}
+
+.eTileGrid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1px;
+	& > .eTile {
+		background: var(--corporate-white);
+		height: 1.25em;
+		text-align: center;
+		outline: 1px solid var(--corporate-black);
+		/* margin: 0 0 -1px -1px; */
+		/* border-right: 1px solid var(--corporate-black); */
+		& > .eTileMessage {
+			font-size: calc(51em / var(--font-scale));
+			height: 0.235em;
+			margin-top: 0.5em;
+		}
+		& > .eTileNumber {
+			font-size: calc(170em / var(--font-scale));
+			height: 0.525em;
+			margin-top: 0.335em;
+		}
+	}
+
+	& > .nightETile {
+		background: var(--night-bus-blue);
+	}
+}

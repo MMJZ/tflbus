@@ -1,0 +1,730 @@
+{
+    "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+    "naptanId": "910GBXLYHTH",
+    "modes": [
+        "bus",
+        "national-rail"
+    ],
+    "icsCode": "1001025",
+    "stopType": "NaptanRailStation",
+    "stationNaptan": "910GBXLYHTH",
+    "lines": [
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+            "id": "422",
+            "name": "422",
+            "uri": "/Line/422",
+            "type": "Line",
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            },
+            "routeType": "Unknown",
+            "status": "Unknown"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+            "id": "b11",
+            "name": "B11",
+            "uri": "/Line/b11",
+            "type": "Line",
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            },
+            "routeType": "Unknown",
+            "status": "Unknown"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+            "id": "b12",
+            "name": "B12",
+            "uri": "/Line/b12",
+            "type": "Line",
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            },
+            "routeType": "Unknown",
+            "status": "Unknown"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+            "id": "b15",
+            "name": "B15",
+            "uri": "/Line/b15",
+            "type": "Line",
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            },
+            "routeType": "Unknown",
+            "status": "Unknown"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+            "id": "sl3",
+            "name": "SL3",
+            "uri": "/Line/sl3",
+            "type": "Line",
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            },
+            "routeType": "Unknown",
+            "status": "Unknown"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+            "id": "southeastern",
+            "name": "Southeastern",
+            "uri": "/Line/southeastern",
+            "type": "Line",
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            },
+            "routeType": "Unknown",
+            "status": "Unknown"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+            "id": "thameslink",
+            "name": "Thameslink",
+            "uri": "/Line/thameslink",
+            "type": "Line",
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            },
+            "routeType": "Unknown",
+            "status": "Unknown"
+        }
+    ],
+    "lineGroup": [
+        {
+            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+            "naptanIdReference": "490001025A",
+            "stationAtcoCode": "490G01025B",
+            "lineIdentifier": [
+                "422",
+                "b11",
+                "b12",
+                "b15",
+                "sl3"
+            ]
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+            "naptanIdReference": "490001025B",
+            "stationAtcoCode": "490G01025B",
+            "lineIdentifier": [
+                "422",
+                "b11",
+                "b12",
+                "b15",
+                "sl3"
+            ]
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+            "stationAtcoCode": "910GBXLYHTH",
+            "lineIdentifier": [
+                "southeastern",
+                "thameslink"
+            ]
+        }
+    ],
+    "lineModeGroups": [
+        {
+            "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+            "modeName": "bus",
+            "lineIdentifier": [
+                "422",
+                "b11",
+                "b12",
+                "b15",
+                "sl3"
+            ]
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+            "modeName": "national-rail",
+            "lineIdentifier": [
+                "southeastern",
+                "thameslink"
+            ]
+        }
+    ],
+    "status": true,
+    "id": "910GBXLYHTH",
+    "commonName": "Bexleyheath Rail Station",
+    "placeType": "StopPoint",
+    "additionalProperties": [
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "Geo",
+            "key": "Zone",
+            "sourceSystemKey": "SingleFareFinder",
+            "value": "5"
+        }
+    ],
+    "children": [
+        {
+            "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+            "naptanId": "4900BXLYHTH1",
+            "indicator": "Entrance 1",
+            "stopLetter": "1",
+            "modes": [
+                "bus"
+            ],
+            "icsCode": "1001025",
+            "stopType": "NaptanRailEntrance",
+            "stationNaptan": "910GBXLYHTH",
+            "lines": [],
+            "lineGroup": [],
+            "lineModeGroups": [],
+            "status": true,
+            "id": "4900BXLYHTH1",
+            "commonName": "Bexleyheath Rail Station",
+            "placeType": "StopPoint",
+            "additionalProperties": [],
+            "children": [],
+            "lat": 51.463611,
+            "lon": 0.133467
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+            "naptanId": "4900BXLYHTH2",
+            "indicator": "Entrance 2",
+            "stopLetter": "2",
+            "modes": [
+                "bus"
+            ],
+            "icsCode": "1001025",
+            "stopType": "NaptanRailEntrance",
+            "stationNaptan": "910GBXLYHTH",
+            "lines": [],
+            "lineGroup": [],
+            "lineModeGroups": [],
+            "status": true,
+            "id": "4900BXLYHTH2",
+            "commonName": "Bexleyheath Rail Station",
+            "placeType": "StopPoint",
+            "additionalProperties": [],
+            "children": [],
+            "lat": 51.463376,
+            "lon": 0.133556
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+            "naptanId": "490G01025B",
+            "modes": [
+                "bus"
+            ],
+            "icsCode": "1001025",
+            "stopType": "NaptanOnstreetBusCoachStopCluster",
+            "stationNaptan": "490G01025B",
+            "lines": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "422",
+                    "name": "422",
+                    "uri": "/Line/422",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "b11",
+                    "name": "B11",
+                    "uri": "/Line/b11",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "b12",
+                    "name": "B12",
+                    "uri": "/Line/b12",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "b15",
+                    "name": "B15",
+                    "uri": "/Line/b15",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "sl3",
+                    "name": "SL3",
+                    "uri": "/Line/sl3",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                }
+            ],
+            "lineGroup": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                    "naptanIdReference": "490001025A",
+                    "stationAtcoCode": "490G01025B",
+                    "lineIdentifier": [
+                        "422",
+                        "b11",
+                        "b12",
+                        "b15",
+                        "sl3"
+                    ]
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                    "naptanIdReference": "490001025B",
+                    "stationAtcoCode": "490G01025B",
+                    "lineIdentifier": [
+                        "422",
+                        "b11",
+                        "b12",
+                        "b15",
+                        "sl3"
+                    ]
+                }
+            ],
+            "lineModeGroups": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+                    "modeName": "bus",
+                    "lineIdentifier": [
+                        "422",
+                        "b11",
+                        "b12",
+                        "b15",
+                        "sl3"
+                    ]
+                }
+            ],
+            "status": true,
+            "id": "490G01025B",
+            "commonName": "Bexleyheath Station",
+            "placeType": "StopPoint",
+            "additionalProperties": [],
+            "children": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                    "naptanId": "490001025A",
+                    "indicator": "Stop BF",
+                    "stopLetter": "BF",
+                    "modes": [
+                        "bus"
+                    ],
+                    "icsCode": "1001025",
+                    "stopType": "NaptanPublicBusCoachTram",
+                    "stationNaptan": "490G01025B",
+                    "lines": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "422",
+                            "name": "422",
+                            "uri": "/Line/422",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "b11",
+                            "name": "B11",
+                            "uri": "/Line/b11",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "b12",
+                            "name": "B12",
+                            "uri": "/Line/b12",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "b15",
+                            "name": "B15",
+                            "uri": "/Line/b15",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "sl3",
+                            "name": "SL3",
+                            "uri": "/Line/sl3",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        }
+                    ],
+                    "lineGroup": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                            "naptanIdReference": "490001025A",
+                            "stationAtcoCode": "490G01025B",
+                            "lineIdentifier": [
+                                "422",
+                                "b11",
+                                "b12",
+                                "b15",
+                                "sl3"
+                            ]
+                        }
+                    ],
+                    "lineModeGroups": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+                            "modeName": "bus",
+                            "lineIdentifier": [
+                                "422",
+                                "b11",
+                                "b12",
+                                "b15",
+                                "sl3"
+                            ]
+                        }
+                    ],
+                    "status": true,
+                    "id": "490001025A",
+                    "commonName": "Bexleyheath Station",
+                    "placeType": "StopPoint",
+                    "additionalProperties": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Direction",
+                            "key": "CompassPoint",
+                            "sourceSystemKey": "Naptan490",
+                            "value": "N"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Direction",
+                            "key": "Towards",
+                            "sourceSystemKey": "CountDown",
+                            "value": "Abbey Wood, Erith Or Plumstead"
+                        }
+                    ],
+                    "children": [],
+                    "lat": 51.464693,
+                    "lon": 0.132826
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                    "naptanId": "490001025B",
+                    "indicator": "Stop BH",
+                    "stopLetter": "BH",
+                    "modes": [
+                        "bus"
+                    ],
+                    "icsCode": "1001025",
+                    "stopType": "NaptanPublicBusCoachTram",
+                    "stationNaptan": "490G01025B",
+                    "lines": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "422",
+                            "name": "422",
+                            "uri": "/Line/422",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "b11",
+                            "name": "B11",
+                            "uri": "/Line/b11",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "b12",
+                            "name": "B12",
+                            "uri": "/Line/b12",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "b15",
+                            "name": "B15",
+                            "uri": "/Line/b15",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "sl3",
+                            "name": "SL3",
+                            "uri": "/Line/sl3",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        }
+                    ],
+                    "lineGroup": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                            "naptanIdReference": "490001025B",
+                            "stationAtcoCode": "490G01025B",
+                            "lineIdentifier": [
+                                "422",
+                                "b11",
+                                "b12",
+                                "b15",
+                                "sl3"
+                            ]
+                        }
+                    ],
+                    "lineModeGroups": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+                            "modeName": "bus",
+                            "lineIdentifier": [
+                                "422",
+                                "b11",
+                                "b12",
+                                "b15",
+                                "sl3"
+                            ]
+                        }
+                    ],
+                    "status": true,
+                    "id": "490001025B",
+                    "commonName": "Bexleyheath Station",
+                    "placeType": "StopPoint",
+                    "additionalProperties": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Direction",
+                            "key": "CompassPoint",
+                            "sourceSystemKey": "Naptan490",
+                            "value": "S"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Direction",
+                            "key": "Towards",
+                            "sourceSystemKey": "CountDown",
+                            "value": "Bexleyheath Town Centre"
+                        }
+                    ],
+                    "children": [],
+                    "lat": 51.464467,
+                    "lon": 0.132902
+                }
+            ],
+            "lat": 51.464467,
+            "lon": 0.132902
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+            "naptanId": "9100BXLYHTH",
+            "modes": [],
+            "icsCode": "1001025",
+            "stopType": "NaptanRailAccessArea",
+            "stationNaptan": "910GBXLYHTH",
+            "lines": [],
+            "lineGroup": [],
+            "lineModeGroups": [],
+            "status": true,
+            "id": "9100BXLYHTH",
+            "commonName": "Bexleyheath Rail Station",
+            "placeType": "StopPoint",
+            "additionalProperties": [],
+            "children": [],
+            "lat": 51.4635,
+            "lon": 0.133735
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+            "naptanId": "9100BXLYHTH0",
+            "modes": [
+                "national-rail"
+            ],
+            "icsCode": "1001025",
+            "stopType": "NaptanRailAccessArea",
+            "stationNaptan": "910GBXLYHTH",
+            "lines": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "southeastern",
+                    "name": "Southeastern",
+                    "uri": "/Line/southeastern",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "thameslink",
+                    "name": "Thameslink",
+                    "uri": "/Line/thameslink",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                }
+            ],
+            "lineGroup": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                    "stationAtcoCode": "910GBXLYHTH",
+                    "lineIdentifier": [
+                        "southeastern",
+                        "thameslink"
+                    ]
+                }
+            ],
+            "lineModeGroups": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+                    "modeName": "national-rail",
+                    "lineIdentifier": [
+                        "southeastern",
+                        "thameslink"
+                    ]
+                }
+            ],
+            "status": true,
+            "id": "9100BXLYHTH0",
+            "commonName": "Bexleyheath",
+            "placeType": "StopPoint",
+            "additionalProperties": [],
+            "children": [],
+            "lat": 51.463558,
+            "lon": 0.133522
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+            "naptanId": "9100BXLYHTH1",
+            "modes": [
+                "national-rail"
+            ],
+            "icsCode": "1001025",
+            "stopType": "NaptanRailAccessArea",
+            "stationNaptan": "910GBXLYHTH",
+            "lines": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "southeastern",
+                    "name": "Southeastern",
+                    "uri": "/Line/southeastern",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "thameslink",
+                    "name": "Thameslink",
+                    "uri": "/Line/thameslink",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                }
+            ],
+            "lineGroup": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                    "stationAtcoCode": "910GBXLYHTH",
+                    "lineIdentifier": [
+                        "southeastern",
+                        "thameslink"
+                    ]
+                }
+            ],
+            "lineModeGroups": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+                    "modeName": "national-rail",
+                    "lineIdentifier": [
+                        "southeastern",
+                        "thameslink"
+                    ]
+                }
+            ],
+            "status": true,
+            "id": "9100BXLYHTH1",
+            "commonName": "Bexleyheath",
+            "placeType": "StopPoint",
+            "additionalProperties": [],
+            "children": [],
+            "lat": 51.463558,
+            "lon": 0.133522
+        }
+    ],
+    "lat": 51.4635,
+    "lon": 0.133735
+}
