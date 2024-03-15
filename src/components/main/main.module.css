@@ -1,0 +1,21 @@
+@import '../../vars.css';
+
+.wrapper {
+  background: var(--corporate-white);
+  color: var(--corporate-black);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.header {
+  background: var(--corporate-blue);
+  color: var(--corporate-white);
+}
+
+.footer {
+  background: var(--corporate-blue);
+  color: var(--corporate-white);
+}

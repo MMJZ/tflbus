@@ -1,11 +1,6 @@
+@import '../../vars.css';
+
 :root {
-	--corporate-red: rgb(216, 48, 31);
-	--corporate-black: rgb(25, 26, 27);
-	--bus-stop-dark-grey: rgb(95, 99, 102);
-	--bus-stop-light-grey: rgb(222, 220, 210);
-	--corporate-white: rgb(241, 239, 235);
-	--corporate-blue: rgb(0, 71, 134);
-	--night-bus-blue: rgb(195, 216, 237);
 	/* assume base size of 16px, and 16px = 12pt, and widths / 100, so mult is 1/1200 */
 	--font-scale: 1200 * 3.75;
 }

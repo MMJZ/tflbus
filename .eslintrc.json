@@ -17,6 +17,7 @@
 		"@typescript-eslint/indent": "off",
 		"@typescript-eslint/semi": "off",
 		"no-tabs": "off",
+		"multiline-ternary": "off",
 		"jest/no-deprecated-functions": "off",
 		"@typescript-eslint/space-before-function-paren": "off",
 		"@typescript-eslint/comma-dangle": "off",
