@@ -12,9 +12,12 @@ export function StopPointPage(): JSX.Element {
 	}
 
 	const state = _state;
+
 	const route = useRoute();
 
 	useEffect(() => {
+		console.log('ha', route);
+
 		const id = route.params.id;
 		if (id !== undefined) {
 			state.focussedStopPointId.value = id;
