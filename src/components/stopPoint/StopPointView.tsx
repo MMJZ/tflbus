@@ -1,54 +1,135 @@
 import { type JSX } from 'preact';
-import { type StopPoint } from '../../model';
-import { BusStopPoint } from './BusStopPoint';
+import {
+	BusStop,
+	BusStopCluster,
+	BusStopGroup,
+	BusStopPair,
+	GeneralStopPoint,
+	StopPointBase,
+	type StopPoint,
+} from '../../model';
+import { BusStopPointTile } from './BusStopPointTile';
+import { BusStopRender } from './BusStopRender';
+import css from './stopPoint.module.css';
+import { OtherStopPointTile } from './OtherStopPointTile';
 
-interface StopPointProps {
-	stopPoint: StopPoint;
+interface StopPointProps<T extends StopPointBase> {
+	stopPointData: T;
+	focussedStopPointPath: string[];
 }
 
-function BusClusterStopPoint({ stopPoint }: StopPointProps): JSX.Element {
-	if (stopPoint.stopType !== 'NaptanOnstreetBusCoachStopCluster') {
-		return <>fuck!</>;
-	}
+function BusPairOrClusterStopPoint({
+	stopPointData,
+	focussedStopPointPath,
+}: StopPointProps<BusStopGroup>): JSX.Element {
+	const focussedStopData =
+		focussedStopPointPath[0] !== undefined
+			? stopPointData.children.find(
+					(child) => child.naptanId === focussedStopPointPath[0],
+				)
+			: undefined;
 
 	return (
 		<>
-			<p>This is a bus stop cluster</p>
-			<h3>{stopPoint.commonName}</h3>
-			<h6>{stopPoint.naptanId}</h6>
-			{stopPoint.children.map((child) => (
-				<StopPointView key={child.naptanId} stopPoint={child} />
-			))}
+			<div class={css.pairWrapper}>
+				<div class={css.pairHeader}>
+					<h5>
+						Bus Stop{' '}
+						{stopPointData.stopType === 'NaptanOnstreetBusCoachStopPair'
+							? 'Pair'
+							: 'Cluster'}
+					</h5>
+					<h4>{stopPointData.commonName}</h4>
+					<h6>{stopPointData.naptanId}</h6>
+				</div>
+				<div class={css.tileRow}>
+					{stopPointData.children.map((child) => (
+						<div
+							class={`${css.tileWrapper} ${focussedStopPointPath[0] === child.naptanId ? css.selectedTile : ''}`}
+						>
+							<a href={`/stopPoint/${child.naptanId}`}>
+								<BusStopPointTile key={child.naptanId} stopPoint={child} />
+							</a>
+						</div>
+					))}
+				</div>
+			</div>
+			{focussedStopData !== undefined && (
+				<BusStopRender stopPoint={focussedStopData} scale={4} />
+			)}
 		</>
 	);
 }
 
-function BusPairStopPoint({ stopPoint }: StopPointProps): JSX.Element {
-	if (stopPoint.stopType !== 'NaptanOnstreetBusCoachStopPair') {
-		return <>fuck!</>;
-	}
+function OtherStopPoint({
+	stopPointData,
+	focussedStopPointPath,
+}: StopPointProps<StopPoint>): JSX.Element {
+	const focussedStopData =
+		focussedStopPointPath[0] !== undefined
+			? stopPointData.children.find(
+					(child) => child.naptanId === focussedStopPointPath[0],
+				)
+			: undefined;
 
 	return (
 		<>
-			<p>This is a bus stop pair</p>
-			<h3>{stopPoint.commonName}</h3>
-			<h6>{stopPoint.naptanId}</h6>
-			{stopPoint.children.map((child) => (
-				<StopPointView key={child.naptanId} stopPoint={child} />
-			))}
+			<div class={css.pairWrapper}>
+				<div class={css.pairHeader}>
+					<h5>{stopPointData.stopType}</h5>
+					<h4>{stopPointData.commonName}</h4>
+					<h6>{stopPointData.naptanId}</h6>
+				</div>
+				<div class={css.tileRow}>
+					{stopPointData.children.map((child) => (
+						<div
+							class={`${css.tileWrapper} ${focussedStopPointPath[0] === child.naptanId ? css.selectedTile : ''}`}
+						>
+							<a href={`/stopPoint/${child.naptanId}`}>
+								<OtherStopPointTile key={child.naptanId} stopPoint={child} />
+							</a>
+						</div>
+					))}
+				</div>
+			</div>
+			{focussedStopData !== undefined && (
+				<StopPointView
+					stopPointData={focussedStopData}
+					focussedStopPointPath={focussedStopPointPath}
+				/>
+			)}
 		</>
 	);
 }
 
-export function StopPointView({ stopPoint }: StopPointProps): JSX.Element {
-	switch (stopPoint.stopType) {
+export function StopPointView({
+	stopPointData,
+	focussedStopPointPath,
+}: StopPointProps<StopPoint>): JSX.Element {
+	if (focussedStopPointPath[0] !== stopPointData.naptanId) {
+		alert('path is incorrect!');
+	}
+
+	const focussedStopSubPath = focussedStopPointPath.slice(1);
+
+	switch (stopPointData.stopType) {
 		case 'NaptanOnstreetBusCoachStopPair':
-			return <BusPairStopPoint stopPoint={stopPoint} />;
-			case 'NaptanOnstreetBusCoachStopCluster':
-				return <BusClusterStopPoint stopPoint={stopPoint} />;
+		case 'NaptanOnstreetBusCoachStopCluster':
+		case 'NaptanBusCoachStation':
+			return (
+				<BusPairOrClusterStopPoint
+					stopPointData={stopPointData}
+					focussedStopPointPath={focussedStopSubPath}
+				/>
+			);
 		case 'NaptanPublicBusCoachTram':
-			return <BusStopPoint stopPoint={stopPoint} scale={5} />;
+			return <>serious error - not expecting bus stop as root</>;
 		default:
-			return <>not done yet</>;
+			return (
+				<OtherStopPoint
+					stopPointData={stopPointData}
+					focussedStopPointPath={focussedStopSubPath}
+				/>
+			);
 	}
 }

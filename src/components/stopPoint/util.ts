@@ -94,8 +94,20 @@ export function getStopTowardsLine(
 			};
 		}
 	}
+	{
+		const mapped = name.split(' ').map(
+			(t) => allowedContractions.get(t) ?? t,
+		);
+		const [first, second, ...rest] = formLines(mapped, 27);
+		if (rest.length === 0) {
+			return {
+				firstLine: first,
+				secondLine: second,
+			};
+		}
+	}
 
-	alert(`failed towards on ${name}`);
+	alert('still buggered on towards' + name);
 	throw new Error('argh');
 }
 

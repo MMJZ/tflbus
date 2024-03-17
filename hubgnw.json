@@ -1,0 +1,1782 @@
+{
+    "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+    "naptanId": "HUBGNW",
+    "modes": [
+        "bus",
+        "dlr",
+        "national-rail"
+    ],
+    "icsCode": "1001123",
+    "stopType": "TransportInterchange",
+    "hubNaptanCode": "HUBGNW",
+    "lines": [
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+            "id": "129",
+            "name": "129",
+            "uri": "/Line/129",
+            "type": "Line",
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            },
+            "routeType": "Unknown",
+            "status": "Unknown"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+            "id": "177",
+            "name": "177",
+            "uri": "/Line/177",
+            "type": "Line",
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            },
+            "routeType": "Unknown",
+            "status": "Unknown"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+            "id": "199",
+            "name": "199",
+            "uri": "/Line/199",
+            "type": "Line",
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            },
+            "routeType": "Unknown",
+            "status": "Unknown"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+            "id": "386",
+            "name": "386",
+            "uri": "/Line/386",
+            "type": "Line",
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            },
+            "routeType": "Unknown",
+            "status": "Unknown"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+            "id": "dlr",
+            "name": "DLR",
+            "uri": "/Line/dlr",
+            "type": "Line",
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            },
+            "routeType": "Unknown",
+            "status": "Unknown"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+            "id": "n199",
+            "name": "N199",
+            "uri": "/Line/n199",
+            "type": "Line",
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            },
+            "routeType": "Unknown",
+            "status": "Unknown"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+            "id": "southeastern",
+            "name": "Southeastern",
+            "uri": "/Line/southeastern",
+            "type": "Line",
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            },
+            "routeType": "Unknown",
+            "status": "Unknown"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+            "id": "thameslink",
+            "name": "Thameslink",
+            "uri": "/Line/thameslink",
+            "type": "Line",
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            },
+            "routeType": "Unknown",
+            "status": "Unknown"
+        }
+    ],
+    "lineGroup": [
+        {
+            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+            "naptanIdReference": "490001123L",
+            "stationAtcoCode": "490G01123L",
+            "lineIdentifier": [
+                "129",
+                "199",
+                "386",
+                "n199"
+            ]
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+            "naptanIdReference": "490001123R",
+            "stationAtcoCode": "490G01123L",
+            "lineIdentifier": [
+                "129",
+                "199",
+                "386",
+                "n199"
+            ]
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+            "naptanIdReference": "490001123N",
+            "stationAtcoCode": "490G01123L",
+            "lineIdentifier": [
+                "177"
+            ]
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+            "naptanIdReference": "490001123P",
+            "stationAtcoCode": "490G01123L",
+            "lineIdentifier": [
+                "177"
+            ]
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+            "stationAtcoCode": "940GZZDLGRE",
+            "lineIdentifier": [
+                "dlr"
+            ]
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+            "stationAtcoCode": "910GGNWH",
+            "lineIdentifier": [
+                "southeastern",
+                "thameslink"
+            ]
+        }
+    ],
+    "lineModeGroups": [
+        {
+            "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+            "modeName": "bus",
+            "lineIdentifier": [
+                "129",
+                "177",
+                "199",
+                "386",
+                "n199"
+            ]
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+            "modeName": "dlr",
+            "lineIdentifier": [
+                "dlr"
+            ]
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+            "modeName": "national-rail",
+            "lineIdentifier": [
+                "southeastern",
+                "thameslink"
+            ]
+        }
+    ],
+    "status": true,
+    "id": "HUBGNW",
+    "commonName": "Greenwich",
+    "placeType": "StopPoint",
+    "additionalProperties": [
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "Facility",
+            "key": "WiFi",
+            "sourceSystemKey": "StaticObjects",
+            "value": "no"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "Geo",
+            "key": "Zone",
+            "sourceSystemKey": "StaticObjects",
+            "value": "2+3"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "NearestPlaces",
+            "key": "SourceSystemPlaceId",
+            "sourceSystemKey": "StaticObjects",
+            "value": "TaxiRank_5472"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "NearestPlaces",
+            "key": "SourceSystemPlaceId",
+            "sourceSystemKey": "StaticObjects",
+            "value": "TaxiRank_5305"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "NearestPlaces",
+            "key": "SourceSystemPlaceId",
+            "sourceSystemKey": "StaticObjects",
+            "value": "TaxiRank_5789"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "NearestPlaces",
+            "key": "SourceSystemPlaceId",
+            "sourceSystemKey": "StaticObjects",
+            "value": "TaxiRank_5430"
+        }
+    ],
+    "children": [
+        {
+            "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+            "naptanId": "910GGNWH",
+            "modes": [
+                "national-rail"
+            ],
+            "icsCode": "1001123",
+            "stopType": "NaptanRailStation",
+            "stationNaptan": "910GGNWH",
+            "hubNaptanCode": "HUBGNW",
+            "lines": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "southeastern",
+                    "name": "Southeastern",
+                    "uri": "/Line/southeastern",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "thameslink",
+                    "name": "Thameslink",
+                    "uri": "/Line/thameslink",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                }
+            ],
+            "lineGroup": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                    "stationAtcoCode": "910GGNWH",
+                    "lineIdentifier": [
+                        "southeastern",
+                        "thameslink"
+                    ]
+                }
+            ],
+            "lineModeGroups": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+                    "modeName": "national-rail",
+                    "lineIdentifier": [
+                        "southeastern",
+                        "thameslink"
+                    ]
+                }
+            ],
+            "status": true,
+            "id": "910GGNWH",
+            "commonName": "Greenwich Rail Station",
+            "placeType": "StopPoint",
+            "additionalProperties": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "WiFi",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "no"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Geo",
+                    "key": "Zone",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "2+3"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Address",
+                    "key": "Address",
+                    "sourceSystemKey": "NreStationData",
+                    "value": "Greenwich station,\r\n            Greenwich High Road,\r\n            Greenwich,\r\n            Greater London,\r\n            SE10 8JQ"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Boarding Ramps",
+                    "sourceSystemKey": "NreStationData",
+                    "value": "yes"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Car Park",
+                    "sourceSystemKey": "NreStationData",
+                    "value": "no"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Cash Machines",
+                    "sourceSystemKey": "NreStationData",
+                    "value": "yes"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Help points",
+                    "sourceSystemKey": "NreStationData",
+                    "value": "yes"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Left Luggage",
+                    "sourceSystemKey": "NreStationData",
+                    "value": "no"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Opening Time",
+                    "key": "MonFriFrom",
+                    "sourceSystemKey": "NreStationData",
+                    "value": "06:10"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Opening Time",
+                    "key": "MonFriTo",
+                    "sourceSystemKey": "NreStationData",
+                    "value": "20:05"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Payphones",
+                    "sourceSystemKey": "NreStationData",
+                    "value": "yes"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Address",
+                    "key": "PhoneNo",
+                    "sourceSystemKey": "NreStationData",
+                    "value": "0345 322 7021"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Opening Time",
+                    "key": "SatFrom",
+                    "sourceSystemKey": "NreStationData",
+                    "value": "06:10"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Opening Time",
+                    "key": "SatTo",
+                    "sourceSystemKey": "NreStationData",
+                    "value": "20:05"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Opening Time",
+                    "key": "SunFrom",
+                    "sourceSystemKey": "NreStationData",
+                    "value": "07:10"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Opening Time",
+                    "key": "SunTo",
+                    "sourceSystemKey": "NreStationData",
+                    "value": "18:40"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Ticket Halls",
+                    "sourceSystemKey": "NreStationData",
+                    "value": "yes"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Toilets",
+                    "sourceSystemKey": "NreStationData",
+                    "value": "yes"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Waiting Room",
+                    "sourceSystemKey": "NreStationData",
+                    "value": "yes"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "WiFi",
+                    "sourceSystemKey": "NreStationData",
+                    "value": "no"
+                }
+            ],
+            "children": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                    "naptanId": "9100GNWH",
+                    "modes": [],
+                    "icsCode": "1001123",
+                    "stopType": "NaptanRailAccessArea",
+                    "stationNaptan": "910GGNWH",
+                    "hubNaptanCode": "HUBGNW",
+                    "lines": [],
+                    "lineGroup": [],
+                    "lineModeGroups": [],
+                    "status": true,
+                    "id": "9100GNWH",
+                    "commonName": "Greenwich Rail Station",
+                    "placeType": "StopPoint",
+                    "additionalProperties": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "WiFi",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Geo",
+                            "key": "Zone",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "2+3"
+                        }
+                    ],
+                    "children": [],
+                    "lat": 51.478135,
+                    "lon": -0.01334
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                    "naptanId": "9100GNWH0",
+                    "modes": [
+                        "national-rail"
+                    ],
+                    "icsCode": "1001123",
+                    "stopType": "NaptanRailAccessArea",
+                    "stationNaptan": "910GGNWH",
+                    "hubNaptanCode": "HUBGNW",
+                    "lines": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "southeastern",
+                            "name": "Southeastern",
+                            "uri": "/Line/southeastern",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "thameslink",
+                            "name": "Thameslink",
+                            "uri": "/Line/thameslink",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        }
+                    ],
+                    "lineGroup": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                            "stationAtcoCode": "910GGNWH",
+                            "lineIdentifier": [
+                                "southeastern",
+                                "thameslink"
+                            ]
+                        }
+                    ],
+                    "lineModeGroups": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+                            "modeName": "national-rail",
+                            "lineIdentifier": [
+                                "southeastern",
+                                "thameslink"
+                            ]
+                        }
+                    ],
+                    "status": true,
+                    "id": "9100GNWH0",
+                    "commonName": "Greenwich Station",
+                    "placeType": "StopPoint",
+                    "additionalProperties": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "WiFi",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Geo",
+                            "key": "Zone",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "2+3"
+                        }
+                    ],
+                    "children": [],
+                    "lat": 51.478216,
+                    "lon": -0.014373
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                    "naptanId": "9100GNWH1",
+                    "modes": [
+                        "national-rail"
+                    ],
+                    "icsCode": "1001123",
+                    "stopType": "NaptanRailAccessArea",
+                    "stationNaptan": "910GGNWH",
+                    "hubNaptanCode": "HUBGNW",
+                    "lines": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "southeastern",
+                            "name": "Southeastern",
+                            "uri": "/Line/southeastern",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "thameslink",
+                            "name": "Thameslink",
+                            "uri": "/Line/thameslink",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        }
+                    ],
+                    "lineGroup": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                            "stationAtcoCode": "910GGNWH",
+                            "lineIdentifier": [
+                                "southeastern",
+                                "thameslink"
+                            ]
+                        }
+                    ],
+                    "lineModeGroups": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+                            "modeName": "national-rail",
+                            "lineIdentifier": [
+                                "southeastern",
+                                "thameslink"
+                            ]
+                        }
+                    ],
+                    "status": true,
+                    "id": "9100GNWH1",
+                    "commonName": "Greenwich Station",
+                    "placeType": "StopPoint",
+                    "additionalProperties": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Geo",
+                            "key": "Zone",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "2+3"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "WiFi",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        }
+                    ],
+                    "children": [],
+                    "lat": 51.47817,
+                    "lon": -0.014361
+                }
+            ],
+            "lat": 51.478135,
+            "lon": -0.01334
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+            "naptanId": "940GZZDLGRE",
+            "modes": [
+                "dlr"
+            ],
+            "icsCode": "1001123",
+            "stopType": "NaptanMetroStation",
+            "stationNaptan": "940GZZDLGRE",
+            "hubNaptanCode": "HUBGNW",
+            "lines": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "dlr",
+                    "name": "DLR",
+                    "uri": "/Line/dlr",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                }
+            ],
+            "lineGroup": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                    "stationAtcoCode": "940GZZDLGRE",
+                    "lineIdentifier": [
+                        "dlr"
+                    ]
+                }
+            ],
+            "lineModeGroups": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+                    "modeName": "dlr",
+                    "lineIdentifier": [
+                        "dlr"
+                    ]
+                }
+            ],
+            "status": true,
+            "id": "940GZZDLGRE",
+            "commonName": "Greenwich DLR Station",
+            "placeType": "StopPoint",
+            "additionalProperties": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Geo",
+                    "key": "Zone",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "2+3"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "WiFi",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "no"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Accessibility",
+                    "key": "AccessViaLift",
+                    "sourceSystemKey": "LRAD",
+                    "value": "Yes"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Accessibility",
+                    "key": "BlueBadgeCarParkSpaces",
+                    "sourceSystemKey": "LRAD",
+                    "value": "1"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Accessibility",
+                    "key": "LimitedCapacityLift",
+                    "sourceSystemKey": "LRAD",
+                    "value": "No"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Accessibility",
+                    "key": "SpecificEntranceRequired",
+                    "sourceSystemKey": "LRAD",
+                    "value": "No"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Accessibility",
+                    "key": "TaxiRankOutsideStation",
+                    "sourceSystemKey": "LRAD",
+                    "value": "No"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Accessibility",
+                    "key": "Toilet",
+                    "sourceSystemKey": "LRAD",
+                    "value": "No"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "NearestPlaces",
+                    "key": "SourceSystemPlaceId",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "TaxiRank_5472"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "NearestPlaces",
+                    "key": "SourceSystemPlaceId",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "TaxiRank_5305"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "NearestPlaces",
+                    "key": "SourceSystemPlaceId",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "TaxiRank_5789"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "NearestPlaces",
+                    "key": "SourceSystemPlaceId",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "TaxiRank_5430"
+                }
+            ],
+            "children": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                    "naptanId": "4900ZZDLGRE1",
+                    "indicator": "Entrance 1",
+                    "stopLetter": "1",
+                    "modes": [
+                        "dlr"
+                    ],
+                    "icsCode": "1001123",
+                    "stopType": "NaptanRailEntrance",
+                    "stationNaptan": "940GZZDLGRE",
+                    "hubNaptanCode": "HUBGNW",
+                    "lines": [],
+                    "lineGroup": [],
+                    "lineModeGroups": [],
+                    "status": true,
+                    "id": "4900ZZDLGRE1",
+                    "commonName": "Greenwich Rail Station",
+                    "placeType": "StopPoint",
+                    "additionalProperties": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "WiFi",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Geo",
+                            "key": "Zone",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "2+3"
+                        }
+                    ],
+                    "children": [],
+                    "lat": 51.477925,
+                    "lon": -0.013219
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                    "naptanId": "4900ZZDLGRE2",
+                    "indicator": "Entrance 2",
+                    "stopLetter": "2",
+                    "modes": [
+                        "dlr"
+                    ],
+                    "icsCode": "1001123",
+                    "stopType": "NaptanMetroEntrance",
+                    "stationNaptan": "940GZZDLGRE",
+                    "hubNaptanCode": "HUBGNW",
+                    "lines": [],
+                    "lineGroup": [],
+                    "lineModeGroups": [],
+                    "status": true,
+                    "id": "4900ZZDLGRE2",
+                    "commonName": "Greenwich DLR Station",
+                    "placeType": "StopPoint",
+                    "additionalProperties": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Geo",
+                            "key": "Zone",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "2+3"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "WiFi",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        }
+                    ],
+                    "children": [],
+                    "lat": 51.478502,
+                    "lon": -0.015441
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                    "naptanId": "4900ZZDLGRE3",
+                    "indicator": "Entrance 3",
+                    "stopLetter": "3",
+                    "modes": [
+                        "dlr"
+                    ],
+                    "icsCode": "1001123",
+                    "stopType": "NaptanRailEntrance",
+                    "stationNaptan": "940GZZDLGRE",
+                    "hubNaptanCode": "HUBGNW",
+                    "lines": [],
+                    "lineGroup": [],
+                    "lineModeGroups": [],
+                    "status": true,
+                    "id": "4900ZZDLGRE3",
+                    "commonName": "Greenwich Rail Station",
+                    "placeType": "StopPoint",
+                    "additionalProperties": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Geo",
+                            "key": "Zone",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "2+3"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "WiFi",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        }
+                    ],
+                    "children": [],
+                    "lat": 51.477956,
+                    "lon": -0.015623
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                    "naptanId": "490G01123L",
+                    "modes": [
+                        "bus"
+                    ],
+                    "icsCode": "1001123",
+                    "stopType": "NaptanOnstreetBusCoachStopCluster",
+                    "stationNaptan": "490G01123L",
+                    "hubNaptanCode": "HUBGNW",
+                    "lines": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "129",
+                            "name": "129",
+                            "uri": "/Line/129",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "177",
+                            "name": "177",
+                            "uri": "/Line/177",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "199",
+                            "name": "199",
+                            "uri": "/Line/199",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "386",
+                            "name": "386",
+                            "uri": "/Line/386",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "n199",
+                            "name": "N199",
+                            "uri": "/Line/n199",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        }
+                    ],
+                    "lineGroup": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                            "naptanIdReference": "490001123L",
+                            "stationAtcoCode": "490G01123L",
+                            "lineIdentifier": [
+                                "129",
+                                "199",
+                                "386",
+                                "n199"
+                            ]
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                            "naptanIdReference": "490001123R",
+                            "stationAtcoCode": "490G01123L",
+                            "lineIdentifier": [
+                                "129",
+                                "199",
+                                "386",
+                                "n199"
+                            ]
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                            "naptanIdReference": "490001123N",
+                            "stationAtcoCode": "490G01123L",
+                            "lineIdentifier": [
+                                "177"
+                            ]
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                            "naptanIdReference": "490001123P",
+                            "stationAtcoCode": "490G01123L",
+                            "lineIdentifier": [
+                                "177"
+                            ]
+                        }
+                    ],
+                    "lineModeGroups": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+                            "modeName": "bus",
+                            "lineIdentifier": [
+                                "129",
+                                "177",
+                                "199",
+                                "386",
+                                "n199"
+                            ]
+                        }
+                    ],
+                    "status": true,
+                    "id": "490G01123L",
+                    "commonName": "Greenwich Station",
+                    "placeType": "StopPoint",
+                    "additionalProperties": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "WiFi",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Geo",
+                            "key": "Zone",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "2+3"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "NearestPlaces",
+                            "key": "SourceSystemPlaceId",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "TaxiRank_5472"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "NearestPlaces",
+                            "key": "SourceSystemPlaceId",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "TaxiRank_5305"
+                        }
+                    ],
+                    "children": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                            "naptanId": "490001123L",
+                            "indicator": "Stop L",
+                            "stopLetter": "L",
+                            "modes": [
+                                "bus"
+                            ],
+                            "icsCode": "1001123",
+                            "stopType": "NaptanPublicBusCoachTram",
+                            "stationNaptan": "490G01123L",
+                            "hubNaptanCode": "HUBGNW",
+                            "lines": [
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                    "id": "129",
+                                    "name": "129",
+                                    "uri": "/Line/129",
+                                    "type": "Line",
+                                    "crowding": {
+                                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                                    },
+                                    "routeType": "Unknown",
+                                    "status": "Unknown"
+                                },
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                    "id": "199",
+                                    "name": "199",
+                                    "uri": "/Line/199",
+                                    "type": "Line",
+                                    "crowding": {
+                                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                                    },
+                                    "routeType": "Unknown",
+                                    "status": "Unknown"
+                                },
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                    "id": "386",
+                                    "name": "386",
+                                    "uri": "/Line/386",
+                                    "type": "Line",
+                                    "crowding": {
+                                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                                    },
+                                    "routeType": "Unknown",
+                                    "status": "Unknown"
+                                },
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                    "id": "n199",
+                                    "name": "N199",
+                                    "uri": "/Line/n199",
+                                    "type": "Line",
+                                    "crowding": {
+                                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                                    },
+                                    "routeType": "Unknown",
+                                    "status": "Unknown"
+                                }
+                            ],
+                            "lineGroup": [
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                                    "naptanIdReference": "490001123L",
+                                    "stationAtcoCode": "490G01123L",
+                                    "lineIdentifier": [
+                                        "129",
+                                        "199",
+                                        "386",
+                                        "n199"
+                                    ]
+                                }
+                            ],
+                            "lineModeGroups": [
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+                                    "modeName": "bus",
+                                    "lineIdentifier": [
+                                        "129",
+                                        "199",
+                                        "386",
+                                        "n199"
+                                    ]
+                                }
+                            ],
+                            "status": true,
+                            "id": "490001123L",
+                            "commonName": "Greenwich Station",
+                            "placeType": "StopPoint",
+                            "additionalProperties": [
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                                    "category": "Direction",
+                                    "key": "CompassPoint",
+                                    "sourceSystemKey": "Naptan490",
+                                    "value": "S"
+                                },
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                                    "category": "Direction",
+                                    "key": "Towards",
+                                    "sourceSystemKey": "CountDown",
+                                    "value": "Lewisham Or Blackheath Village"
+                                },
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                                    "category": "Facility",
+                                    "key": "WiFi",
+                                    "sourceSystemKey": "StaticObjects",
+                                    "value": "no"
+                                },
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                                    "category": "Geo",
+                                    "key": "Zone",
+                                    "sourceSystemKey": "StaticObjects",
+                                    "value": "2+3"
+                                },
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                                    "category": "NearestPlaces",
+                                    "key": "SourceSystemPlaceId",
+                                    "sourceSystemKey": "StaticObjects",
+                                    "value": "TaxiRank_5472"
+                                },
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                                    "category": "NearestPlaces",
+                                    "key": "SourceSystemPlaceId",
+                                    "sourceSystemKey": "StaticObjects",
+                                    "value": "TaxiRank_5305"
+                                },
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                                    "category": "NearestPlaces",
+                                    "key": "SourceSystemPlaceId",
+                                    "sourceSystemKey": "StaticObjects",
+                                    "value": "TaxiRank_5789"
+                                },
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                                    "category": "NearestPlaces",
+                                    "key": "SourceSystemPlaceId",
+                                    "sourceSystemKey": "StaticObjects",
+                                    "value": "TaxiRank_5430"
+                                }
+                            ],
+                            "children": [],
+                            "lat": 51.478263,
+                            "lon": -0.011448
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                            "naptanId": "490001123N",
+                            "indicator": "Stop N",
+                            "stopLetter": "N",
+                            "modes": [
+                                "bus"
+                            ],
+                            "icsCode": "1001123",
+                            "stopType": "NaptanPublicBusCoachTram",
+                            "stationNaptan": "490G01123L",
+                            "hubNaptanCode": "HUBGNW",
+                            "lines": [
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                    "id": "177",
+                                    "name": "177",
+                                    "uri": "/Line/177",
+                                    "type": "Line",
+                                    "crowding": {
+                                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                                    },
+                                    "routeType": "Unknown",
+                                    "status": "Unknown"
+                                }
+                            ],
+                            "lineGroup": [
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                                    "naptanIdReference": "490001123N",
+                                    "stationAtcoCode": "490G01123L",
+                                    "lineIdentifier": [
+                                        "177"
+                                    ]
+                                }
+                            ],
+                            "lineModeGroups": [
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+                                    "modeName": "bus",
+                                    "lineIdentifier": [
+                                        "177"
+                                    ]
+                                }
+                            ],
+                            "status": true,
+                            "id": "490001123N",
+                            "commonName": "Greenwich Station",
+                            "placeType": "StopPoint",
+                            "additionalProperties": [
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                                    "category": "Direction",
+                                    "key": "CompassPoint",
+                                    "sourceSystemKey": "Naptan490",
+                                    "value": "E"
+                                },
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                                    "category": "Direction",
+                                    "key": "Towards",
+                                    "sourceSystemKey": "CountDown",
+                                    "value": "Charlton"
+                                },
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                                    "category": "Geo",
+                                    "key": "Zone",
+                                    "sourceSystemKey": "StaticObjects",
+                                    "value": "2+3"
+                                },
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                                    "category": "Facility",
+                                    "key": "WiFi",
+                                    "sourceSystemKey": "StaticObjects",
+                                    "value": "no"
+                                },
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                                    "category": "NearestPlaces",
+                                    "key": "SourceSystemPlaceId",
+                                    "sourceSystemKey": "StaticObjects",
+                                    "value": "TaxiRank_5472"
+                                },
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                                    "category": "NearestPlaces",
+                                    "key": "SourceSystemPlaceId",
+                                    "sourceSystemKey": "StaticObjects",
+                                    "value": "TaxiRank_5305"
+                                },
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                                    "category": "NearestPlaces",
+                                    "key": "SourceSystemPlaceId",
+                                    "sourceSystemKey": "StaticObjects",
+                                    "value": "TaxiRank_5789"
+                                }
+                            ],
+                            "children": [],
+                            "lat": 51.477814,
+                            "lon": -0.013095
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                            "naptanId": "490001123P",
+                            "indicator": "Stop P",
+                            "stopLetter": "P",
+                            "modes": [
+                                "bus"
+                            ],
+                            "icsCode": "1001123",
+                            "stopType": "NaptanPublicBusCoachTram",
+                            "stationNaptan": "490G01123L",
+                            "hubNaptanCode": "HUBGNW",
+                            "lines": [
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                    "id": "177",
+                                    "name": "177",
+                                    "uri": "/Line/177",
+                                    "type": "Line",
+                                    "crowding": {
+                                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                                    },
+                                    "routeType": "Unknown",
+                                    "status": "Unknown"
+                                }
+                            ],
+                            "lineGroup": [
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                                    "naptanIdReference": "490001123P",
+                                    "stationAtcoCode": "490G01123L",
+                                    "lineIdentifier": [
+                                        "177"
+                                    ]
+                                }
+                            ],
+                            "lineModeGroups": [
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+                                    "modeName": "bus",
+                                    "lineIdentifier": [
+                                        "177"
+                                    ]
+                                }
+                            ],
+                            "status": true,
+                            "id": "490001123P",
+                            "commonName": "Greenwich Station",
+                            "placeType": "StopPoint",
+                            "additionalProperties": [
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                                    "category": "Direction",
+                                    "key": "CompassPoint",
+                                    "sourceSystemKey": "Naptan490",
+                                    "value": "SW"
+                                },
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                                    "category": "Direction",
+                                    "key": "Towards",
+                                    "sourceSystemKey": "CountDown",
+                                    "value": "New Cross"
+                                },
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                                    "category": "Facility",
+                                    "key": "WiFi",
+                                    "sourceSystemKey": "StaticObjects",
+                                    "value": "no"
+                                },
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                                    "category": "Geo",
+                                    "key": "Zone",
+                                    "sourceSystemKey": "StaticObjects",
+                                    "value": "2+3"
+                                },
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                                    "category": "NearestPlaces",
+                                    "key": "SourceSystemPlaceId",
+                                    "sourceSystemKey": "StaticObjects",
+                                    "value": "TaxiRank_5472"
+                                },
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                                    "category": "NearestPlaces",
+                                    "key": "SourceSystemPlaceId",
+                                    "sourceSystemKey": "StaticObjects",
+                                    "value": "TaxiRank_5305"
+                                }
+                            ],
+                            "children": [],
+                            "lat": 51.47753,
+                            "lon": -0.013841
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                            "naptanId": "490001123R",
+                            "indicator": "Stop R",
+                            "stopLetter": "R",
+                            "modes": [
+                                "bus"
+                            ],
+                            "icsCode": "1001123",
+                            "stopType": "NaptanPublicBusCoachTram",
+                            "stationNaptan": "490G01123L",
+                            "hubNaptanCode": "HUBGNW",
+                            "lines": [
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                    "id": "129",
+                                    "name": "129",
+                                    "uri": "/Line/129",
+                                    "type": "Line",
+                                    "crowding": {
+                                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                                    },
+                                    "routeType": "Unknown",
+                                    "status": "Unknown"
+                                },
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                    "id": "199",
+                                    "name": "199",
+                                    "uri": "/Line/199",
+                                    "type": "Line",
+                                    "crowding": {
+                                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                                    },
+                                    "routeType": "Unknown",
+                                    "status": "Unknown"
+                                },
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                    "id": "386",
+                                    "name": "386",
+                                    "uri": "/Line/386",
+                                    "type": "Line",
+                                    "crowding": {
+                                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                                    },
+                                    "routeType": "Unknown",
+                                    "status": "Unknown"
+                                },
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                                    "id": "n199",
+                                    "name": "N199",
+                                    "uri": "/Line/n199",
+                                    "type": "Line",
+                                    "crowding": {
+                                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                                    },
+                                    "routeType": "Unknown",
+                                    "status": "Unknown"
+                                }
+                            ],
+                            "lineGroup": [
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                                    "naptanIdReference": "490001123R",
+                                    "stationAtcoCode": "490G01123L",
+                                    "lineIdentifier": [
+                                        "129",
+                                        "199",
+                                        "386",
+                                        "n199"
+                                    ]
+                                }
+                            ],
+                            "lineModeGroups": [
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+                                    "modeName": "bus",
+                                    "lineIdentifier": [
+                                        "129",
+                                        "199",
+                                        "386",
+                                        "n199"
+                                    ]
+                                }
+                            ],
+                            "status": true,
+                            "id": "490001123R",
+                            "commonName": "Greenwich Station",
+                            "placeType": "StopPoint",
+                            "additionalProperties": [
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                                    "category": "Direction",
+                                    "key": "CompassPoint",
+                                    "sourceSystemKey": "Naptan490",
+                                    "value": "N"
+                                },
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                                    "category": "Direction",
+                                    "key": "Towards",
+                                    "sourceSystemKey": "CountDown",
+                                    "value": "Royal Standard, Charlton Or Surrey Quays"
+                                },
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                                    "category": "Geo",
+                                    "key": "Zone",
+                                    "sourceSystemKey": "StaticObjects",
+                                    "value": "2+3"
+                                },
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                                    "category": "Facility",
+                                    "key": "WiFi",
+                                    "sourceSystemKey": "StaticObjects",
+                                    "value": "no"
+                                },
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                                    "category": "NearestPlaces",
+                                    "key": "SourceSystemPlaceId",
+                                    "sourceSystemKey": "StaticObjects",
+                                    "value": "TaxiRank_5472"
+                                },
+                                {
+                                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                                    "category": "NearestPlaces",
+                                    "key": "SourceSystemPlaceId",
+                                    "sourceSystemKey": "StaticObjects",
+                                    "value": "TaxiRank_5305"
+                                }
+                            ],
+                            "children": [],
+                            "lat": 51.477265,
+                            "lon": -0.012485
+                        }
+                    ],
+                    "lat": 51.477265,
+                    "lon": -0.012485
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                    "naptanId": "9400ZZDLGRE",
+                    "modes": [
+                        "dlr"
+                    ],
+                    "icsCode": "1001123",
+                    "stopType": "NaptanMetroAccessArea",
+                    "stationNaptan": "940GZZDLGRE",
+                    "hubNaptanCode": "HUBGNW",
+                    "lines": [],
+                    "lineGroup": [],
+                    "lineModeGroups": [],
+                    "status": true,
+                    "id": "9400ZZDLGRE",
+                    "commonName": "Greenwich DLR Station",
+                    "placeType": "StopPoint",
+                    "additionalProperties": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Geo",
+                            "key": "Zone",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "2+3"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "WiFi",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        }
+                    ],
+                    "children": [],
+                    "lat": 51.478087,
+                    "lon": -0.013673
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                    "naptanId": "9400ZZDLGRE1",
+                    "modes": [
+                        "dlr"
+                    ],
+                    "icsCode": "1001123",
+                    "stopType": "NaptanMetroPlatform",
+                    "stationNaptan": "940GZZDLGRE",
+                    "hubNaptanCode": "HUBGNW",
+                    "lines": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "dlr",
+                            "name": "DLR",
+                            "uri": "/Line/dlr",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        }
+                    ],
+                    "lineGroup": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                            "stationAtcoCode": "940GZZDLGRE",
+                            "lineIdentifier": [
+                                "dlr"
+                            ]
+                        }
+                    ],
+                    "lineModeGroups": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+                            "modeName": "dlr",
+                            "lineIdentifier": [
+                                "dlr"
+                            ]
+                        }
+                    ],
+                    "status": true,
+                    "id": "9400ZZDLGRE1",
+                    "commonName": "Greenwich DLR Station",
+                    "placeType": "StopPoint",
+                    "additionalProperties": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Geo",
+                            "key": "Zone",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "2+3"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "WiFi",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Accessibility",
+                            "key": "AccessViaLift",
+                            "sourceSystemKey": "LRAD",
+                            "value": "Yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Accessibility",
+                            "key": "BlueBadgeCarParkSpaces",
+                            "sourceSystemKey": "LRAD",
+                            "value": "1"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Accessibility",
+                            "key": "LimitedCapacityLift",
+                            "sourceSystemKey": "LRAD",
+                            "value": "No"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Accessibility",
+                            "key": "SpecificEntranceRequired",
+                            "sourceSystemKey": "LRAD",
+                            "value": "No"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Accessibility",
+                            "key": "TaxiRankOutsideStation",
+                            "sourceSystemKey": "LRAD",
+                            "value": "No"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Accessibility",
+                            "key": "Toilet",
+                            "sourceSystemKey": "LRAD",
+                            "value": "No"
+                        }
+                    ],
+                    "children": [],
+                    "lat": 51.478162,
+                    "lon": -0.016003
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                    "naptanId": "9400ZZDLGRE2",
+                    "modes": [
+                        "dlr"
+                    ],
+                    "icsCode": "1001123",
+                    "stopType": "NaptanMetroPlatform",
+                    "stationNaptan": "940GZZDLGRE",
+                    "hubNaptanCode": "HUBGNW",
+                    "lines": [],
+                    "lineGroup": [],
+                    "lineModeGroups": [],
+                    "status": true,
+                    "id": "9400ZZDLGRE2",
+                    "commonName": "Greenwich DLR Station",
+                    "placeType": "StopPoint",
+                    "additionalProperties": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Geo",
+                            "key": "Zone",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "2+3"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "WiFi",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Accessibility",
+                            "key": "AccessViaLift",
+                            "sourceSystemKey": "LRAD",
+                            "value": "Yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Accessibility",
+                            "key": "BlueBadgeCarParkSpaces",
+                            "sourceSystemKey": "LRAD",
+                            "value": "1"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Accessibility",
+                            "key": "LimitedCapacityLift",
+                            "sourceSystemKey": "LRAD",
+                            "value": "No"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Accessibility",
+                            "key": "SpecificEntranceRequired",
+                            "sourceSystemKey": "LRAD",
+                            "value": "No"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Accessibility",
+                            "key": "TaxiRankOutsideStation",
+                            "sourceSystemKey": "LRAD",
+                            "value": "No"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Accessibility",
+                            "key": "Toilet",
+                            "sourceSystemKey": "LRAD",
+                            "value": "No"
+                        }
+                    ],
+                    "children": [],
+                    "lat": 51.478082,
+                    "lon": -0.015488
+                }
+            ],
+            "lat": 51.478087,
+            "lon": -0.013673
+        }
+    ],
+    "lat": 51.478235,
+    "lon": -0.014096
+}

@@ -1,0 +1,3453 @@
+{
+    "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+    "naptanId": "HUBNGW",
+    "modes": [
+        "bus",
+        "cable-car",
+        "tube"
+    ],
+    "icsCode": "1000160",
+    "stopType": "TransportInterchange",
+    "hubNaptanCode": "HUBNGW",
+    "lines": [
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+            "id": "108",
+            "name": "108",
+            "uri": "/Line/108",
+            "type": "Line",
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            },
+            "routeType": "Unknown",
+            "status": "Unknown"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+            "id": "129",
+            "name": "129",
+            "uri": "/Line/129",
+            "type": "Line",
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            },
+            "routeType": "Unknown",
+            "status": "Unknown"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+            "id": "132",
+            "name": "132",
+            "uri": "/Line/132",
+            "type": "Line",
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            },
+            "routeType": "Unknown",
+            "status": "Unknown"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+            "id": "161",
+            "name": "161",
+            "uri": "/Line/161",
+            "type": "Line",
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            },
+            "routeType": "Unknown",
+            "status": "Unknown"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+            "id": "180",
+            "name": "180",
+            "uri": "/Line/180",
+            "type": "Line",
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            },
+            "routeType": "Unknown",
+            "status": "Unknown"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+            "id": "188",
+            "name": "188",
+            "uri": "/Line/188",
+            "type": "Line",
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            },
+            "routeType": "Unknown",
+            "status": "Unknown"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+            "id": "335",
+            "name": "335",
+            "uri": "/Line/335",
+            "type": "Line",
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            },
+            "routeType": "Unknown",
+            "status": "Unknown"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+            "id": "422",
+            "name": "422",
+            "uri": "/Line/422",
+            "type": "Line",
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            },
+            "routeType": "Unknown",
+            "status": "Unknown"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+            "id": "472",
+            "name": "472",
+            "uri": "/Line/472",
+            "type": "Line",
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            },
+            "routeType": "Unknown",
+            "status": "Unknown"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+            "id": "486",
+            "name": "486",
+            "uri": "/Line/486",
+            "type": "Line",
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            },
+            "routeType": "Unknown",
+            "status": "Unknown"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+            "id": "jubilee",
+            "name": "Jubilee",
+            "uri": "/Line/jubilee",
+            "type": "Line",
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            },
+            "routeType": "Unknown",
+            "status": "Unknown"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+            "id": "london-cable-car",
+            "name": "IFS Cloud Cable Car",
+            "uri": "/Line/london-cable-car",
+            "type": "Line",
+            "crowding": {
+                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+            },
+            "routeType": "Unknown",
+            "status": "Unknown"
+        }
+    ],
+    "lineGroup": [
+        {
+            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+            "naptanIdReference": "490010374B",
+            "stationAtcoCode": "490G000682",
+            "lineIdentifier": [
+                "108",
+                "335",
+                "422",
+                "486"
+            ]
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+            "naptanIdReference": "490010374C",
+            "stationAtcoCode": "490G000682",
+            "lineIdentifier": [
+                "108",
+                "129",
+                "188"
+            ]
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+            "naptanIdReference": "490010374E",
+            "stationAtcoCode": "490G000682",
+            "lineIdentifier": [
+                "129",
+                "132",
+                "161",
+                "180",
+                "188",
+                "335",
+                "422",
+                "472",
+                "486"
+            ]
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+            "naptanIdReference": "490010374D",
+            "stationAtcoCode": "490G000682",
+            "lineIdentifier": [
+                "132"
+            ]
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+            "naptanIdReference": "490010374A",
+            "stationAtcoCode": "490G000682",
+            "lineIdentifier": [
+                "161",
+                "180",
+                "472"
+            ]
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+            "stationAtcoCode": "940GZZLUNGW",
+            "lineIdentifier": [
+                "jubilee"
+            ]
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+            "stationAtcoCode": "940GZZALGWP",
+            "lineIdentifier": [
+                "london-cable-car"
+            ]
+        }
+    ],
+    "lineModeGroups": [
+        {
+            "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+            "modeName": "bus",
+            "lineIdentifier": [
+                "108",
+                "129",
+                "132",
+                "161",
+                "180",
+                "188",
+                "335",
+                "422",
+                "472",
+                "486"
+            ]
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+            "modeName": "tube",
+            "lineIdentifier": [
+                "jubilee"
+            ]
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+            "modeName": "cable-car",
+            "lineIdentifier": [
+                "london-cable-car"
+            ]
+        }
+    ],
+    "status": true,
+    "id": "HUBNGW",
+    "commonName": "North Greenwich",
+    "placeType": "StopPoint",
+    "additionalProperties": [
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "Facility",
+            "key": "Car park",
+            "sourceSystemKey": "StaticObjects",
+            "value": "yes"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "Facility",
+            "key": "Escalators",
+            "sourceSystemKey": "StaticObjects",
+            "value": "9"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "Facility",
+            "key": "Help Points",
+            "sourceSystemKey": "StaticObjects",
+            "value": "6 on platforms, 4 in ticket halls, 0 elsewhere"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "Facility",
+            "key": "Toilets",
+            "sourceSystemKey": "StaticObjects",
+            "value": "yes"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "Address",
+            "key": "Address",
+            "sourceSystemKey": "StaticObjects",
+            "value": "North Greenwich Station,London Underground Ltd.,5 Millenium Way,London,SE10 0PH"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "Facility",
+            "key": "Bridge",
+            "sourceSystemKey": "StaticObjects",
+            "value": "no"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "Facility",
+            "key": "Payphones",
+            "sourceSystemKey": "StaticObjects",
+            "value": "3"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "Facility",
+            "key": "Photo Booths",
+            "sourceSystemKey": "StaticObjects",
+            "value": "0"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "Facility",
+            "key": "Ticket Halls",
+            "sourceSystemKey": "StaticObjects",
+            "value": "1"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "Geo",
+            "key": "Zone",
+            "sourceSystemKey": "StaticObjects",
+            "value": "2/3"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "Facility",
+            "key": "Euro Cash Machines",
+            "sourceSystemKey": "StaticObjects",
+            "value": "yes"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "Facility",
+            "key": "Gates",
+            "sourceSystemKey": "StaticObjects",
+            "value": "13"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "Facility",
+            "key": "Lifts",
+            "sourceSystemKey": "StaticObjects",
+            "value": "4"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "Facility",
+            "key": "WiFi",
+            "sourceSystemKey": "StaticObjects",
+            "value": "yes"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "Facility",
+            "key": "Cash Machines",
+            "sourceSystemKey": "StaticObjects",
+            "value": "3"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "Facility",
+            "key": "Waiting Room",
+            "sourceSystemKey": "StaticObjects",
+            "value": "no"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "Address",
+            "key": "PhoneNo",
+            "sourceSystemKey": "StaticObjects",
+            "value": "0845 330 9880"
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+            "category": "NearestPlaces",
+            "key": "SourceSystemPlaceId",
+            "sourceSystemKey": "StaticObjects",
+            "value": "TaxiRank_5930"
+        }
+    ],
+    "children": [
+        {
+            "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+            "naptanId": "490G000682",
+            "modes": [
+                "bus"
+            ],
+            "icsCode": "1010374",
+            "stopType": "NaptanOnstreetBusCoachStopCluster",
+            "stationNaptan": "490G000682",
+            "hubNaptanCode": "HUBNGW",
+            "lines": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "108",
+                    "name": "108",
+                    "uri": "/Line/108",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "129",
+                    "name": "129",
+                    "uri": "/Line/129",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "132",
+                    "name": "132",
+                    "uri": "/Line/132",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "161",
+                    "name": "161",
+                    "uri": "/Line/161",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "180",
+                    "name": "180",
+                    "uri": "/Line/180",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "188",
+                    "name": "188",
+                    "uri": "/Line/188",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "335",
+                    "name": "335",
+                    "uri": "/Line/335",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "422",
+                    "name": "422",
+                    "uri": "/Line/422",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "472",
+                    "name": "472",
+                    "uri": "/Line/472",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "486",
+                    "name": "486",
+                    "uri": "/Line/486",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                }
+            ],
+            "lineGroup": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                    "naptanIdReference": "490010374B",
+                    "stationAtcoCode": "490G000682",
+                    "lineIdentifier": [
+                        "108",
+                        "335",
+                        "422",
+                        "486"
+                    ]
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                    "naptanIdReference": "490010374C",
+                    "stationAtcoCode": "490G000682",
+                    "lineIdentifier": [
+                        "108",
+                        "129",
+                        "188"
+                    ]
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                    "naptanIdReference": "490010374E",
+                    "stationAtcoCode": "490G000682",
+                    "lineIdentifier": [
+                        "129",
+                        "132",
+                        "161",
+                        "180",
+                        "188",
+                        "335",
+                        "422",
+                        "472",
+                        "486"
+                    ]
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                    "naptanIdReference": "490010374D",
+                    "stationAtcoCode": "490G000682",
+                    "lineIdentifier": [
+                        "132"
+                    ]
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                    "naptanIdReference": "490010374A",
+                    "stationAtcoCode": "490G000682",
+                    "lineIdentifier": [
+                        "161",
+                        "180",
+                        "472"
+                    ]
+                }
+            ],
+            "lineModeGroups": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+                    "modeName": "bus",
+                    "lineIdentifier": [
+                        "108",
+                        "129",
+                        "132",
+                        "161",
+                        "180",
+                        "188",
+                        "335",
+                        "422",
+                        "472",
+                        "486"
+                    ]
+                }
+            ],
+            "status": true,
+            "id": "490G000682",
+            "commonName": "North Greenwich Station",
+            "placeType": "StopPoint",
+            "additionalProperties": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "NearestPlaces",
+                    "key": "SourceSystemPlaceId",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "TaxiRank_5930"
+                }
+            ],
+            "children": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                    "naptanId": "490010374A",
+                    "indicator": "Stop A",
+                    "stopLetter": "A",
+                    "modes": [
+                        "bus"
+                    ],
+                    "icsCode": "1010374",
+                    "stopType": "NaptanPublicBusCoachTram",
+                    "stationNaptan": "490G000682",
+                    "hubNaptanCode": "HUBNGW",
+                    "lines": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "161",
+                            "name": "161",
+                            "uri": "/Line/161",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "180",
+                            "name": "180",
+                            "uri": "/Line/180",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "472",
+                            "name": "472",
+                            "uri": "/Line/472",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        }
+                    ],
+                    "lineGroup": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                            "naptanIdReference": "490010374A",
+                            "stationAtcoCode": "490G000682",
+                            "lineIdentifier": [
+                                "161",
+                                "180",
+                                "472"
+                            ]
+                        }
+                    ],
+                    "lineModeGroups": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+                            "modeName": "bus",
+                            "lineIdentifier": [
+                                "161",
+                                "180",
+                                "472"
+                            ]
+                        }
+                    ],
+                    "status": true,
+                    "id": "490010374A",
+                    "commonName": "North Greenwich Station",
+                    "placeType": "StopPoint",
+                    "additionalProperties": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Direction",
+                            "key": "CompassPoint",
+                            "sourceSystemKey": "Naptan490",
+                            "value": "E"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "NearestPlaces",
+                            "key": "SourceSystemPlaceId",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "TaxiRank_5930"
+                        }
+                    ],
+                    "children": [],
+                    "lat": 51.499716,
+                    "lon": 0.004643
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                    "naptanId": "490010374B",
+                    "indicator": "Stop B",
+                    "stopLetter": "B",
+                    "modes": [
+                        "bus"
+                    ],
+                    "icsCode": "1010374",
+                    "stopType": "NaptanPublicBusCoachTram",
+                    "stationNaptan": "490G000682",
+                    "hubNaptanCode": "HUBNGW",
+                    "lines": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "108",
+                            "name": "108",
+                            "uri": "/Line/108",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "335",
+                            "name": "335",
+                            "uri": "/Line/335",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "422",
+                            "name": "422",
+                            "uri": "/Line/422",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "486",
+                            "name": "486",
+                            "uri": "/Line/486",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        }
+                    ],
+                    "lineGroup": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                            "naptanIdReference": "490010374B",
+                            "stationAtcoCode": "490G000682",
+                            "lineIdentifier": [
+                                "108",
+                                "335",
+                                "422",
+                                "486"
+                            ]
+                        }
+                    ],
+                    "lineModeGroups": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+                            "modeName": "bus",
+                            "lineIdentifier": [
+                                "108",
+                                "335",
+                                "422",
+                                "486"
+                            ]
+                        }
+                    ],
+                    "status": true,
+                    "id": "490010374B",
+                    "commonName": "North Greenwich Station",
+                    "placeType": "StopPoint",
+                    "additionalProperties": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Direction",
+                            "key": "CompassPoint",
+                            "sourceSystemKey": "Naptan490",
+                            "value": "E"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "NearestPlaces",
+                            "key": "SourceSystemPlaceId",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "TaxiRank_5930"
+                        }
+                    ],
+                    "children": [],
+                    "lat": 51.499666,
+                    "lon": 0.004367
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                    "naptanId": "490010374C",
+                    "indicator": "Stop C",
+                    "stopLetter": "C",
+                    "modes": [
+                        "bus"
+                    ],
+                    "icsCode": "1010374",
+                    "stopType": "NaptanPublicBusCoachTram",
+                    "stationNaptan": "490G000682",
+                    "hubNaptanCode": "HUBNGW",
+                    "lines": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "108",
+                            "name": "108",
+                            "uri": "/Line/108",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "129",
+                            "name": "129",
+                            "uri": "/Line/129",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "188",
+                            "name": "188",
+                            "uri": "/Line/188",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        }
+                    ],
+                    "lineGroup": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                            "naptanIdReference": "490010374C",
+                            "stationAtcoCode": "490G000682",
+                            "lineIdentifier": [
+                                "108",
+                                "129",
+                                "188"
+                            ]
+                        }
+                    ],
+                    "lineModeGroups": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+                            "modeName": "bus",
+                            "lineIdentifier": [
+                                "108",
+                                "129",
+                                "188"
+                            ]
+                        }
+                    ],
+                    "status": true,
+                    "id": "490010374C",
+                    "commonName": "North Greenwich Station",
+                    "placeType": "StopPoint",
+                    "additionalProperties": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Direction",
+                            "key": "CompassPoint",
+                            "sourceSystemKey": "Naptan490",
+                            "value": "E"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "NearestPlaces",
+                            "key": "SourceSystemPlaceId",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "TaxiRank_5930"
+                        }
+                    ],
+                    "children": [],
+                    "lat": 51.499654,
+                    "lon": 0.00405
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                    "naptanId": "490010374D",
+                    "indicator": "Stop D",
+                    "stopLetter": "D",
+                    "modes": [
+                        "bus"
+                    ],
+                    "icsCode": "1010374",
+                    "stopType": "NaptanPublicBusCoachTram",
+                    "stationNaptan": "490G000682",
+                    "hubNaptanCode": "HUBNGW",
+                    "lines": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "132",
+                            "name": "132",
+                            "uri": "/Line/132",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        }
+                    ],
+                    "lineGroup": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                            "naptanIdReference": "490010374D",
+                            "stationAtcoCode": "490G000682",
+                            "lineIdentifier": [
+                                "132"
+                            ]
+                        }
+                    ],
+                    "lineModeGroups": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+                            "modeName": "bus",
+                            "lineIdentifier": [
+                                "132"
+                            ]
+                        }
+                    ],
+                    "status": true,
+                    "id": "490010374D",
+                    "commonName": "North Greenwich Station",
+                    "placeType": "StopPoint",
+                    "additionalProperties": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Direction",
+                            "key": "CompassPoint",
+                            "sourceSystemKey": "Naptan490",
+                            "value": "S"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "NearestPlaces",
+                            "key": "SourceSystemPlaceId",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "TaxiRank_5930"
+                        }
+                    ],
+                    "children": [],
+                    "lat": 51.500267,
+                    "lon": 0.00291
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                    "naptanId": "490010374E",
+                    "indicator": "Stop E",
+                    "stopLetter": "E",
+                    "modes": [
+                        "bus"
+                    ],
+                    "icsCode": "1010374",
+                    "stopType": "NaptanPublicBusCoachTram",
+                    "stationNaptan": "490G000682",
+                    "hubNaptanCode": "HUBNGW",
+                    "lines": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "129",
+                            "name": "129",
+                            "uri": "/Line/129",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "132",
+                            "name": "132",
+                            "uri": "/Line/132",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "161",
+                            "name": "161",
+                            "uri": "/Line/161",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "180",
+                            "name": "180",
+                            "uri": "/Line/180",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "188",
+                            "name": "188",
+                            "uri": "/Line/188",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "335",
+                            "name": "335",
+                            "uri": "/Line/335",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "422",
+                            "name": "422",
+                            "uri": "/Line/422",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "472",
+                            "name": "472",
+                            "uri": "/Line/472",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "486",
+                            "name": "486",
+                            "uri": "/Line/486",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        }
+                    ],
+                    "lineGroup": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                            "naptanIdReference": "490010374E",
+                            "stationAtcoCode": "490G000682",
+                            "lineIdentifier": [
+                                "129",
+                                "132",
+                                "161",
+                                "180",
+                                "188",
+                                "335",
+                                "422",
+                                "472",
+                                "486"
+                            ]
+                        }
+                    ],
+                    "lineModeGroups": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+                            "modeName": "bus",
+                            "lineIdentifier": [
+                                "129",
+                                "132",
+                                "161",
+                                "180",
+                                "188",
+                                "335",
+                                "422",
+                                "472",
+                                "486"
+                            ]
+                        }
+                    ],
+                    "status": true,
+                    "id": "490010374E",
+                    "commonName": "North Greenwich Station",
+                    "placeType": "StopPoint",
+                    "additionalProperties": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Direction",
+                            "key": "CompassPoint",
+                            "sourceSystemKey": "Naptan490",
+                            "value": "S"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "NearestPlaces",
+                            "key": "SourceSystemPlaceId",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "TaxiRank_5930"
+                        }
+                    ],
+                    "children": [],
+                    "lat": 51.500609,
+                    "lon": 0.002867
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                    "naptanId": "490010374F",
+                    "indicator": "Stop F",
+                    "stopLetter": "F",
+                    "modes": [
+                        "bus"
+                    ],
+                    "icsCode": "1010374",
+                    "stopType": "NaptanPublicBusCoachTram",
+                    "stationNaptan": "490G000682",
+                    "hubNaptanCode": "HUBNGW",
+                    "lines": [],
+                    "lineGroup": [],
+                    "lineModeGroups": [],
+                    "status": true,
+                    "id": "490010374F",
+                    "commonName": "North Greenwich Station",
+                    "placeType": "StopPoint",
+                    "additionalProperties": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Direction",
+                            "key": "CompassPoint",
+                            "sourceSystemKey": "Naptan490",
+                            "value": "S"
+                        }
+                    ],
+                    "children": [],
+                    "lat": 51.49978,
+                    "lon": 0.002456
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                    "naptanId": "490010374G",
+                    "indicator": "Stop G",
+                    "stopLetter": "G",
+                    "modes": [
+                        "bus"
+                    ],
+                    "icsCode": "1010374",
+                    "stopType": "NaptanPublicBusCoachTram",
+                    "stationNaptan": "490G000682",
+                    "hubNaptanCode": "HUBNGW",
+                    "lines": [],
+                    "lineGroup": [],
+                    "lineModeGroups": [],
+                    "status": true,
+                    "id": "490010374G",
+                    "commonName": "North Greenwich Station",
+                    "placeType": "StopPoint",
+                    "additionalProperties": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Direction",
+                            "key": "CompassPoint",
+                            "sourceSystemKey": "Naptan490",
+                            "value": "S"
+                        }
+                    ],
+                    "children": [],
+                    "lat": 51.499528,
+                    "lon": 0.002445
+                }
+            ],
+            "lat": 51.499528,
+            "lon": 0.002445
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+            "naptanId": "940GZZALGWP",
+            "modes": [
+                "cable-car"
+            ],
+            "icsCode": "1020079",
+            "stopType": "NaptanMetroStation",
+            "stationNaptan": "940GZZALGWP",
+            "hubNaptanCode": "HUBNGW",
+            "lines": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "london-cable-car",
+                    "name": "IFS Cloud Cable Car",
+                    "uri": "/Line/london-cable-car",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                }
+            ],
+            "lineGroup": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                    "stationAtcoCode": "940GZZALGWP",
+                    "lineIdentifier": [
+                        "london-cable-car"
+                    ]
+                }
+            ],
+            "lineModeGroups": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+                    "modeName": "cable-car",
+                    "lineIdentifier": [
+                        "london-cable-car"
+                    ]
+                }
+            ],
+            "status": true,
+            "id": "940GZZALGWP",
+            "commonName": "IFS Cloud Greenwich Peninsula",
+            "placeType": "StopPoint",
+            "additionalProperties": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Cash Machines",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "1"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Help Points",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "0 on platforms, 0 in ticket halls, 0 elsewhere"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Opening Time - Winter",
+                    "key": "SatFrom",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "08:00"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Opening Time - Summer",
+                    "key": "SunFrom",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "09:00"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Opening Time - Winter",
+                    "key": "SunTo",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "20:00"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Opening Time - Summer",
+                    "key": "MonFriFrom",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "07:00"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Ticket Halls",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "1"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Bridge",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "no"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Euro Cash Machines",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "yes"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Other Facilities",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "none"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Payphones",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "0"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Opening Time - Summer",
+                    "key": "SatFrom",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "08:00"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Opening Time - Winter",
+                    "key": "SunFrom",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "09:00"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Toilets",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "no"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "WiFi",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "no"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Address",
+                    "key": "Address",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "IFS Cloud Greenwich Peninsula Terminal,Edmund Halley Way,London,SE10 0FR"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Gates",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "7"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Opening Time - Summer",
+                    "key": "SatTo",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "21:00"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Waiting Room",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "no"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Escalators",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "0"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Opening Time - Winter",
+                    "key": "MonFriFrom",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "07:00"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Photo Booths",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "0"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Car park",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "no"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Lifts",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "2"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Opening Time - Winter",
+                    "key": "MonFriTo",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "20:00"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Opening Time - Winter",
+                    "key": "SatTo",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "20:00"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Opening Time - Summer",
+                    "key": "SunTo",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "21:00"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Opening Time - Summer",
+                    "key": "MonFriTo",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "21:00"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "NearestPlaces",
+                    "key": "SourceSystemPlaceId",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "TaxiRank_5930"
+                }
+            ],
+            "children": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                    "naptanId": "4900ZZALGWP0",
+                    "indicator": "Entrance 1",
+                    "stopLetter": "1",
+                    "modes": [
+                        "cable-car"
+                    ],
+                    "icsCode": "1020079",
+                    "stopType": "NaptanMetroEntrance",
+                    "stationNaptan": "940GZZALGWP",
+                    "hubNaptanCode": "HUBNGW",
+                    "lines": [],
+                    "lineGroup": [],
+                    "lineModeGroups": [],
+                    "status": true,
+                    "id": "4900ZZALGWP0",
+                    "commonName": "IFS Cloud Greenwich Peninsula",
+                    "placeType": "StopPoint",
+                    "additionalProperties": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Cash Machines",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "1"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Escalators",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "0"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Winter",
+                            "key": "MonFriFrom",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "07:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Winter",
+                            "key": "SatFrom",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "08:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Bridge",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Car park",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Help Points",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "0 on platforms, 0 in ticket halls, 0 elsewhere"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Other Facilities",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "none"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Winter",
+                            "key": "SatTo",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "20:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Winter",
+                            "key": "SunFrom",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "09:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Gates",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "7"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Toilets",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "WiFi",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Summer",
+                            "key": "MonFriFrom",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "07:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Summer",
+                            "key": "SatTo",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "21:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Ticket Halls",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "1"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Summer",
+                            "key": "MonFriTo",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "21:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Address",
+                            "key": "Address",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "IFS Cloud Greenwich Peninsula Terminal,Edmund Halley Way,London,SE10 0FR"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Waiting Room",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Photo Booths",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "0"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Summer",
+                            "key": "SunFrom",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "09:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Winter",
+                            "key": "SunTo",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "20:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Euro Cash Machines",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Lifts",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "2"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Winter",
+                            "key": "MonFriTo",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "20:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Payphones",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "0"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Summer",
+                            "key": "SatFrom",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "08:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Summer",
+                            "key": "SunTo",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "21:00"
+                        }
+                    ],
+                    "children": [],
+                    "lat": 51.499838,
+                    "lon": 0.007977
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                    "naptanId": "9400ZZALGWP",
+                    "modes": [],
+                    "icsCode": "1020079",
+                    "stopType": "NaptanMetroAccessArea",
+                    "stationNaptan": "940GZZALGWP",
+                    "hubNaptanCode": "HUBNGW",
+                    "lines": [],
+                    "lineGroup": [],
+                    "lineModeGroups": [],
+                    "status": true,
+                    "id": "9400ZZALGWP",
+                    "commonName": "IFS Cloud Greenwich Peninsula",
+                    "placeType": "StopPoint",
+                    "additionalProperties": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Cash Machines",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "1"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Help Points",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "0 on platforms, 0 in ticket halls, 0 elsewhere"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Summer",
+                            "key": "SunFrom",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "09:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Winter",
+                            "key": "SunTo",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "20:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Escalators",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "0"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Ticket Halls",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "1"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Address",
+                            "key": "Address",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "IFS Cloud Greenwich Peninsula Terminal,Edmund Halley Way,London,SE10 0FR"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Euro Cash Machines",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Gates",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "7"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Winter",
+                            "key": "MonFriTo",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "20:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Summer",
+                            "key": "SatTo",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "21:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Bridge",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Car park",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Lifts",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "2"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Summer",
+                            "key": "MonFriTo",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "21:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Winter",
+                            "key": "SatTo",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "20:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Winter",
+                            "key": "SunFrom",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "09:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Summer",
+                            "key": "MonFriFrom",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "07:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Toilets",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Waiting Room",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Winter",
+                            "key": "MonFriFrom",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "07:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Payphones",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "0"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Photo Booths",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "0"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Winter",
+                            "key": "SatFrom",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "08:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Summer",
+                            "key": "SatFrom",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "08:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Summer",
+                            "key": "SunTo",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "21:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "WiFi",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Other Facilities",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "none"
+                        }
+                    ],
+                    "children": [],
+                    "lat": 51.499573,
+                    "lon": 0.00834
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                    "naptanId": "9400ZZALGWP1",
+                    "modes": [
+                        "cable-car"
+                    ],
+                    "icsCode": "1020079",
+                    "stopType": "NaptanMetroPlatform",
+                    "stationNaptan": "940GZZALGWP",
+                    "hubNaptanCode": "HUBNGW",
+                    "lines": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "london-cable-car",
+                            "name": "IFS Cloud Cable Car",
+                            "uri": "/Line/london-cable-car",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        }
+                    ],
+                    "lineGroup": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                            "stationAtcoCode": "940GZZALGWP",
+                            "lineIdentifier": [
+                                "london-cable-car"
+                            ]
+                        }
+                    ],
+                    "lineModeGroups": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+                            "modeName": "cable-car",
+                            "lineIdentifier": [
+                                "london-cable-car"
+                            ]
+                        }
+                    ],
+                    "status": true,
+                    "id": "9400ZZALGWP1",
+                    "commonName": "IFS Cloud Greenwich Peninsula",
+                    "placeType": "StopPoint",
+                    "additionalProperties": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Lifts",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "2"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Payphones",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "0"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Ticket Halls",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "1"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Summer",
+                            "key": "SunFrom",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "09:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Winter",
+                            "key": "SunTo",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "20:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "WiFi",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Euro Cash Machines",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Gates",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "7"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Summer",
+                            "key": "MonFriFrom",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "07:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Other Facilities",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "none"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Summer",
+                            "key": "SatFrom",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "08:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Summer",
+                            "key": "SatTo",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "21:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Car park",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Winter",
+                            "key": "SatFrom",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "08:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Escalators",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "0"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Winter",
+                            "key": "MonFriFrom",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "07:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Toilets",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Bridge",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Cash Machines",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "1"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Help Points",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "0 on platforms, 0 in ticket halls, 0 elsewhere"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Winter",
+                            "key": "SunFrom",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "09:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Waiting Room",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Summer",
+                            "key": "MonFriTo",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "21:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Photo Booths",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "0"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Address",
+                            "key": "Address",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "IFS Cloud Greenwich Peninsula Terminal,Edmund Halley Way,London,SE10 0FR"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Winter",
+                            "key": "MonFriTo",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "20:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Winter",
+                            "key": "SatTo",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "20:00"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Opening Time - Summer",
+                            "key": "SunTo",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "21:00"
+                        }
+                    ],
+                    "children": [],
+                    "lat": 51.499555,
+                    "lon": 0.008368
+                }
+            ],
+            "lat": 51.499573,
+            "lon": 0.00834
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+            "naptanId": "940GZZLUNGW",
+            "modes": [
+                "tube"
+            ],
+            "icsCode": "1000160",
+            "stopType": "NaptanMetroStation",
+            "stationNaptan": "940GZZLUNGW",
+            "hubNaptanCode": "HUBNGW",
+            "lines": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "jubilee",
+                    "name": "Jubilee",
+                    "uri": "/Line/jubilee",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                }
+            ],
+            "lineGroup": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                    "stationAtcoCode": "940GZZLUNGW",
+                    "lineIdentifier": [
+                        "jubilee"
+                    ]
+                }
+            ],
+            "lineModeGroups": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+                    "modeName": "tube",
+                    "lineIdentifier": [
+                        "jubilee"
+                    ]
+                }
+            ],
+            "status": true,
+            "id": "940GZZLUNGW",
+            "commonName": "North Greenwich Underground Station",
+            "placeType": "StopPoint",
+            "additionalProperties": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "ServiceInfo",
+                    "key": "Night",
+                    "sourceSystemKey": "TransXchangeETL",
+                    "value": "yes"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Bridge",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "no"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Lifts",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "4"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "WiFi",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "yes"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Car park",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "yes"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Escalators",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "9"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Gates",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "13"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Address",
+                    "key": "PhoneNo",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "0845 330 9880"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Waiting Room",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "no"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Cash Machines",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "3"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Euro Cash Machines",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "yes"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Help Points",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "6 on platforms, 4 in ticket halls, 0 elsewhere"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Toilets",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "yes"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Ticket Halls",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "1"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Address",
+                    "key": "Address",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "North Greenwich Station,London Underground Ltd.,5 Millenium Way,London,SE10 0PH"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Payphones",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "3"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "Photo Booths",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "0"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Geo",
+                    "key": "Zone",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "2/3"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Accessibility",
+                    "key": "AccessViaLift",
+                    "sourceSystemKey": "LRAD",
+                    "value": "Yes"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Accessibility",
+                    "key": "AddtionalInformation",
+                    "sourceSystemKey": "LRAD",
+                    "value": "If you require level access to leave the train at  Green Park, please make sure that you travel in the correct carriage "
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Accessibility",
+                    "key": "BlueBadgeCarParkSpaces",
+                    "sourceSystemKey": "LRAD",
+                    "value": "19"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Accessibility",
+                    "key": "LimitedCapacityLift",
+                    "sourceSystemKey": "LRAD",
+                    "value": "No"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Accessibility",
+                    "key": "SpecificEntranceRequired",
+                    "sourceSystemKey": "LRAD",
+                    "value": "No"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Accessibility",
+                    "key": "TaxiRankOutsideStation",
+                    "sourceSystemKey": "LRAD",
+                    "value": "No"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Accessibility",
+                    "key": "Toilet",
+                    "sourceSystemKey": "LRAD",
+                    "value": "Yes"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Accessibility",
+                    "key": "ToiletNote",
+                    "sourceSystemKey": "LRAD",
+                    "value": "(Bus station)"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "NearestPlaces",
+                    "key": "SourceSystemPlaceId",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "TaxiRank_5930"
+                }
+            ],
+            "children": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                    "naptanId": "4900ZZLUNGW1",
+                    "indicator": "Entrance 1",
+                    "stopLetter": "1",
+                    "modes": [
+                        "tube"
+                    ],
+                    "icsCode": "1000160",
+                    "stopType": "NaptanMetroEntrance",
+                    "stationNaptan": "940GZZLUNGW",
+                    "hubNaptanCode": "HUBNGW",
+                    "lines": [],
+                    "lineGroup": [],
+                    "lineModeGroups": [],
+                    "status": true,
+                    "id": "4900ZZLUNGW1",
+                    "commonName": "North Greenwich Underground Station",
+                    "placeType": "StopPoint",
+                    "additionalProperties": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Address",
+                            "key": "Address",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "North Greenwich Station,London Underground Ltd.,5 Millenium Way,London,SE10 0PH"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Payphones",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "3"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Photo Booths",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "0"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Waiting Room",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Cash Machines",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "3"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Help Points",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "6 on platforms, 4 in ticket halls, 0 elsewhere"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Escalators",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "9"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Gates",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "13"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Lifts",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "4"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Euro Cash Machines",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "WiFi",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Car park",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Ticket Halls",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "1"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Bridge",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Toilets",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Address",
+                            "key": "PhoneNo",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "0845 330 9880"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Geo",
+                            "key": "Zone",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "2/3"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Accessibility",
+                            "key": "AccessViaLift",
+                            "sourceSystemKey": "LRAD",
+                            "value": "Yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Accessibility",
+                            "key": "AddtionalInformation",
+                            "sourceSystemKey": "LRAD",
+                            "value": "If you require level access to leave the train at  Green Park, please make sure that you travel in the correct carriage "
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Accessibility",
+                            "key": "BlueBadgeCarParkSpaces",
+                            "sourceSystemKey": "LRAD",
+                            "value": "19"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Accessibility",
+                            "key": "LimitedCapacityLift",
+                            "sourceSystemKey": "LRAD",
+                            "value": "No"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Accessibility",
+                            "key": "SpecificEntranceRequired",
+                            "sourceSystemKey": "LRAD",
+                            "value": "No"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Accessibility",
+                            "key": "TaxiRankOutsideStation",
+                            "sourceSystemKey": "LRAD",
+                            "value": "No"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Accessibility",
+                            "key": "Toilet",
+                            "sourceSystemKey": "LRAD",
+                            "value": "Yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Accessibility",
+                            "key": "ToiletNote",
+                            "sourceSystemKey": "LRAD",
+                            "value": "(Bus station)"
+                        }
+                    ],
+                    "children": [],
+                    "lat": 51.500264,
+                    "lon": 0.004624
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                    "naptanId": "4900ZZLUNGW2",
+                    "indicator": "Entrance 2",
+                    "stopLetter": "2",
+                    "modes": [
+                        "tube"
+                    ],
+                    "icsCode": "1000160",
+                    "stopType": "NaptanMetroEntrance",
+                    "stationNaptan": "940GZZLUNGW",
+                    "hubNaptanCode": "HUBNGW",
+                    "lines": [],
+                    "lineGroup": [],
+                    "lineModeGroups": [],
+                    "status": true,
+                    "id": "4900ZZLUNGW2",
+                    "commonName": "North Greenwich Underground Station",
+                    "placeType": "StopPoint",
+                    "additionalProperties": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Car park",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Escalators",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "9"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Lifts",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "4"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Photo Booths",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "0"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Geo",
+                            "key": "Zone",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "2/3"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Bridge",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Ticket Halls",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "1"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Cash Machines",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "3"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Help Points",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "6 on platforms, 4 in ticket halls, 0 elsewhere"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Address",
+                            "key": "PhoneNo",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "0845 330 9880"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Toilets",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Waiting Room",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "WiFi",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Gates",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "13"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Address",
+                            "key": "Address",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "North Greenwich Station,London Underground Ltd.,5 Millenium Way,London,SE10 0PH"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Euro Cash Machines",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Payphones",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "3"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Accessibility",
+                            "key": "AccessViaLift",
+                            "sourceSystemKey": "LRAD",
+                            "value": "Yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Accessibility",
+                            "key": "AddtionalInformation",
+                            "sourceSystemKey": "LRAD",
+                            "value": "If you require level access to leave the train at  Green Park, please make sure that you travel in the correct carriage "
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Accessibility",
+                            "key": "BlueBadgeCarParkSpaces",
+                            "sourceSystemKey": "LRAD",
+                            "value": "19"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Accessibility",
+                            "key": "LimitedCapacityLift",
+                            "sourceSystemKey": "LRAD",
+                            "value": "No"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Accessibility",
+                            "key": "SpecificEntranceRequired",
+                            "sourceSystemKey": "LRAD",
+                            "value": "No"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Accessibility",
+                            "key": "TaxiRankOutsideStation",
+                            "sourceSystemKey": "LRAD",
+                            "value": "No"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Accessibility",
+                            "key": "Toilet",
+                            "sourceSystemKey": "LRAD",
+                            "value": "Yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Accessibility",
+                            "key": "ToiletNote",
+                            "sourceSystemKey": "LRAD",
+                            "value": "(Bus station)"
+                        }
+                    ],
+                    "children": [],
+                    "lat": 51.500074,
+                    "lon": 0.003132
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                    "naptanId": "4900ZZLUNGW3",
+                    "indicator": "Entrance 3",
+                    "stopLetter": "3",
+                    "modes": [
+                        "tube"
+                    ],
+                    "icsCode": "1000160",
+                    "stopType": "NaptanMetroEntrance",
+                    "stationNaptan": "940GZZLUNGW",
+                    "hubNaptanCode": "HUBNGW",
+                    "lines": [],
+                    "lineGroup": [],
+                    "lineModeGroups": [],
+                    "status": true,
+                    "id": "4900ZZLUNGW3",
+                    "commonName": "North Greenwich Underground Station",
+                    "placeType": "StopPoint",
+                    "additionalProperties": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Address",
+                            "key": "Address",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "North Greenwich Station,London Underground Ltd.,5 Millenium Way,London,SE10 0PH"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Payphones",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "3"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Photo Booths",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "0"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Waiting Room",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Help Points",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "6 on platforms, 4 in ticket halls, 0 elsewhere"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Toilets",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "WiFi",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Euro Cash Machines",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Gates",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "13"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Lifts",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "4"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Car park",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Cash Machines",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "3"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Escalators",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "9"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Ticket Halls",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "1"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Bridge",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Geo",
+                            "key": "Zone",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "2/3"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Address",
+                            "key": "PhoneNo",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "0845 330 9880"
+                        }
+                    ],
+                    "children": [],
+                    "lat": 51.500293,
+                    "lon": 0.003991
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                    "naptanId": "9400ZZLUNGW",
+                    "modes": [
+                        "tube"
+                    ],
+                    "icsCode": "1000160",
+                    "stopType": "NaptanMetroAccessArea",
+                    "stationNaptan": "940GZZLUNGW",
+                    "hubNaptanCode": "HUBNGW",
+                    "lines": [],
+                    "lineGroup": [],
+                    "lineModeGroups": [],
+                    "status": true,
+                    "id": "9400ZZLUNGW",
+                    "commonName": "North Greenwich Underground Station",
+                    "placeType": "StopPoint",
+                    "additionalProperties": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Escalators",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "9"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Help Points",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "6 on platforms, 4 in ticket halls, 0 elsewhere"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Photo Booths",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "0"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Ticket Halls",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "1"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Geo",
+                            "key": "Zone",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "2/3"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Address",
+                            "key": "Address",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "North Greenwich Station,London Underground Ltd.,5 Millenium Way,London,SE10 0PH"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Gates",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "13"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Lifts",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "4"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "WiFi",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Cash Machines",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "3"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Waiting Room",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Car park",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Payphones",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "3"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Address",
+                            "key": "PhoneNo",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "0845 330 9880"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Euro Cash Machines",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Toilets",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Bridge",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        }
+                    ],
+                    "children": [],
+                    "lat": 51.50047,
+                    "lon": 0.004287
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                    "naptanId": "9400ZZLUNGW1",
+                    "modes": [
+                        "tube"
+                    ],
+                    "icsCode": "1000160",
+                    "stopType": "NaptanMetroPlatform",
+                    "stationNaptan": "940GZZLUNGW",
+                    "hubNaptanCode": "HUBNGW",
+                    "lines": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "jubilee",
+                            "name": "Jubilee",
+                            "uri": "/Line/jubilee",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        }
+                    ],
+                    "lineGroup": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                            "stationAtcoCode": "940GZZLUNGW",
+                            "lineIdentifier": [
+                                "jubilee"
+                            ]
+                        }
+                    ],
+                    "lineModeGroups": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+                            "modeName": "tube",
+                            "lineIdentifier": [
+                                "jubilee"
+                            ]
+                        }
+                    ],
+                    "status": true,
+                    "id": "9400ZZLUNGW1",
+                    "commonName": "North Greenwich Underground Station",
+                    "placeType": "StopPoint",
+                    "additionalProperties": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Cash Machines",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "3"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Address",
+                            "key": "Address",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "North Greenwich Station,London Underground Ltd.,5 Millenium Way,London,SE10 0PH"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Payphones",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "3"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Euro Cash Machines",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Gates",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "13"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Lifts",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "4"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Bridge",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Address",
+                            "key": "PhoneNo",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "0845 330 9880"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Photo Booths",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "0"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Waiting Room",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Car park",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Escalators",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "9"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Ticket Halls",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "1"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Geo",
+                            "key": "Zone",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "2/3"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Help Points",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "6 on platforms, 4 in ticket halls, 0 elsewhere"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Toilets",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "WiFi",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "yes"
+                        }
+                    ],
+                    "children": [],
+                    "lat": 51.500382,
+                    "lon": 0.005191
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+                    "naptanId": "9400ZZLUNGW2",
+                    "modes": [
+                        "tube"
+                    ],
+                    "icsCode": "1000160",
+                    "stopType": "NaptanMetroPlatform",
+                    "stationNaptan": "940GZZLUNGW",
+                    "hubNaptanCode": "HUBNGW",
+                    "lines": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                            "id": "jubilee",
+                            "name": "Jubilee",
+                            "uri": "/Line/jubilee",
+                            "type": "Line",
+                            "crowding": {
+                                "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                            },
+                            "routeType": "Unknown",
+                            "status": "Unknown"
+                        }
+                    ],
+                    "lineGroup": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                            "stationAtcoCode": "940GZZLUNGW",
+                            "lineIdentifier": [
+                                "jubilee"
+                            ]
+                        }
+                    ],
+                    "lineModeGroups": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+                            "modeName": "tube",
+                            "lineIdentifier": [
+                                "jubilee"
+                            ]
+                        }
+                    ],
+                    "status": true,
+                    "id": "9400ZZLUNGW2",
+                    "commonName": "North Greenwich Underground Station",
+                    "placeType": "StopPoint",
+                    "additionalProperties": [
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Help Points",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "6 on platforms, 4 in ticket halls, 0 elsewhere"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Photo Booths",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "0"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "WiFi",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Geo",
+                            "key": "Zone",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "2/3"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Bridge",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Cash Machines",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "3"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Toilets",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Car park",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Escalators",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "9"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Gates",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "13"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Address",
+                            "key": "PhoneNo",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "0845 330 9880"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Waiting Room",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "no"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Lifts",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "4"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Ticket Halls",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "1"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Address",
+                            "key": "Address",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "North Greenwich Station,London Underground Ltd.,5 Millenium Way,London,SE10 0PH"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Euro Cash Machines",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "yes"
+                        },
+                        {
+                            "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                            "category": "Facility",
+                            "key": "Payphones",
+                            "sourceSystemKey": "StaticObjects",
+                            "value": "3"
+                        }
+                    ],
+                    "children": [],
+                    "lat": 51.500425,
+                    "lon": 0.005308
+                }
+            ],
+            "lat": 51.50047,
+            "lon": 0.004287
+        }
+    ],
+    "lat": 51.500474,
+    "lon": 0.004295
+}

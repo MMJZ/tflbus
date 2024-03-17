@@ -8,11 +8,29 @@
   align-items: stretch;
   justify-content: space-between;
   min-height: 100vh;
+  width: 100%;
 }
 
 .header {
   background: var(--corporate-blue);
   color: var(--corporate-white);
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  &>a>h1 {
+    margin-right: 20px;
+    font-size: 3em;
+  }
+  &>:last-child {
+    flex: 1;
+    margin: 0 10%;
+  }
+}
+
+.main {
+  flex: 1;
 }
 
 .footer {

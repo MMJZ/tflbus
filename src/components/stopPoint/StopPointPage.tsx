@@ -12,12 +12,9 @@ export function StopPointPage(): JSX.Element {
 	}
 
 	const state = _state;
-
 	const route = useRoute();
 
 	useEffect(() => {
-		console.log('ha', route);
-
 		const id = route.params.id;
 		if (id !== undefined) {
 			state.focussedStopPointId.value = id;
@@ -25,9 +22,13 @@ export function StopPointPage(): JSX.Element {
 	}, [route, state.focussedStopPointId]);
 
 	const focussedStopPoint = state.focussedStopPoint.value;
+	const focussedStopPointPath = state.focussedStopPointPath.value ?? [];
 
 	return focussedStopPoint !== undefined ? (
-		<StopPointView stopPoint={focussedStopPoint} />
+		<StopPointView
+			stopPointData={focussedStopPoint}
+			focussedStopPointPath={focussedStopPointPath}
+		/>
 	) : (
 		<p>Loading I guess?</p>
 	);

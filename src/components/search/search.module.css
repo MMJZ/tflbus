@@ -1,0 +1,51 @@
+@import '../../vars.css';
+
+.wrapper {
+	font-size: 1.3em;
+	color: var(--corporate-white);
+	& > .searchBox {
+		display: flex;
+		& > input {
+			background: var(--corporate-white);
+			color: var(--corporate-black);
+			padding: 10px 20px;
+			border-radius: 4px;
+			flex: 1;
+		}
+		& > button {
+			margin-left: 10px;
+			padding: 10px 20px;
+			background: var(--corporate-white);
+			color: var(--corporate-black);
+			border-radius: 4px;
+		}
+	}
+	& > ul {
+		margin-top: 20px;
+		cursor: pointer;
+		& > li {
+      margin-bottom: 10px;
+			& > a {
+				display: block;
+				border: 1px solid var(--corporate-white);
+				border-radius: 4px;
+				padding: 10px 20px;
+				& > h4 {
+					font-size: 1.4em;
+					margin-bottom: 10px;
+				}
+				& > h6 {
+					font-family: 'johnston100-light';
+					color: var(--bus-stop-light-grey);
+				}
+				&:hover {
+					background: var(--corporate-white);
+					color: var(--corporate-blue);
+					& > h6 {
+						color: var(--bus-stop-dark-grey);
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,127 @@
+@import '../../vars.css';
+
+.wrapper {
+	& > .titleBar {
+		margin: 10px 20px;
+		display: flex;
+		& > h2 {
+			font-size: 5em;
+			padding: 0.05em 0.3em;
+			border-radius: 4px;
+			color: var(--corporate-white);
+			background: var(--corporate-red);
+		}
+	}
+	& > .routeGrid {
+		margin: 10px;
+		line-height: 4em;
+		display: grid;
+		grid-template-columns: 3em 3em 1fr;
+		align-items: stretch;
+		justify-content: center;
+		font-size: 2em;
+		& > .rounderRow {
+			& > div {
+				height: 3em;
+				position: relative;
+				overflow: hidden;
+				&::after {
+					height: 2.5em;
+					width: 2.5em;
+					content: '';
+					border: 0.5em solid var(--corporate-red);
+					border-radius: 100%;
+					position: absolute;
+				}
+			}
+			display: contents;
+			.firstCorner {
+				&::after {
+					bottom: -1.75em;
+					right: -1.75em;
+				}
+			}
+			.secondCorner {
+				&::after {
+					bottom: -1.75em;
+					left: -1.75em;
+				}
+			}
+			.thirdCorner {
+				&::after {
+					top: -1.75em;
+					right: -1.75em;
+				}
+			}
+			.fourthCorner {
+				&::after {
+					top: -1.75em;
+					left: -1.75em;
+				}
+			}
+		}
+		& > .mainRow {
+			display: contents;
+			& > .withLetter {
+				position: relative;
+				justify-self: center;
+				display: flex;
+				align-items: center;
+				& > a {
+					&::before {
+						height: 100%;
+						content: '';
+						background: var(--corporate-red);
+						width: 0.5em;
+						position: absolute;
+						top: 0;
+						left: 0.75em;
+					}
+					& > .letterWrapper {
+						width: 2em;
+						height: 2em;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						background: var(--corporate-red);
+						color: var(--corporate-white);
+						border-radius: 100%;
+						& > span {
+							font-size: 1em;
+						}
+					}
+				}
+			}
+			& > .noStop {
+				position: relative;
+				justify-self: center;
+				display: flex;
+				align-items: center;
+				&::before {
+					height: 100%;
+					content: '';
+					/* background/: rgba(var(--corp-red-2)/ 0.5); */
+					background-image: linear-gradient(
+						rgba(var(--corporate-red-t) / 0.5) 0%,
+						rgba(var(--corporate-red-t) / 0.5) 25%,
+						var(--corporate-red) 25%,
+						var(--corporate-red) 50%,
+						rgba(var(--corporate-red-t) / 0.5) 50%,
+						rgba(var(--corporate-red-t) / 0.5) 75%,
+						var(--corporate-red) 75%,
+						var(--corporate-red) 100%
+					);
+					width: 0.5em;
+					position: absolute;
+					top: 0;
+					left: -0.25em;
+				}
+			}
+			& > .name {
+				margin-left: 1em;
+				font-size: 1.2em;
+				font-family: 'johnston100-light';
+			}
+		}
+	}
+}

@@ -3,6 +3,7 @@
 :root {
 	/* assume base size of 16px, and 16px = 12pt, and widths / 100, so mult is 1/1200 */
 	--font-scale: 1200 * 3.75;
+	--border-size: 0.01em;
 }
 
 .indicators {
@@ -13,7 +14,7 @@
 	align-items: center;
 	& > .letterWrapper {
 		border-radius: 100%;
-		border: 1px solid black;
+		border: var(--border-size) solid black;
 		display: flex;
 		width: 2.5em;
 		height: 2.5em;
@@ -75,7 +76,7 @@
 
 .stopView {
 	background: var(--corporate-white);
-	border: 1px solid var(--corporate-black);
+	border: var(--border-size) solid var(--corporate-black);
 	color: var(--corporate-black);
 	width: 4.57em;
 	border-radius: 0.05em;
@@ -84,7 +85,7 @@
 
 .logoPanel {
 	background: var(--corporate-white);
-	border-bottom: 1px solid var(--corporate-black);
+	border-bottom: var(--border-size) solid var(--corporate-black);
 	color: var(--corporate-white);
 	height: 4em;
 	display: flex;
@@ -111,7 +112,7 @@
 	justify-content: center;
 	align-items: center;
 	background: var(--bus-stop-dark-grey);
-	border-bottom: 1px solid var(--corporate-black);
+	border-bottom: var(--border-size) solid var(--corporate-black);
 	color: var(--corporate-white);
 	height: 1.25em;
 	& > .nameLine {
@@ -128,7 +129,7 @@
 	justify-content: center;
 	align-items: center;
 	background: var(--bus-stop-light-grey);
-	border-bottom: 1px solid var(--corporate-black);
+	border-bottom: var(--border-size) solid var(--corporate-black);
 	height: 1.25em;
 	& > .towardsLine {
 		font-size: calc(94em / var(--font-scale));
@@ -146,9 +147,7 @@
 		background: var(--corporate-white);
 		height: 1.25em;
 		text-align: center;
-		outline: 1px solid var(--corporate-black);
-		/* margin: 0 0 -1px -1px; */
-		/* border-right: 1px solid var(--corporate-black); */
+		outline: var(--border-size) solid var(--corporate-black);
 		& > .eTileMessage {
 			font-size: calc(51em / var(--font-scale));
 			height: 0.235em;
@@ -163,5 +162,41 @@
 
 	& > .nightETile {
 		background: var(--night-bus-blue);
+	}
+}
+
+.pairWrapper {
+	margin: 10px 0;
+	& > .pairHeader {
+		display: flex;
+		align-items: baseline;
+		justify-content: flex-start;
+		& > h5 {
+			padding: 5px 10px;
+			background: var(--corporate-blue);
+			color: var(--corporate-white);
+			font-size: 1.4em;
+			font-family: 'johnston100-light';
+			border-radius: 4px;
+			align-self: center;
+		}
+		& > h4 {
+			font-size: 2em;
+		}
+		& > h6 {
+			font-family: 'johnston100-light';
+		}
+	}
+	& > .tileRow {
+		display: flex;
+		margin: 10px 0;
+		overflow-x: auto;
+		& > .tileWrapper {
+			margin-right: 10px;
+			border: 1px solid transparent;
+			&.selectedTile {
+				border-color: var(--corporate-red);
+			}
+		}
 	}
 }

@@ -13,7 +13,7 @@ interface StopPointProps {
 	scale: number;
 }
 
-export function BusStopPoint({
+export function BusStopRender({
 	stopPoint,
 	scale,
 }: StopPointProps): JSX.Element {
@@ -31,7 +31,7 @@ export function BusStopPoint({
 	const stopLetterData = getStopLetterAndSize(stopPoint.stopLetter);
 
 	return (
-		<div style={{ fontSize: `${scale}em`, margin: '40px' }}>
+		<div style={{ fontSize: `${scale}em` }}>
 			<div class={css.indicators}>
 				{stopLetterData !== undefined && (
 					<div class={css.letterWrapper}>

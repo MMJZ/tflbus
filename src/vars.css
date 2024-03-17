@@ -1,5 +1,6 @@
 :root {
 	--corporate-red: rgb(216, 48, 31);
+	--corporate-red-t: 216 48 31;
 	--corporate-black: rgb(25, 26, 27);
 	--bus-stop-dark-grey: rgb(95, 99, 102);
 	--bus-stop-light-grey: rgb(222, 220, 210);
