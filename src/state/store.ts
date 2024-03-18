@@ -29,6 +29,7 @@ export interface AppState {
 	lineCache: Signal<Map<string, LineData>>;
 	focussedLineId: Signal<string | undefined>;
 	focussedLine: ReadonlySignal<EnrichedLineData | undefined>;
+	lineList: Signal<string[] | undefined>;
 	scrollY: Signal<number>;
 }
 
@@ -131,13 +132,8 @@ export function createAppState(): AppState {
 		const patches = getPatch(
 			outboundSequenceStops,
 			inboundSequenceStops,
-			(a, b) => a.parentId === b.parentId,
+			(a, b) => a.topMostParentId === b.topMostParentId,
 		);
-
-		// const zipped = zip(
-		// 	outboundSequenceStops,
-		// 	applyPatch(inboundSequenceStops, patches),
-		// );
 
 		const { results, outboundPos, inboundPos } = patches.reduce<{
 			results: RouteRow[];
@@ -243,6 +239,19 @@ export function createAppState(): AppState {
 		}
 	});
 
+	const lineList = signal<string[] | undefined>(undefined);
+	effect(() => {
+		if (lineList.value === undefined) {
+			fetch('https://api.tfl.gov.uk/Line/Mode/bus')
+				.then(
+					async (response) => (await response.json()) as Array<{ id: string }>,
+				)
+				.then((lines) => {
+					lineList.value = lines.map((l) => l.id);
+				});
+		}
+	});
+
 	return {
 		stopPointCache,
 		focussedStopPointId,
@@ -252,6 +261,7 @@ export function createAppState(): AppState {
 		lineCache,
 		focussedLineId,
 		focussedLine,
+		lineList,
 	};
 }
 

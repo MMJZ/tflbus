@@ -1,8 +1,9 @@
 @import '../../vars.css';
 
 .wrapper {
-	font-size: 1.3em;
 	color: var(--corporate-white);
+	max-width: 1000px;
+	margin: 0 auto;
 	& > .searchBox {
 		display: flex;
 		& > input {
@@ -14,29 +15,54 @@
 		}
 		& > button {
 			margin-left: 10px;
-			padding: 10px 20px;
 			background: var(--corporate-white);
 			color: var(--corporate-black);
-			border-radius: 4px;
 		}
 	}
-	& > ul {
-		margin-top: 20px;
-		cursor: pointer;
+	& > .matchedLines {
+		margin-top: 10px;
+		display: flex;
+		gap: 5px;
+		flex-wrap: wrap;
 		& > li {
-      margin-bottom: 10px;
 			& > a {
-				display: block;
+				& > h4 {
+					transition: all 0.2s ease-in-out;
+					padding: 5px 10px;
+					border-radius: 4px;
+					background: var(--corporate-red);
+					color: var(--corporate-white);
+					font-size: 1.2em;
+				}
+				&:hover {
+					& > h4 {
+						background: var(--corporate-white);
+						color: var(--corporate-red);
+					}
+				}
+			}
+			
+		}
+	}
+	& > .searchResults {
+		margin-top: 10px;
+		& > li {
+			margin-bottom: 10px;
+			& > a {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				gap: 20px;
 				border: 1px solid var(--corporate-white);
 				border-radius: 4px;
 				padding: 10px 20px;
 				& > h4 {
-					font-size: 1.4em;
-					margin-bottom: 10px;
+					font-size: 1.3em;
 				}
 				& > h6 {
 					font-family: 'johnston100-light';
 					color: var(--bus-stop-light-grey);
+					font-size: 0.7em;
 				}
 				&:hover {
 					background: var(--corporate-white);

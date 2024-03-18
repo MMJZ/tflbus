@@ -14,15 +14,10 @@ const dotChar = '●';
 
 export function LinePage(): JSX.Element {
 	const _state = useContext(StateContext);
-
 	if (_state === undefined) {
 		throw new Error('fucked it bro');
 	}
-
 	const state = _state;
-
-	(document as unknown as { hackState: AppState }).hackState = state;
-
 	const route = useRoute();
 
 	useEffect(() => {

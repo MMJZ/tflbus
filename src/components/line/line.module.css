@@ -2,10 +2,10 @@
 
 .wrapper {
 	& > .titleBar {
-		margin: 10px 20px;
+		margin: 20px 20px 0;
 		display: flex;
 		& > h2 {
-			font-size: 5em;
+			font-size: 3em;
 			padding: 0.05em 0.3em;
 			border-radius: 4px;
 			color: var(--corporate-white);
@@ -13,16 +13,16 @@
 		}
 	}
 	& > .routeGrid {
-		margin: 10px;
-		line-height: 4em;
+		margin: 0 10px;
 		display: grid;
 		grid-template-columns: 3em 3em 1fr;
+		grid-auto-rows: 4em;
 		align-items: stretch;
 		justify-content: center;
-		font-size: 2em;
+		font-size: 1em;
 		& > .rounderRow {
 			& > div {
-				height: 3em;
+				/* height: 3em; */
 				position: relative;
 				overflow: hidden;
 				&::after {
@@ -68,6 +68,11 @@
 				display: flex;
 				align-items: center;
 				& > a {
+					&:hover {
+						&>.letterWrapper {
+							box-shadow: 0 0 0 2px var(--corporate-red);
+						}
+					}
 					&::before {
 						height: 100%;
 						content: '';
@@ -76,8 +81,10 @@
 						position: absolute;
 						top: 0;
 						left: 0.75em;
+						z-index: 1;
 					}
 					& > .letterWrapper {
+						transition: box-shadow 0.2s ease-in-out;
 						width: 2em;
 						height: 2em;
 						display: flex;
@@ -86,8 +93,10 @@
 						background: var(--corporate-red);
 						color: var(--corporate-white);
 						border-radius: 100%;
+						z-index: 2;
 						& > span {
 							font-size: 1em;
+							z-index: 2;
 						}
 					}
 				}
@@ -100,15 +109,16 @@
 				&::before {
 					height: 100%;
 					content: '';
-					/* background/: rgba(var(--corp-red-2)/ 0.5); */
 					background-image: linear-gradient(
-						rgba(var(--corporate-red-t) / 0.5) 0%,
-						rgba(var(--corporate-red-t) / 0.5) 25%,
-						var(--corporate-red) 25%,
-						var(--corporate-red) 50%,
-						rgba(var(--corporate-red-t) / 0.5) 50%,
-						rgba(var(--corporate-red-t) / 0.5) 75%,
-						var(--corporate-red) 75%,
+						var(--corporate-red) 0%,
+						var(--corporate-red) 12.5%,
+						rgba(var(--corporate-red-t) / 0.6) 12.5%,
+						rgba(var(--corporate-red-t) / 0.6) 37.5%,
+						var(--corporate-red) 37.5%,
+						var(--corporate-red) 62.5%,
+						rgba(var(--corporate-red-t) / 0.6) 62.5%,
+						rgba(var(--corporate-red-t) / 0.6) 87.5%,
+						var(--corporate-red) 87.5%,
 						var(--corporate-red) 100%
 					);
 					width: 0.5em;
@@ -118,9 +128,20 @@
 				}
 			}
 			& > .name {
-				margin-left: 1em;
+				margin-left: 0.2em;
 				font-size: 1.2em;
 				font-family: 'johnston100-light';
+				display: flex;
+				align-items: center;
+				&>a{
+					border-radius: 4px;
+					padding: 0.3em 0.7em;
+					transition: all 0.2s ease-in-out;
+					&:hover {
+						background: var(--corporate-blue);
+						color: var(--corporate-white);
+					}
+				}
 			}
 		}
 	}

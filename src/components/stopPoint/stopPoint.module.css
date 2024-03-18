@@ -143,25 +143,27 @@
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 1px;
-	& > .eTile {
-		background: var(--corporate-white);
-		height: 1.25em;
-		text-align: center;
-		outline: var(--border-size) solid var(--corporate-black);
-		& > .eTileMessage {
-			font-size: calc(51em / var(--font-scale));
-			height: 0.235em;
-			margin-top: 0.5em;
+	& > a {
+		& > .eTile {
+			display: block;
+			outline: var(--border-size) solid var(--corporate-black);
+			background: var(--corporate-white);
+			height: 1.25em;
+			text-align: center;
+			& > .eTileMessage {
+				font-size: calc(51em / var(--font-scale));
+				height: 0.235em;
+				padding-top: 0.5em;
+			}
+			& > .eTileNumber {
+				font-size: calc(170em / var(--font-scale));
+				height: 0.525em;
+				margin-top: 0.5em;
+			}
 		}
-		& > .eTileNumber {
-			font-size: calc(170em / var(--font-scale));
-			height: 0.525em;
-			margin-top: 0.335em;
+		& > .nightETile {
+			background: var(--night-bus-blue);
 		}
-	}
-
-	& > .nightETile {
-		background: var(--night-bus-blue);
 	}
 }
 

@@ -75,6 +75,7 @@ export function BusStopRender({
 				)}
 				<div class={css.eTileGrid}>
 					{lines.map((line) => (
+						<a href={`/line/${line.number}`}>
 						<div
 							key={line.number}
 							class={`${css.eTile} ${line.isNightBus ? css.nightETile : ''}`}
@@ -82,6 +83,7 @@ export function BusStopRender({
 							<div class={css.eTileMessage}>{line.message}</div>
 							<div class={css.eTileNumber}>{line.number}</div>
 						</div>
+						</a>
 					))}
 				</div>
 			</div>

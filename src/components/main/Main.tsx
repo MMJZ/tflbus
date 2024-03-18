@@ -32,13 +32,10 @@ function Nothing(): JSX.Element {
 
 export function Main(): JSX.Element {
 	const _state = useContext(StateContext);
-
 	if (_state === undefined) {
 		throw new Error('fucked it bro');
 	}
-
 	const state = _state;
-
 	(document as unknown as { hackState: AppState }).hackState = state;
 
 	const [loading, setLoading] = useState(false);
@@ -47,16 +44,8 @@ export function Main(): JSX.Element {
 		<div class={css.wrapper}>
 			<header class={css.header}>
 				<a href="/">
-					<h1>Probus</h1>
+					<h1>BusMup</h1>
 				</a>
-				<button
-					onClick={() => {
-						state.stopPointCache.value = new Map();
-						state.lineCache.value = new Map();
-					}}
-				>
-					Clear cache
-				</button>
 				<Search />
 			</header>
 			<main class={css.main}>
@@ -79,7 +68,17 @@ export function Main(): JSX.Element {
 					</Router>
 				</ErrorBoundary>
 			</main>
-			<footer class={css.footer}>footer</footer>
+			<footer class={css.footer}>
+				<p>Not associated with TfL.</p>
+				<button
+					onClick={() => {
+						state.stopPointCache.value = new Map();
+						state.lineCache.value = new Map();
+					}}
+				>
+					Clear cache
+				</button>‰
+			</footer>
 		</div>
 	);
 }

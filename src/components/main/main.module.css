@@ -17,15 +17,14 @@
   width: 100%;
   padding: 20px;
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
   justify-content: flex-start;
+  gap: 20px;
   &>a>h1 {
-    margin-right: 20px;
-    font-size: 3em;
+    font-size: 2em;
   }
   &>:last-child {
     flex: 1;
-    margin: 0 10%;
   }
 }
 
@@ -36,4 +35,19 @@
 .footer {
   background: var(--corporate-blue);
   color: var(--corporate-white);
+  font-family: 'johnston100-light';
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  align-items: center;
+  &>button {
+    background: var(--corporate-blue);
+    transition: all 0.2s ease-in-out;
+    border: 1px solid var(--corporate-white);
+    &:hover {
+      background: var(--corporate-white);
+      color: var(--corporate-black);
+    }
+  }
 }
