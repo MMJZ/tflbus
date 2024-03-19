@@ -22,7 +22,6 @@
 		font-size: 1em;
 		& > .rounderRow {
 			& > div {
-				/* height: 3em; */
 				position: relative;
 				overflow: hidden;
 				&::after {

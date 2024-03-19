@@ -167,8 +167,8 @@
 	}
 }
 
-.pairWrapper {
-	margin: 10px 0;
+.pointWrapper {
+	margin: 10px;
 	& > .pairHeader {
 		display: flex;
 		align-items: baseline;
@@ -192,13 +192,29 @@
 	& > .tileRow {
 		display: flex;
 		margin: 10px 0;
+		gap: 10px;
 		overflow-x: auto;
 		& > .tileWrapper {
-			margin-right: 10px;
 			border: 1px solid transparent;
+			padding: 5px;
+			border-radius: 4px;
 			&.selectedTile {
 				border-color: var(--corporate-red);
 			}
 		}
+	}
+}
+
+.stopPointTile {
+	&>h5{
+		font-family: 'johnston100-light';
+	}
+	&>h3 {
+		font-size: 1.3em;
+		margin: 5px 0;
+	}
+	&>h6 {
+		font-family: 'johnston100-light';
+		font-size: 0.8em;
 	}
 }

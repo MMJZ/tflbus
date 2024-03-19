@@ -77,7 +77,7 @@ export function Main(): JSX.Element {
 					}}
 				>
 					Clear cache
-				</button>‰
+				</button>
 			</footer>
 		</div>
 	);

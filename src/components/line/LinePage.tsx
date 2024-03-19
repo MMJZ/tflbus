@@ -57,7 +57,7 @@ export function LinePage(): JSX.Element {
 								</div>
 								<div class={css.noStop}></div>
 								<div class={css.name}>
-									<a href={`/stopPoint/${row.parentId}`}>{row.name}</a>
+									<a href={row.parentId === undefined ? undefined : `/stopPoint/${row.parentId}`}>{row.name}</a>
 								</div>
 							</>
 						) : row.kind === 'outbound' ? (
@@ -71,7 +71,7 @@ export function LinePage(): JSX.Element {
 									</a>
 								</div>
 								<div class={css.name}>
-									<a href={`/stopPoint/${row.parentId}`}>{row.name}</a>
+									<a href={row.parentId === undefined ? undefined : `/stopPoint/${row.parentId}`}>{row.name}</a>
 								</div>
 							</>
 						) : (
@@ -91,7 +91,7 @@ export function LinePage(): JSX.Element {
 									</a>
 								</div>
 								<div class={css.name}>
-									<a href={`/stopPoint/${row.parentId}`}>{row.inboundName}</a>
+									<a href={row.parentId === undefined ? undefined : `/stopPoint/${row.parentId}`}>{row.inboundName}</a>
 								</div>
 							</>
 						)}

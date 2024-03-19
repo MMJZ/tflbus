@@ -10,13 +10,15 @@ export interface SearchResult {
 	id: string;
 }
 
-// export type StopType =
-// 	| 'NaptanOnstreetBusCoachStopCluster'
-// 	| 'NaptanOnstreetBusCoachStopPair'
-// 	| 'NaptanPublicBusCoachTram'
-// 	| 'TransportInterchange'
-// 	| 'NaptanRailStation';
-// NaptanMetroStation
+export type StopType =
+	| 'NaptanOnstreetBusCoachStopCluster'
+	| 'NaptanOnstreetBusCoachStopPair'
+	| 'NaptanPublicBusCoachTram'
+	| 'TransportInterchange'
+	| 'NaptanMetroStation'
+	| 'NaptanMetroAccessArea'
+	| 'NaptanBusCoachStation'
+	| 'NaptanRailStation';
 
 export interface AdditionalProperties {
 	key: string;
@@ -37,25 +39,25 @@ export interface StopPointBase {
 		id: string;
 	}>;
 	children: StopPointBase[];
-	stopType: string;
+	stopType: StopType;
 }
 
-export interface BusStation extends StopPointBase {
-	stopType: 'NaptanBusCoachStation';
-	children: BusStop[];
-}
-export interface BusStopCluster extends StopPointBase {
-	stopType: 'NaptanOnstreetBusCoachStopCluster';
-	children: BusStop[];
-}
-export interface BusStopPair extends StopPointBase {
-	stopType: 'NaptanOnstreetBusCoachStopPair';
-	children: BusStop[];
-}
-export interface BusStop extends StopPointBase {
-	stopType: 'NaptanPublicBusCoachTram';
-	children: StopPoint[];
-}
+// export interface BusStation extends StopPointBase {
+// 	stopType: 'NaptanBusCoachStation';
+// 	// children: BusStop[];
+// }
+// export interface BusStopCluster extends StopPointBase {
+// 	stopType: 'NaptanOnstreetBusCoachStopCluster';
+// 	// children: BusStop[];
+// }
+// export interface BusStopPair extends StopPointBase {
+// 	stopType: 'NaptanOnstreetBusCoachStopPair';
+// 	// children: BusStop[];
+// }
+// export interface BusStop extends StopPointBase {
+// 	stopType: 'NaptanPublicBusCoachTram';
+// 	// children: StopPoint[];
+// }
 // export interface RailStation extends StopPointBase {
 // 	stopType: 'NaptanRailStation';
 // }
@@ -63,16 +65,17 @@ export interface BusStop extends StopPointBase {
 // 	stopType: 'TransportInterchange';
 // }
 
-export interface GeneralStopPoint extends StopPointBase {
-	stopType: 'SomeOtherNaptanWotsit';
-	children: StopPoint[];
-}
+// export interface GeneralStopPoint extends StopPointBase {
+// 	// stopType: 'SomeOtherNaptanWotsit';
+// 	// children: StopPoint[];
+// }
 
-export type StopPoint =
-	| BusStation
-	| BusStopCluster
-	| BusStopPair
-	| BusStop
-	| GeneralStopPoint;
+// export type StopPoint =
+// 	| BusStation
+// 	| BusStopCluster
+// 	| BusStopPair
+// 	| BusStop
+// 	| GeneralStopPoint;
 
-export type BusStopGroup = BusStation | BusStopCluster | BusStopPair;
+export type StopPoint = StopPointBase;
+
