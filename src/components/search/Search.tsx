@@ -8,6 +8,7 @@ import {
 	type StopPoint,
 	type QueryResult,
 } from '../../model';
+import { Loading } from '../loading/Loading';
 
 function debounce<T>(wait: number, fn: (arg: T) => void): (arg: T) => void {
 	let timeoutId: number | undefined;
@@ -64,6 +65,7 @@ export function Search(): JSX.Element {
 		<div class={css.wrapper}>
 			<div class={css.searchBox}>
 				<input
+					autofocus
 					placeholder="Search..."
 					type="search"
 					onInput={(e) => {
@@ -79,7 +81,7 @@ export function Search(): JSX.Element {
 					}}
 				/>
 			</div>
-			{isSearching && <div>loading</div>}
+			{isSearching && <Loading />}
 			{matchedLines.length > 0 && (
 				<ul class={css.matchedLines}>
 					{matchedLines.map((matchedLine) => (

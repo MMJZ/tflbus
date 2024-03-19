@@ -9,6 +9,7 @@ import {
 	type QueryResult,
 } from '../../model';
 import { useRoute } from 'preact-iso';
+import { Loading } from '../loading/Loading';
 
 const dotChar = '●';
 
@@ -30,7 +31,7 @@ export function LinePage(): JSX.Element {
 	const line = state.focussedLine.value;
 
 	if (line === undefined) {
-		return <>loading</>;
+		return <Loading />;
 	}
 
 	return (

@@ -1,4 +1,4 @@
-import { type StopPoint } from '../../model';
+import { StopType, type StopPoint } from '../../model';
 
 export interface StopNameData {
 	firstLine: string;
@@ -95,9 +95,7 @@ export function getStopTowardsLine(
 		}
 	}
 	{
-		const mapped = name.split(' ').map(
-			(t) => allowedContractions.get(t) ?? t,
-		);
+		const mapped = name.split(' ').map((t) => allowedContractions.get(t) ?? t);
 		const [first, second, ...rest] = formLines(mapped, 27);
 		if (rest.length === 0) {
 			return {
@@ -273,5 +271,32 @@ export function getStopLetterAndSize(
 		default:
 			alert(`failed stop letter ${stopLetter}`);
 			throw new Error('fuck');
+	}
+}
+
+export function getStopTypeName(stopType: StopType) {
+	switch (stopType) {
+		case 'NaptanBusCoachStation':
+			return 'Bus Station';
+		case 'NaptanMetroEntrance':
+		case 'NaptanMetroAccessArea':
+			return 'Metro Entrance';
+		case 'NaptanMetroStation':
+			return 'Metro Station';
+		case 'NaptanOnstreetBusCoachStopCluster':
+			return 'Bus Stop Cluster';
+		case 'NaptanOnstreetBusCoachStopPair':
+			return 'Bus Stop Pair';
+		case 'NaptanPublicBusCoachTram':
+			return 'Bus Stop';
+		case 'NaptanRailStation':
+			return 'Rail Station';
+		case 'TransportInterchange':
+			return 'Transport Hub';
+		case 'NaptanMetroPlatform':
+			return 'Metro Platform';
+		default:
+			console.log('failed on ', stopType);
+			return stopType;
 	}
 }

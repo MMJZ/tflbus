@@ -50,8 +50,9 @@
 			margin-bottom: 10px;
 			& > a {
 				display: flex;
-				justify-content: flex-start;
+				justify-content: space-between;
 				align-items: center;
+				text-align: left;
 				gap: 20px;
 				border: 1px solid var(--corporate-white);
 				border-radius: 4px;

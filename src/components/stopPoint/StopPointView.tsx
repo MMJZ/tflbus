@@ -1,11 +1,9 @@
 import { type JSX } from 'preact';
-import {
-	StopPointBase,
-	type StopPoint,
-} from '../../model';
+import { StopPointBase, type StopPoint } from '../../model';
 import { BusStopRender } from './BusStopRender';
 import css from './stopPoint.module.css';
 import { StopPointTile } from './StopPointTile';
+import { getStopTypeName } from './util';
 
 interface StopPointProps<T extends StopPointBase> {
 	stopPointData: T;
@@ -19,17 +17,19 @@ function OtherStopPoint({
 	const focussedStopData =
 		focussedStopPointPath[0] !== undefined
 			? stopPointData.children.find(
-				(child) => child.naptanId === focussedStopPointPath[0],
-			)
+					(child) => child.naptanId === focussedStopPointPath[0],
+				)
 			: undefined;
 
 	return (
 		<>
 			<div class={css.pointWrapper}>
-				<div class={css.pairHeader}>
-					<h5>{stopPointData.stopType}</h5>
+				<div class={css.pointHeader}>
+					<div>
+						<h5>{getStopTypeName(stopPointData.stopType)}</h5>
+						<h6>{stopPointData.naptanId}</h6>
+					</div>
 					<h4>{stopPointData.commonName}</h4>
-					<h6>{stopPointData.naptanId}</h6>
 				</div>
 				<div class={css.tileRow}>
 					{stopPointData.children.map((child) => (
@@ -64,7 +64,7 @@ export function StopPointView({
 	const focussedStopSubPath = focussedStopPointPath.slice(1);
 
 	if (stopPointData.stopType === 'NaptanPublicBusCoachTram') {
-		return <BusStopRender stopPoint={stopPointData} scale={4} />
+		return <BusStopRender stopPoint={stopPointData} scale={4} />;
 	}
 
 	return (

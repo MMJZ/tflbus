@@ -7,27 +7,41 @@ import css from './main.module.css';
 import { Search } from '../search/Search';
 import { ErrorBoundary, Route, Router } from 'preact-iso';
 import { LinePage } from '../line/LinePage';
+import { Loading } from '../loading/Loading';
 
 function Nothing(): JSX.Element {
-	const [things, setThings] = useState<string[]>([]);
-
-	useEffect(() => {
-		fetch('https://api.tfl.gov.uk/Line/Route')
-			.then(
-				async (response) =>
-					(await response.json()) as Array<{
-						name: string;
-						routeSections: object[];
-					}>,
-			)
-			.then((hmmhmm) => {
-				setThings(
-					hmmhmm.filter((h) => h.routeSections.length > 2).map((h) => h.name),
-				);
-			});
-	}, [setThings]);
-
-	return <>Nothing {things.join(',')}</>;
+	return (
+		<div class={css.nothingWrapper}>
+			<span>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="800px"
+					height="800px"
+					viewBox="0 0 24 24"
+					fill="none"
+				>
+					<path
+						d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					/>
+				</svg>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="800px"
+					height="800px"
+					viewBox="0 0 24 24"
+					fill="none"
+				>
+					<path
+						d="M12 20L12 4M12 4L18 10M12 4L6 10"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					/>
+				</svg>
+			</span>
+		</div>
+	);
 }
 
 export function Main(): JSX.Element {
@@ -44,12 +58,12 @@ export function Main(): JSX.Element {
 		<div class={css.wrapper}>
 			<header class={css.header}>
 				<a href="/">
-					<h1>BusMup</h1>
+					<h1>BusMupper</h1>
 				</a>
 				<Search />
 			</header>
 			<main class={css.main}>
-				{loading && <>loading</>}
+				{loading && <Loading />}
 				<ErrorBoundary>
 					<Router
 						onLoadStart={() => {

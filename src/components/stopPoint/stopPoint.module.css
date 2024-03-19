@@ -6,6 +6,10 @@
 	--border-size: 0.01em;
 }
 
+.busStopRenderWrapper {
+	padding: 0.5em;
+}
+
 .indicators {
 	margin-bottom: 0.2em;
 	width: 4.57em;
@@ -168,52 +172,65 @@
 }
 
 .pointWrapper {
-	margin: 10px;
-	& > .pairHeader {
-		display: flex;
-		align-items: baseline;
-		justify-content: flex-start;
-		& > h5 {
-			padding: 5px 10px;
-			background: var(--corporate-blue);
-			color: var(--corporate-white);
-			font-size: 1.4em;
+	&:not(:last-child) {
+		border-bottom: 4px solid var(--corporate-blue);
+		box-shadow: var(--md-ele-8);
+	}
+	padding-top: 50px;
+	& > .pointHeader {
+		margin-left: 20px;
+		& > div {
+			display: flex;
+			align-items: baseline;
+			justify-content: flex-start;
+			gap: 10px;
 			font-family: 'johnston100-light';
-			border-radius: 4px;
-			align-self: center;
+			& > h5 {
+				font-size: 1.1em;
+			}
+			& > h6 {
+				font-size: 0.7em;
+			}
 		}
 		& > h4 {
-			font-size: 2em;
-		}
-		& > h6 {
-			font-family: 'johnston100-light';
+			margin: 10px 0 20px;
+			font-size: 1.6em;
 		}
 	}
 	& > .tileRow {
 		display: flex;
-		margin: 10px 0;
+		margin-top: 10px;
 		gap: 10px;
 		overflow-x: auto;
 		& > .tileWrapper {
-			border: 1px solid transparent;
-			padding: 5px;
-			border-radius: 4px;
+			/* border: 1px solid transparent; */
+			/* border-bottom: none; */
+			flex-basis: 1;
+			border-radius: 4px 4px 0 0;
 			&.selectedTile {
-				border-color: var(--corporate-red);
+				/* border-color: var(--corporate-red); */
+				background: var(--corporate-blue);
+				color: var(--corporate-white);
+				opacity: 1;
+			}
+			&:first-child {
+				margin-left: 10px;
 			}
 		}
 	}
 }
 
 .stopPointTile {
-	&>h5{
+	padding: 10px 10px 15px;
+	& > h5 {
 		font-family: 'johnston100-light';
 	}
-	&>h3 {
-		font-size: 1.3em;
+	& > h3 {
+		font-size: 1.1em;
 		margin: 5px 0;
+		white-space: nowrap;
 	}
-	&>h6 {
+	& > h6 {
 		font-family: 'johnston100-light';
 		font-size: 0.8em;
 	}

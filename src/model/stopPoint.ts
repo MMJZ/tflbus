@@ -18,6 +18,8 @@ export type StopType =
 	| 'NaptanMetroStation'
 	| 'NaptanMetroAccessArea'
 	| 'NaptanBusCoachStation'
+	| 'NaptanMetroEntrance'
+	| 'NaptanMetroPlatform'
 	| 'NaptanRailStation';
 
 export interface AdditionalProperties {

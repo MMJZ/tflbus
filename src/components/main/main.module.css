@@ -1,53 +1,79 @@
 @import '../../vars.css';
 
 .wrapper {
-  background: var(--corporate-white);
-  color: var(--corporate-black);
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: space-between;
-  min-height: 100vh;
-  width: 100%;
+	background: var(--corporate-white);
+	color: var(--corporate-black);
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: space-between;
+	min-height: 100vh;
+	width: 100%;
 }
 
+
 .header {
-  background: var(--corporate-blue);
-  color: var(--corporate-white);
-  width: 100%;
-  padding: 20px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 20px;
-  &>a>h1 {
-    font-size: 2em;
-  }
-  &>:last-child {
-    flex: 1;
+	background: var(--corporate-blue);
+	color: var(--corporate-white);
+	width: 100%;
+	padding: 20px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	gap: 20px;
+	& > a > h1 {
+		font-size: 2em;
+	}
+	& > :last-child {
+		flex: 1;
+	}
+	box-shadow: var(--md-ele-4);
+  @media (width <= 1000px) {
+    padding: 20px 10px 10px;
+    display: block;
+    text-align: center;
+    &>a>h1 {
+      margin-bottom: 20px;
+    }
   }
 }
 
 .main {
-  flex: 1;
+	flex: 1;
+	box-shadow: var(--md-ele-8);
+}
+
+.nothingWrapper {
+	margin-top: 100px;
+	text-align: center;
+	& > span {
+		& > svg {
+			width: 7em;
+			height: 7em;
+			& > path {
+        stroke: var(--bus-stop-light-grey);
+        stroke-width: 2;
+			}
+		}
+	}
 }
 
 .footer {
-  background: var(--corporate-blue);
-  color: var(--corporate-white);
-  font-family: 'johnston100-light';
-  padding: 10px 20px;
-  display: flex;
-  justify-content: flex-start;
-  gap: 20px;
-  align-items: center;
-  &>button {
-    background: var(--corporate-blue);
-    transition: all 0.2s ease-in-out;
-    border: 1px solid var(--corporate-white);
-    &:hover {
-      background: var(--corporate-white);
-      color: var(--corporate-black);
-    }
-  }
+	background: var(--corporate-black);
+	color: var(--corporate-white);
+	font-family: 'johnston100-light';
+	padding: 10px 20px;
+	display: flex;
+	justify-content: flex-start;
+	gap: 20px;
+	align-items: center;
+	& > button {
+		background: var(--corporate-black);
+		transition: all 0.2s ease-in-out;
+		border: 1px solid var(--corporate-white);
+		&:hover {
+			background: var(--corporate-white);
+			color: var(--corporate-black);
+		}
+	}
 }

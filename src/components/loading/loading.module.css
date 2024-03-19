@@ -1,0 +1,25 @@
+@import '../../vars.css';
+
+@keyframes spin {
+	from {
+		rotate: -135deg;
+	}
+	to{
+		rotate: 225deg;
+	}
+}
+
+.wrapper {
+	margin-top: 100px;
+	text-align: center;
+	& > svg {
+		animation: spin 1s linear infinite reverse;
+		width: 5em;
+		height: 5em;
+		fill: var(--bus-stop-light-grey);
+		& > path {
+			/* stroke: var(--bus-stop-light-grey); */
+			stroke-width: 2;
+		}
+	}
+}

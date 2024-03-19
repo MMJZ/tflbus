@@ -1,5 +1,5 @@
 {
-	"name": "busbus",
+	"name": "busmupper",
 	"type": "module",
 	"scripts": {
 		"dev": "vite --host 0.0.0.0",

@@ -31,7 +31,7 @@ export function BusStopRender({
 	const stopLetterData = getStopLetterAndSize(stopPoint.stopLetter);
 
 	return (
-		<div style={{ fontSize: `${scale}em` }}>
+		<div style={{ fontSize: `${scale}em` }} class={css.busStopRenderWrapper}>
 			<div class={css.indicators}>
 				{stopLetterData !== undefined && (
 					<div class={css.letterWrapper}>

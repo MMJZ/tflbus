@@ -3,6 +3,7 @@ import { useRoute } from 'preact-iso';
 import { useContext, useEffect } from 'preact/hooks';
 import { StateContext } from '../../context';
 import { StopPointView } from './StopPointView';
+import { Loading } from '../loading/Loading';
 
 export function StopPointPage(): JSX.Element {
 	const _state = useContext(StateContext);
@@ -30,6 +31,6 @@ export function StopPointPage(): JSX.Element {
 			focussedStopPointPath={focussedStopPointPath}
 		/>
 	) : (
-		<p>Loading I guess?</p>
+		<Loading />
 	);
 }
