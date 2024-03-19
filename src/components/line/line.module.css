@@ -69,7 +69,7 @@
 				& > a {
 					&:hover {
 						&>.letterWrapper {
-							outline: 3px solid var(--corporate-red);
+							outline-width: 4px;
 						}
 					}
 					&::before {
@@ -83,7 +83,9 @@
 						z-index: 1;
 					}
 					& > .letterWrapper {
-						transition: outline 0.2s ease-in-out;
+						outline: 0px solid var(--corporate-red);
+						outline-offset: -1px;
+						transition: all 0.2s ease-in-out;
 						width: 2em;
 						height: 2em;
 						display: flex;

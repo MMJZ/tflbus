@@ -51,8 +51,7 @@
 		align-items: center;
 		& > .compass {
 			font-size: calc(350em / var(--font-scale));
-			margin-bottom: -0.06em;
-			margin-right: -0.1em;
+			line-height: 1.5em;
 		}
 	}
 	& > .dirse {
@@ -172,9 +171,10 @@
 }
 
 .pointWrapper {
+	transition: all 0.2s ease-in-out;
 	&:not(:last-child) {
 		border-bottom: 4px solid var(--corporate-blue);
-		box-shadow: var(--md-ele-8);
+		background: var(--bus-stop-light-grey);
 	}
 	padding-top: 50px;
 	& > .pointHeader {
@@ -203,15 +203,18 @@
 		gap: 10px;
 		overflow-x: auto;
 		& > .tileWrapper {
-			/* border: 1px solid transparent; */
-			/* border-bottom: none; */
 			flex-basis: 1;
-			border-radius: 4px 4px 0 0;
+			/* border-radius: 4px; */
+			transition: all 0.2s ease-in-out;
+			border: 2px solid transparent;
+			&:hover {
+				border-color: var(--corporate-blue);
+			}
 			&.selectedTile {
-				/* border-color: var(--corporate-red); */
 				background: var(--corporate-blue);
 				color: var(--corporate-white);
 				opacity: 1;
+				/* border-radius: 4px 4px 0 0; */
 			}
 			&:first-child {
 				margin-left: 10px;
@@ -221,7 +224,7 @@
 }
 
 .stopPointTile {
-	padding: 10px 10px 15px;
+	padding: 8px;
 	& > h5 {
 		font-family: 'johnston100-light';
 	}

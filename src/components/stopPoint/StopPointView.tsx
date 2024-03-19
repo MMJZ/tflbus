@@ -35,8 +35,12 @@ function OtherStopPoint({
 					{stopPointData.children.map((child) => (
 						<div
 							class={`${css.tileWrapper} ${focussedStopPointPath[0] === child.naptanId ? css.selectedTile : ''}`}
+							style={{
+								borderBottom: focussedStopData === undefined ? undefined : 'none',
+								borderRadius: focussedStopData === undefined ? '4px' : '4px 4px 0 0'
+							}}
 						>
-							<a href={`/stopPoint/${child.naptanId}`}>
+							<a href={`/stopPoint/${focussedStopData?.naptanId === child.naptanId ? stopPointData.naptanId : child.naptanId}`}>
 								<StopPointTile key={child.naptanId} stopPoint={child} />
 							</a>
 						</div>
