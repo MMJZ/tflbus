@@ -247,7 +247,7 @@ export function createAppState(): AppState {
 					async (response) => (await response.json()) as Array<{ id: string }>,
 				)
 				.then((lines) => {
-					lineList.value = lines.map((l) => l.id);
+					lineList.value = lines.map((l) => l.id.toLocaleUpperCase());
 				});
 		}
 	});

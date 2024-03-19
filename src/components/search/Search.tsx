@@ -33,8 +33,9 @@ export function Search(): JSX.Element {
 	const doSearch = useCallback(
 		debounce<string>(300, (searchTerm) => {
 			if (searchTerm.length > 0) {
+				const cleanedSearchTerm = searchTerm.toLocaleUpperCase();
 				const lines = (state.lineList.value ?? []).filter((i) =>
-					i.includes(searchTerm),
+					i.includes(cleanedSearchTerm),
 				);
 				lines.sort((a, b) => a.length - b.length);
 				setMatchedLines(lines.slice(0, 20));
