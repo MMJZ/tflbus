@@ -8,7 +8,7 @@
 		"lint": "eslint .",
 		"prettier": "prettier -w .",
 		"lint:fix": "eslint --fix .",
-		"push": "rsync -av --delete -e ssh dist/ work:/srv/glydian/busmupper/www"
+		"push": "vite build && rsync -av --delete -e ssh dist/ work:/srv/glydian/busmupper/www"
 	},
 	"dependencies": {
 		"@preact/signals": "^1.2.2",

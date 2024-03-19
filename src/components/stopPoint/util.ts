@@ -295,6 +295,9 @@ export function getStopTypeName(stopType: StopType) {
 			return 'Transport Hub';
 		case 'NaptanMetroPlatform':
 			return 'Metro Platform';
+		case 'NaptanRailAccessArea':
+		case 'NaptainRailEntrance':
+			return 'Rail Entrance';
 		default:
 			console.log('failed on ', stopType);
 			return stopType;
