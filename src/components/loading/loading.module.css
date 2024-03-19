@@ -10,7 +10,7 @@
 }
 
 .wrapper {
-	margin-top: 100px;
+	margin-top: 20px;
 	text-align: center;
 	& > svg {
 		animation: spin 1s linear infinite reverse;

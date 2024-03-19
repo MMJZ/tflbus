@@ -1,8 +1,6 @@
 @import '../../vars.css';
 
 .wrapper {
-	background: var(--corporate-white);
-	color: var(--corporate-black);
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
@@ -10,7 +8,6 @@
 	min-height: 100vh;
 	width: 100%;
 }
-
 
 .header {
 	background: var(--corporate-blue);
@@ -51,7 +48,7 @@
 			width: 7em;
 			height: 7em;
 			& > path {
-        stroke: var(--bus-stop-light-grey);
+        stroke: var(--default-faded-background);
         stroke-width: 2;
 			}
 		}
@@ -59,7 +56,7 @@
 }
 
 .footer {
-	background: var(--corporate-black);
+	background: var(--corporate-blue);
 	color: var(--corporate-white);
 	font-family: 'johnston100-light';
 	padding: 10px 20px;
@@ -68,7 +65,7 @@
 	gap: 20px;
 	align-items: center;
 	& > button {
-		background: var(--corporate-black);
+		background: var(--corporate-blue);
 		transition: all 0.2s ease-in-out;
 		border: 1px solid var(--corporate-white);
 		&:hover {

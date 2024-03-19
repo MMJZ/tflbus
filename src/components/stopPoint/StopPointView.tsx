@@ -25,11 +25,11 @@ function OtherStopPoint({
 		<>
 			<div class={css.pointWrapper}>
 				<div class={css.pointHeader}>
+					<h4>{stopPointData.commonName}</h4>
 					<div>
 						<h5>{getStopTypeName(stopPointData.stopType)}</h5>
 						<h6>{stopPointData.naptanId}</h6>
 					</div>
-					<h4>{stopPointData.commonName}</h4>
 				</div>
 				<div class={css.tileRow}>
 					{stopPointData.children.map((child) => (

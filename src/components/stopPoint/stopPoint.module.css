@@ -174,7 +174,7 @@
 	transition: all 0.2s ease-in-out;
 	&:not(:last-child) {
 		border-bottom: 4px solid var(--corporate-blue);
-		background: var(--bus-stop-light-grey);
+		background: var(--default-faded-background);
 	}
 	padding-top: 50px;
 	& > .pointHeader {
@@ -193,7 +193,6 @@
 			}
 		}
 		& > h4 {
-			margin: 10px 0 20px;
 			font-size: 1.6em;
 		}
 	}
