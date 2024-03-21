@@ -71,6 +71,21 @@ export function getStopTowardsLine(
 		};
 	}
 	{
+		const [first, second, ...rest] = name.split(' Or ');
+		if (
+			first !== undefined &&
+			second !== undefined &&
+			rest.length === 0 &&
+			first.length <= 21 &&
+			second.length <= 24
+		) {
+			return {
+				firstLine: `Towards ${first}`,
+				secondLine: `Or ${second}`,
+			};
+		}
+	}
+	{
 		const [first, second, ...rest] = formLines(
 			['Towards', ...name.split(' ')],
 			27,
@@ -191,17 +206,23 @@ const allowedContractions = new Map(
 
 interface CallingBusData {
 	number: string;
-	isNightBus: boolean;
-	message?: string;
+	specialStatus?: 'NightBus' | 'Superloop';
 }
 
 export function getStopCallingBusData(stopPoint: StopPoint): CallingBusData[] {
-	const data = stopPoint.lines.map((l) => {
+	const data = stopPoint.lines.map<CallingBusData>((l) => {
 		const isNightBus = l.id.startsWith('n');
+		const isSuperloopBus = l.id.startsWith('sl');
 		return {
 			number: l.name,
-			isNightBus,
-			message: isNightBus ? 'Night Bus' : undefined,
+			specialStatus: isNightBus
+				? 'NightBus'
+				: isSuperloopBus
+					? 'Superloop'
+					: undefined,
+			// isNightBus,
+			// isSuperloopBus,
+			// message: isNightBus ? 'Night Bus' : undefined,
 		};
 	});
 
@@ -249,7 +270,11 @@ export interface StopLetterData {
 export function getStopLetterAndSize(
 	stopLetter: string,
 ): StopLetterData | undefined {
-	if (stopLetter === undefined || stopLetter.startsWith('-')) {
+	if (
+		stopLetter === undefined ||
+		stopLetter.startsWith('-') ||
+		stopLetter.startsWith('>')
+	) {
 		return undefined;
 	}
 
@@ -296,10 +321,38 @@ export function getStopTypeName(stopType: StopType) {
 		case 'NaptanMetroPlatform':
 			return 'Metro Platform';
 		case 'NaptanRailAccessArea':
-		case 'NaptainRailEntrance':
+		case 'NaptanRailEntrance':
 			return 'Rail Entrance';
 		default:
 			console.log('failed on ', stopType);
 			return stopType;
 	}
+}
+
+export function separateBy<T>(
+	input: T[],
+	predicate: (t: T) => boolean,
+): [T[], T[]] {
+	const matches: T[] = [];
+	const nonMatches: T[] = [];
+
+	for (const t of input) {
+		(predicate(t) ? matches : nonMatches).push(t);
+	}
+
+	return [matches, nonMatches];
+}
+
+const busKinds: StopType[] = [
+	'NaptanBusCoachStation',
+	'NaptanPublicBusCoachTram',
+	'NaptanOnstreetBusCoachStopCluster',
+	'NaptanOnstreetBusCoachStopPair',
+];
+
+export function hasBusesInTree(stopPoint: StopPoint) {
+	return (
+		busKinds.includes(stopPoint.stopType) ||
+		stopPoint.children.some(hasBusesInTree)
+	);
 }

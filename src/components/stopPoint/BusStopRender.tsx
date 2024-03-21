@@ -41,7 +41,9 @@ export function BusStopRender({
 					</div>
 				)}
 				{compassDirection !== undefined && (
-					<div class={`${css.compassWrapper} ${css[`dir${compassDirection.toLocaleLowerCase()}`]}`}>
+					<div
+						class={`${css.compassWrapper} ${css[`dir${compassDirection.toLocaleLowerCase()}`]}`}
+					>
 						<div class={css.compass}>➤</div>
 					</div>
 				)}
@@ -74,18 +76,37 @@ export function BusStopRender({
 					</div>
 				)}
 				<div class={css.eTileGrid}>
-					{lines.map((line) => (
-						<a href={`/line/${line.number}`}>
-						<div
-							key={line.number}
-							class={`${css.eTile} ${line.isNightBus ? css.nightETile : ''}`}
-						>
-							<div class={css.eTileMessage}>{line.message}</div>
-							<div class={css.eTileNumber}>{line.number}</div>
-						</div>
-						</a>
-					))}
+					{lines.map((line) => {
+						let cssClass: string | undefined = undefined;
+						let message: string | undefined = undefined;
+
+						switch (line.specialStatus) {
+							case 'NightBus':
+								cssClass = css.nightETile;
+								message = 'Night Bus';
+								break;
+							case 'Superloop':
+								cssClass = css.superloopETile;
+								message = 'Express';
+								break;
+						}
+
+						return (
+							<a href={`/line/${line.number}`}>
+								<div key={line.number} class={`${css.eTile} ${cssClass ?? ''}`}>
+									<div class={css.eTileMessage}>{message ?? ''}</div>
+									<div class={css.eTileNumber}>{line.number}</div>
+								</div>
+							</a>
+						);
+					})}
 				</div>
+				{lines.some((l) => l.specialStatus === 'Superloop') && (
+					<div class={css.superloopWrapper}>
+						<img src="/sls.svg" />
+						<span>SUPERLOOP</span>
+					</div>
+				)}
 			</div>
 		</div>
 	);

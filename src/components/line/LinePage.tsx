@@ -10,6 +10,7 @@ import {
 } from '../../model';
 import { useRoute } from 'preact-iso';
 import { Loading } from '../loading/Loading';
+import { StopLetterRender } from '../stopPoint/StopLetterRender';
 
 const dotChar = '●';
 
@@ -51,14 +52,28 @@ export function LinePage(): JSX.Element {
 							<>
 								<div class={css.withLetter}>
 									<a href={`/stopPoint/${row.id}`}>
-										<div class={css.letterWrapper}>
+										{/* <div class={css.letterWrapper}>
 											<span>{row.stopLetter ?? dotChar}</span>
-										</div>
+										</div> */}
+
+										<StopLetterRender
+											stopLetter={row.stopLetter}
+											scale={0.7}
+											defaultToDot
+										/>
 									</a>
 								</div>
 								<div class={css.noStop}></div>
 								<div class={css.name}>
-									<a href={row.parentId === undefined ? undefined : `/stopPoint/${row.parentId}`}>{row.name}</a>
+									<a
+										href={
+											row.parentId === undefined
+												? undefined
+												: `/stopPoint/${row.parentId}`
+										}
+									>
+										{row.name}
+									</a>
 								</div>
 							</>
 						) : row.kind === 'outbound' ? (
@@ -66,33 +81,66 @@ export function LinePage(): JSX.Element {
 								<div class={css.noStop}></div>
 								<div class={css.withLetter}>
 									<a href={`/stopPoint/${row.id}`}>
-										<div class={css.letterWrapper}>
+										{/* <div class={css.letterWrapper}>
 											<span>{row.stopLetter ?? dotChar}</span>
-										</div>
+										</div> */}
+										<StopLetterRender
+											stopLetter={row.stopLetter}
+											scale={0.7}
+											defaultToDot
+										/>
 									</a>
 								</div>
 								<div class={css.name}>
-									<a href={row.parentId === undefined ? undefined : `/stopPoint/${row.parentId}`}>{row.name}</a>
+									<a
+										href={
+											row.parentId === undefined
+												? undefined
+												: `/stopPoint/${row.parentId}`
+										}
+									>
+										{row.name}
+									</a>
 								</div>
 							</>
 						) : (
 							<>
 								<div class={css.withLetter}>
 									<a href={`/stopPoint/${row.inboundId}`}>
-										<div class={css.letterWrapper}>
+										{/* <div class={css.letterWrapper}>
 											<span>{row.inboundStopLetter ?? dotChar}</span>
-										</div>
+										</div> */}
+
+										<StopLetterRender
+											stopLetter={row.inboundStopLetter}
+											scale={0.7}
+											defaultToDot
+										/>
 									</a>
 								</div>
 								<div class={css.withLetter}>
 									<a href={`/stopPoint/${row.outboundId}`}>
-										<div class={css.letterWrapper}>
+										{/* <div class={css.letterWrapper}>
 											<span>{row.outboundStopLetter ?? dotChar}</span>
-										</div>
+										</div> */}
+
+										<StopLetterRender
+											stopLetter={row.outboundStopLetter}
+											scale={0.7}
+											defaultToDot
+										/>
 									</a>
 								</div>
 								<div class={css.name}>
-									<a href={row.parentId === undefined ? undefined : `/stopPoint/${row.parentId}`}>{row.inboundName}</a>
+									<a
+										href={
+											row.parentId === undefined
+												? undefined
+												: `/stopPoint/${row.parentId}`
+										}
+									>
+										{row.inboundName}
+									</a>
 								</div>
 							</>
 						)}

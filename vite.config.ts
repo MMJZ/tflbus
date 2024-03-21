@@ -6,7 +6,7 @@ export default defineConfig({
 	plugins: [preact()],
 	css: {
 		modules: {
-			localsConvention: 'camelCaseOnly',
+			localsConvention: 'camelCase',
 		},
 	},
 });

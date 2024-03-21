@@ -25,14 +25,14 @@
 		flex: 1;
 	}
 	box-shadow: var(--md-ele-4);
-  @media (width <= 1000px) {
-    padding: 20px 10px 10px;
-    display: block;
-    text-align: center;
-    &>a>h1 {
-      margin-bottom: 20px;
-    }
-  }
+	@media (width <= 1000px) {
+		padding: 20px 10px 10px;
+		display: block;
+		text-align: center;
+		& > a > h1 {
+			margin-bottom: 20px;
+		}
+	}
 }
 
 .main {
@@ -48,14 +48,15 @@
 			width: 7em;
 			height: 7em;
 			& > path {
-        stroke: var(--default-faded-background);
-        stroke-width: 2;
+				stroke: var(--default-faded-background);
+				stroke-width: 2;
 			}
 		}
 	}
 }
 
 .footer {
+	margin-top: 20px;
 	background: var(--corporate-blue);
 	color: var(--corporate-white);
 	font-family: 'johnston100-light';

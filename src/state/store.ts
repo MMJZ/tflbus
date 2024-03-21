@@ -7,16 +7,13 @@ import {
 } from '@preact/signals';
 import {
 	EnrichedLineData,
-	InboundRouteRow,
 	LineData,
 	LineRoute,
-	LineSequenceStopPoint,
 	RouteRow,
-	StopPointBase,
 	type StopPoint,
 } from '../model';
-import { Patch, applyPatch, getPatch } from 'fast-array-diff';
-import { zip } from './util';
+import { getPatch } from 'fast-array-diff';
+import { dovetail, maxBy, zip } from './util';
 
 const localStopPointCacheKey = 'localStopPointCache';
 const localLineCacheKey = 'localLineCache';
@@ -117,21 +114,20 @@ export function createAppState(): AppState {
 			return undefined;
 		}
 
-		if (
-			data.inboundRoute.stopPointSequences.length !== 1 ||
-			data.outboundRoute.stopPointSequences.length !== 1
-		) {
-			return undefined; // in short, fuck the b buses and their loopy nonsense, for now at least
-		}
-
-		const inboundSequenceStops =
-			data.inboundRoute.stopPointSequences[0].stopPoint.slice().reverse();
-		const outboundSequenceStops =
-			data.outboundRoute.stopPointSequences[0].stopPoint;
+		// TODO dirty hack: draw the route using the longest sequence available
+		const inboundSequence = (
+			maxBy(data.inboundRoute.stopPointSequences, (s) => s.stopPoint.length)
+				?.stopPoint ?? []
+		)
+			.slice()
+			.reverse();
+		const outboundSequence =
+			maxBy(data.outboundRoute.stopPointSequences, (s) => s.stopPoint.length)
+				?.stopPoint ?? [];
 
 		const patches = getPatch(
-			outboundSequenceStops,
-			inboundSequenceStops,
+			outboundSequence,
+			inboundSequence,
 			(a, b) => a.topMostParentId === b.topMostParentId,
 		);
 
@@ -144,8 +140,8 @@ export function createAppState(): AppState {
 				results: acc.results
 					.concat(
 						zip(
-							outboundSequenceStops.slice(acc.outboundPos, patch.oldPos),
-							inboundSequenceStops.slice(acc.inboundPos, patch.newPos),
+							outboundSequence.slice(acc.outboundPos, patch.oldPos),
+							inboundSequence.slice(acc.inboundPos, patch.newPos),
 						).map(([a, b]) => ({
 							kind: 'shared',
 							outboundName: a.name,
@@ -176,8 +172,8 @@ export function createAppState(): AppState {
 
 		const fullResults = results.concat(
 			zip(
-				outboundSequenceStops.slice(outboundPos, outboundSequenceStops.length),
-				inboundSequenceStops.slice(inboundPos, inboundSequenceStops.length),
+				outboundSequence.slice(outboundPos, outboundSequence.length),
+				inboundSequence.slice(inboundPos, inboundSequence.length),
 			).map(([a, b]) => ({
 				kind: 'shared',
 				outboundName: a.name,
@@ -190,52 +186,66 @@ export function createAppState(): AppState {
 			})),
 		);
 
+		const [routeRows] = [...fullResults, null].reduce<
+			[RouteRow[], RouteRow[], RouteRow[]]
+		>(
+			([ret, ins, outs], cur) => {
+				switch (cur?.kind) {
+					case 'inbound':
+						ins.push(cur);
+						return [ret, ins, outs];
+					case 'outbound':
+						outs.push(cur);
+						return [ret, ins, outs];
+					default:
+						ret.push(...dovetail(ins, outs));
+						if (cur !== null) {
+							ret.push(cur);
+						}
+						return [ret, [], []];
+				}
+			},
+			[[], [], []],
+		);
+
 		return {
 			...data,
 			patch: patches,
-			routeRows: fullResults,
+			routeRows,
 		};
 	});
 
 	effect(() => {
 		const focussed = focussedLineId.value;
 		if (focussed !== undefined && !lineCache.value.has(focussed)) {
-			fetch(`https://api.tfl.gov.uk/Line/${focussed}/Route/Sequence/Outbound`)
-				.then(async (response) => (await response.json()) as LineRoute)
-				.then((extraPropsOutboundRoute) => {
-					const outboundRoute = filterLineRouteToKnownProperties(
-						extraPropsOutboundRoute,
-					);
-					fetch(
-						`https://api.tfl.gov.uk/Line/${focussed}/Route/Sequence/Inbound`,
+			const routeCall = (dir: 'Inbound' | 'Outbound') =>
+				fetch(`https://api.tfl.gov.uk/Line/${focussed}/Route/Sequence/${dir}`)
+					.then(async (response) =>
+						filterLineRouteToKnownProperties(await response.json()),
 					)
-						.then(async (response) => (await response.json()) as LineRoute)
-						.then((extraPropsInboundRoute) => {
-							const inboundRoute = filterLineRouteToKnownProperties(
-								extraPropsInboundRoute,
+					.catch((err) => {
+						console.log(err);
+					});
+
+			Promise.all([routeCall('Outbound'), routeCall('Inbound')]).then(
+				([outboundRoute, inboundRoute]) => {
+					if (outboundRoute && inboundRoute) {
+						lineCache.value = new Map([
+							...lineCache.peek(),
+							[focussed, { inboundRoute, outboundRoute }],
+						]);
+
+						try {
+							localStorage.setItem(
+								localLineCacheKey,
+								JSON.stringify(Array.from(lineCache.peek().entries())),
 							);
-
-							lineCache.value = new Map([
-								...lineCache.peek(),
-								[focussed, { inboundRoute, outboundRoute }],
-							]);
-
-							try {
-								localStorage.setItem(
-									localLineCacheKey,
-									JSON.stringify(Array.from(lineCache.peek().entries())),
-								);
-							} catch (e: unknown) {
-								alert(e);
-							}
-						})
-						.catch((err) => {
-							console.log(err);
-						});
-				})
-				.catch((err) => {
-					console.log(err);
-				});
+						} catch (e: unknown) {
+							alert(e);
+						}
+					}
+				},
+			);
 		}
 	});
 
@@ -293,6 +303,7 @@ function filterStopPointToKnownProperties(
 ): StopPoint {
 	return {
 		naptanId: extraPropsStopPoint.naptanId,
+		indicator: extraPropsStopPoint.indicator,
 		stopLetter: extraPropsStopPoint.stopLetter,
 		modes: extraPropsStopPoint.modes,
 		commonName: extraPropsStopPoint.commonName,

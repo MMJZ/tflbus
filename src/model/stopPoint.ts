@@ -20,7 +20,7 @@ export type StopType =
 	| 'NaptanBusCoachStation'
 	| 'NaptanMetroEntrance'
 	| 'NaptanMetroPlatform'
-	| 'NaptainRailEntrance'
+	| 'NaptanRailEntrance'
 	| 'NaptanRailAccessArea'
 	| 'NaptanRailStation';
 
@@ -29,9 +29,10 @@ export interface AdditionalProperties {
 	value: string;
 }
 
-export interface StopPointBase {
+export interface StopPoint {
 	naptanId: string;
 	stopLetter: string;
+	indicator: string;
 	modes: string[];
 	commonName: string;
 	lat: number;
@@ -42,44 +43,6 @@ export interface StopPointBase {
 		name: string;
 		id: string;
 	}>;
-	children: StopPointBase[];
+	children: StopPoint[];
 	stopType: StopType;
 }
-
-// export interface BusStation extends StopPointBase {
-// 	stopType: 'NaptanBusCoachStation';
-// 	// children: BusStop[];
-// }
-// export interface BusStopCluster extends StopPointBase {
-// 	stopType: 'NaptanOnstreetBusCoachStopCluster';
-// 	// children: BusStop[];
-// }
-// export interface BusStopPair extends StopPointBase {
-// 	stopType: 'NaptanOnstreetBusCoachStopPair';
-// 	// children: BusStop[];
-// }
-// export interface BusStop extends StopPointBase {
-// 	stopType: 'NaptanPublicBusCoachTram';
-// 	// children: StopPoint[];
-// }
-// export interface RailStation extends StopPointBase {
-// 	stopType: 'NaptanRailStation';
-// }
-// export interface TransportInterchange extends StopPointBase {
-// 	stopType: 'TransportInterchange';
-// }
-
-// export interface GeneralStopPoint extends StopPointBase {
-// 	// stopType: 'SomeOtherNaptanWotsit';
-// 	// children: StopPoint[];
-// }
-
-// export type StopPoint =
-// 	| BusStation
-// 	| BusStopCluster
-// 	| BusStopPair
-// 	| BusStop
-// 	| GeneralStopPoint;
-
-export type StopPoint = StopPointBase;
-

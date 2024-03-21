@@ -16,29 +16,6 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	& > .letterWrapper {
-		border-radius: 100%;
-		border: var(--border-size) solid black;
-		display: flex;
-		width: 2.5em;
-		height: 2.5em;
-		justify-content: center;
-		align-items: center;
-		color: var(--corporate-white);
-		background: var(--corporate-red);
-		& > .single {
-			font-size: calc(623em / var(--font-scale));
-		}
-		& > .singleW {
-			font-size: calc(551em / var(--font-scale));
-		}
-		& > .double {
-			font-size: calc(400em / var(--font-scale));
-		}
-		& > .triple {
-			font-size: calc(308em / var(--font-scale));
-		}
-	}
 
 	& > .compassWrapper {
 		border-radius: 100%;
@@ -74,6 +51,29 @@
 	}
 	& > .dirne {
 		transform: rotate(315deg);
+	}
+}
+
+.letterWrapper {
+	border-radius: 100%;
+	display: flex;
+	width: 2.5em;
+	height: 2.5em;
+	justify-content: center;
+	align-items: center;
+	color: var(--corporate-white);
+	background: var(--corporate-red);
+	& > .single {
+		font-size: calc(623em / var(--font-scale));
+	}
+	& > .singleW {
+		font-size: calc(551em / var(--font-scale));
+	}
+	& > .double {
+		font-size: calc(400em / var(--font-scale));
+	}
+	& > .triple {
+		font-size: calc(308em / var(--font-scale));
 	}
 }
 
@@ -145,6 +145,7 @@
 .eTileGrid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
+	border-bottom: var(--border-size) solid var(--corporate-black);
 	gap: 1px;
 	& > a {
 		& > .eTile {
@@ -167,6 +168,27 @@
 		& > .nightETile {
 			background: var(--night-bus-blue);
 		}
+		& > .superloopETile {
+			background: var(--superloop-bus-red);
+			color: var(--corporate-white);
+		}
+	}
+}
+
+.superloopWrapper {
+	background: var(--corporate-white);
+	color: var(--corporate-red);
+	height: 1.25em;
+	display: flex;
+	gap: 0.1em;
+	justify-content: center;
+	align-items: center;
+	& > img {
+		height: calc(170em / var(--font-scale));
+	}
+	& > span {
+		font-size: calc(170em / var(--font-scale));
+		letter-spacing: -0.03em;
 	}
 }
 
@@ -176,7 +198,7 @@
 		border-bottom: 4px solid var(--corporate-blue);
 		background: var(--default-faded-background);
 	}
-	padding-top: 50px;
+	padding-top: 30px;
 	& > .pointHeader {
 		margin-left: 20px;
 		& > div {
@@ -196,27 +218,53 @@
 			font-size: 1.6em;
 		}
 	}
+	& > h5 {
+		margin: 20px 20px 0;
+		font-size: 1.1em;
+	}
+	& > .detailsRow {
+		display: flex;
+		gap: 5px;
+		margin: 0 12px 10px;
+		overflow-x: auto;
+		& > div {
+			min-width: max-content;
+			max-width: 350px;
+			&:not(:last-child) {
+				border-right: 1px solid var(--default-text);
+			}
+		}
+	}
 	& > .tileRow {
 		display: flex;
-		margin-top: 10px;
+		padding: 0 10px;
 		gap: 10px;
+		margin-top: 5px;
 		overflow-x: auto;
-		& > .tileWrapper {
-			flex-basis: 1;
-			/* border-radius: 4px; */
-			transition: all 0.2s ease-in-out;
-			border: 2px solid transparent;
-			&:hover {
-				border-color: var(--corporate-blue);
-			}
-			&.selectedTile {
-				background: var(--corporate-blue);
-				color: var(--corporate-white);
-				opacity: 1;
-				/* border-radius: 4px 4px 0 0; */
-			}
-			&:first-child {
+		& > a {
+			min-width: max-content;
+			max-width: 350px;
+			/* &:first-child {
 				margin-left: 10px;
+			}
+			&:last-child {
+				margin-right: 10px;
+			} */
+			& > .tileWrapper {
+				transition: all 0.2s ease-in-out;
+				border: 2px solid transparent;
+				/* overflow: hidden; */
+				height: 100%;
+				background: var(--default-faded-background);
+				&:hover {
+					border-color: var(--corporate-blue);
+				}
+				&.selectedTile {
+					background: var(--corporate-blue);
+					color: var(--corporate-white);
+					opacity: 1;
+					/* border-radius: 4px 4px 0 0; */
+				}
 			}
 		}
 	}
@@ -224,16 +272,150 @@
 
 .stopPointTile {
 	padding: 8px;
-	& > h5 {
-		font-family: 'johnston100-light';
-	}
-	& > h3 {
-		font-size: 1.1em;
-		margin: 5px 0;
-		white-space: nowrap;
-	}
 	& > h6 {
 		font-family: 'johnston100-light';
-		font-size: 0.8em;
 	}
+	& > .railLinesRow {
+		& > span:not(.buses) {
+			font-family: 'johnston100-light';
+		}
+		& > .southeastern {
+			background: #389cff;
+		}
+		& > .thameslink {
+			background: #ff5aa4;
+		}
+		& > .elizabeth {
+			background: #6950a1;
+		}
+		& > .bakerloo {
+			background: rgb(178, 99, 0);
+		}
+		& > .central {
+			background: rgb(220, 36, 31);
+		}
+		& > .circle {
+			background: rgb(255, 200, 10);
+			color: var(--corporate-black);
+		}
+		& > .district {
+			background: rgb(0, 125, 50);
+		}
+		& > .hammersmith-city {
+			background: rgb(245, 137, 166);
+			color: var(--corporate-black);
+		}
+		& > .metropolitan {
+			background: rgb(155, 0, 88);
+		}
+		& > .northern {
+			background: rgb(0, 0, 0);
+			@media (prefers-color-scheme: dark) {
+				border: 1px solid var(--corporate-white);
+			}
+		}
+		& > .piccadilly {
+			background: rgb(0, 25, 168);
+		}
+		& > .jubilee {
+			background: rgb(131, 141, 147);
+		}
+		& > .victoria {
+			background: rgb(3, 155, 229);
+		}
+		& > .waterloo-city {
+			background: rgb(118, 208, 189);
+		}
+		& > .dlr {
+			background: rgb(0, 175, 173);
+		}
+		& > .london-overground {
+			background: rgb(250, 123, 5);
+			color: var(--corporate-black);
+		}
+		& > .great-western-railway {
+			background: #47640f;
+		}
+		& > .heathrow-express {
+			background: #532e63;
+		}
+		& > .avanti-west-coast {
+			background: #004354;
+		}
+		& > .west-midlands-trains {
+			background: #ff8300;
+			color: var(--corporate-black);
+		}
+		& > .east-midlands-railway {
+			background: #713563;
+		}
+		& > .c2c {
+			background: #b7007c;
+		}
+		& > .greater-anglia {
+			background: #d70428;
+		}
+		& > .gatwick-express {
+			background: #eb1e2d;
+		}
+		& > .southern {
+			background: #8cc63e;
+			color: var(--corporate-black);
+		}
+		& > .first-hull-trains {
+			background: #de005c;
+		}
+		& > .grand-central {
+			background: #1d1d1b;
+			@media (prefers-color-scheme: dark) {
+				border: 1px solid var(--corporate-white);
+			}
+		}
+		& > .great-northern {
+			background: #0f0d78;
+			@media (prefers-color-scheme: dark) {
+				border: 1px solid var(--corporate-white);
+			}
+		}
+		& > .london-north-eastern-railway {
+			background: #ce0e2d;
+		}
+		& > .lumo {
+			background: #2b6ef5;
+		}
+		& > .south-western-railway {
+			background: #24398c;
+		}
+	}
+	& > .linesRow {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 4px;
+		margin: 5px 0;
+		& > span {
+			padding: 0.05em 0.2em;
+			border-radius: 2px;
+			color: var(--corporate-white);
+			background: var(--corporate-red);
+		}
+	}
+	& > .titleRow {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 5px;
+	}
+}
+
+.busStopTile {
+	& > p {
+		margin-top: 5px;
+		font-family: 'johnston100-light';
+	}
+}
+
+.zone {
+	padding: 0 7px;
+	font-family: 'johnston100-light';
+	/* background: var(--corporate-blue); */
 }

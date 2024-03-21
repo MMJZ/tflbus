@@ -34,21 +34,33 @@ export interface EnrichedLineData extends LineData {
 	patch: Patch<LineSequenceStopPoint>;
 }
 
-export interface InboundRouteRow extends RouteRowBase {
-	kind: 'inbound';
+export interface SingleStopRouteRow<T> extends RouteRowBase {
+	kind: T;
 	stopLetter: string;
 	name: string;
 	id: string;
 	parentId: string;
 }
 
-export interface OutboundRouteRow extends RouteRowBase {
-	kind: 'outbound';
-	stopLetter: string;
-	name: string;
-	id: string;
-	parentId: string;
-}
+export type InboundRouteRow = SingleStopRouteRow<'inbound'>;
+export type OutboundRouteRow = SingleStopRouteRow<'outbound'>;
+export type SharedReverseRouteRow = SingleStopRouteRow<'reverse'>;
+
+// export interface InboundRouteRow extends RouteRowBase {
+// 	kind: 'inbound';
+// 	stopLetter: string;
+// 	name: string;
+// 	id: string;
+// 	parentId: string;
+// }
+
+// export interface OutboundRouteRow extends RouteRowBase {
+// 	kind: 'outbound';
+// 	stopLetter: string;
+// 	name: string;
+// 	id: string;
+// 	parentId: string;
+// }
 
 export interface SharedRouteRow extends RouteRowBase {
 	kind: 'shared';
@@ -61,7 +73,8 @@ export interface SharedRouteRow extends RouteRowBase {
 	outboundStopLetter: string;
 }
 
-export interface RouteRowBase {
-}
+export interface RouteRowBase {}
 
 export type RouteRow = InboundRouteRow | OutboundRouteRow | SharedRouteRow;
+
+export type Bleh = RouteRow | SharedReverseRouteRow;

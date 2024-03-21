@@ -68,7 +68,7 @@
 				align-items: center;
 				& > a {
 					&:hover {
-						&>.letterWrapper {
+						& > div {
 							outline-width: 4px;
 						}
 					}
@@ -79,26 +79,14 @@
 						width: 0.5em;
 						position: absolute;
 						top: 0;
-						left: 0.75em;
-						z-index: 1;
+						left: 0.625em;
 					}
-					& > .letterWrapper {
+					& > div {
+						z-index: 1;
+						position: relative;
 						outline: 0px solid var(--corporate-red);
 						outline-offset: -1px;
 						transition: all 0.2s ease-in-out;
-						width: 2em;
-						height: 2em;
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						background: var(--corporate-red);
-						color: var(--corporate-white);
-						border-radius: 100%;
-						z-index: 2;
-						& > span {
-							font-size: 1em;
-							z-index: 2;
-						}
 					}
 				}
 			}
@@ -134,7 +122,7 @@
 				font-family: 'johnston100-light';
 				display: flex;
 				align-items: center;
-				&>a{
+				& > a {
 					border-radius: 4px;
 					padding: 0.3em 0.7em;
 					transition: all 0.2s ease-in-out;
