@@ -1,7 +1,6 @@
-import { StopPoint } from '../../model';
 import { getStopLetterAndSize } from './util';
 import css from './stopPoint.module.css';
-import { JSX } from 'preact';
+import { type JSX } from 'preact';
 
 interface StopLetterProps {
 	stopLetter: string;

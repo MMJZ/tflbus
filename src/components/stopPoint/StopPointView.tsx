@@ -1,5 +1,5 @@
 import { type JSX } from 'preact';
-import { StopType, type StopPoint } from '../../model';
+import { type StopType, type StopPoint } from '../../model';
 import { BusStopRender } from './BusStopRender';
 import css from './stopPoint.module.css';
 import { StopPointTile } from './StopPointTile';
@@ -47,7 +47,7 @@ function OtherStopPoint({
 					<h4>{stopPointData.commonName}</h4>
 					<div>
 						<h5>{getStopTypeName(stopPointData.stopType)}</h5>
-						{zone && <div class={css.zone}>Zone {zone}</div>}
+						{zone !== undefined && <div class={css.zone}>Zone {zone}</div>}
 						<h6>{stopPointData.naptanId}</h6>
 					</div>
 				</div>

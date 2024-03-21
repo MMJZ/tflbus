@@ -6,10 +6,10 @@ import {
 	effect,
 } from '@preact/signals';
 import {
-	EnrichedLineData,
-	LineData,
-	LineRoute,
-	RouteRow,
+	type EnrichedLineData,
+	type LineData,
+	type LineRoute,
+	type RouteRow,
 	type StopPoint,
 } from '../model';
 import { getPatch } from 'fast-array-diff';
@@ -102,7 +102,7 @@ export function createAppState(): AppState {
 
 	const scrollY = signal(0);
 
-	const focussedLineId = signal(undefined);
+	const focussedLineId = signal<string | undefined>(undefined);
 
 	const focussedLine = computed(() => {
 		const data =
@@ -218,41 +218,44 @@ export function createAppState(): AppState {
 	effect(() => {
 		const focussed = focussedLineId.value;
 		if (focussed !== undefined && !lineCache.value.has(focussed)) {
-			const routeCall = (dir: 'Inbound' | 'Outbound') =>
-				fetch(`https://api.tfl.gov.uk/Line/${focussed}/Route/Sequence/${dir}`)
-					.then(async (response) =>
-						filterLineRouteToKnownProperties(await response.json()),
-					)
-					.catch((err) => {
-						console.log(err);
-					});
+			const routeCall: (
+				dir: 'Inbound' | 'Outbound',
+			) => Promise<LineRoute> = async (dir: 'Inbound' | 'Outbound') => {
+				const response = await fetch(
+					`https://api.tfl.gov.uk/Line/${focussed}/Route/Sequence/${dir}`,
+				);
+				return filterLineRouteToKnownProperties(
+					(await response.json()) as LineRoute,
+				);
+			};
 
-			Promise.all([routeCall('Outbound'), routeCall('Inbound')]).then(
-				([outboundRoute, inboundRoute]) => {
-					if (outboundRoute && inboundRoute) {
-						lineCache.value = new Map([
-							...lineCache.peek(),
-							[focussed, { inboundRoute, outboundRoute }],
-						]);
+			void Promise.all([
+				routeCall('Outbound').catch((_) => undefined),
+				routeCall('Inbound').catch((_) => undefined),
+			]).then(([outboundRoute, inboundRoute]) => {
+				if (outboundRoute !== undefined && inboundRoute !== undefined) {
+					lineCache.value = new Map([
+						...lineCache.peek(),
+						[focussed, { inboundRoute, outboundRoute }],
+					]);
 
-						try {
-							localStorage.setItem(
-								localLineCacheKey,
-								JSON.stringify(Array.from(lineCache.peek().entries())),
-							);
-						} catch (e: unknown) {
-							alert(e);
-						}
+					try {
+						localStorage.setItem(
+							localLineCacheKey,
+							JSON.stringify(Array.from(lineCache.peek().entries())),
+						);
+					} catch (e: unknown) {
+						alert(e);
 					}
-				},
-			);
+				}
+			});
 		}
 	});
 
 	const lineList = signal<string[] | undefined>(undefined);
 	effect(() => {
 		if (lineList.value === undefined) {
-			fetch('https://api.tfl.gov.uk/Line/Mode/bus')
+			void fetch('https://api.tfl.gov.uk/Line/Mode/bus')
 				.then(
 					async (response) => (await response.json()) as Array<{ id: string }>,
 				)
@@ -319,7 +322,7 @@ function filterStopPointToKnownProperties(
 		children: extraPropsStopPoint.children.map(
 			filterStopPointToKnownProperties,
 		),
-	} as StopPoint;
+	};
 }
 
 function filterLineRouteToKnownProperties(

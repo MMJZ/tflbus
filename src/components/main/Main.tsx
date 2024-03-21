@@ -1,5 +1,5 @@
 import { type JSX } from 'preact';
-import { useContext, useEffect, useState } from 'preact/hooks';
+import { useContext, useState } from 'preact/hooks';
 import { StateContext } from '../../context';
 import { type AppState } from '../../state/store';
 import { StopPointPage } from '../stopPoint/StopPointPage';

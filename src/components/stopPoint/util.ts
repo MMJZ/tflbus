@@ -1,4 +1,4 @@
-import { StopType, type StopPoint } from '../../model';
+import { type StopType, type StopPoint } from '../../model';
 
 export interface StopNameData {
 	firstLine: string;
@@ -120,7 +120,7 @@ export function getStopTowardsLine(
 		}
 	}
 
-	alert('still buggered on towards' + name);
+	alert(`still buggered on towards${name}`);
 	throw new Error('argh');
 }
 
@@ -247,6 +247,9 @@ function compareBusNumbers(a: string, b: string): number {
 		if ((aI === 'N') !== (bI === 'N')) {
 			return aI === 'N' ? 1 : -1;
 		}
+		if ((aI === 'SL') !== (bI === 'SL')) {
+			return aI === 'SL' ? 1 : -1;
+		}
 		if (aI === '') return -1;
 		if (bI === '') return 1;
 		return aI.localeCompare(bI);
@@ -299,7 +302,7 @@ export function getStopLetterAndSize(
 	}
 }
 
-export function getStopTypeName(stopType: StopType) {
+export function getStopTypeName(stopType: StopType): string {
 	switch (stopType) {
 		case 'NaptanBusCoachStation':
 			return 'Bus Station';
@@ -350,7 +353,7 @@ const busKinds: StopType[] = [
 	'NaptanOnstreetBusCoachStopPair',
 ];
 
-export function hasBusesInTree(stopPoint: StopPoint) {
+export function hasBusesInTree(stopPoint: StopPoint): boolean {
 	return (
 		busKinds.includes(stopPoint.stopType) ||
 		stopPoint.children.some(hasBusesInTree)

@@ -1,4 +1,4 @@
-import { Patch } from 'fast-array-diff';
+import { type Patch } from 'fast-array-diff';
 
 export interface LineRoute {
 	lineName: string;
@@ -34,7 +34,7 @@ export interface EnrichedLineData extends LineData {
 	patch: Patch<LineSequenceStopPoint>;
 }
 
-export interface SingleStopRouteRow<T> extends RouteRowBase {
+export interface SingleStopRouteRow<T> {
 	kind: T;
 	stopLetter: string;
 	name: string;
@@ -46,23 +46,7 @@ export type InboundRouteRow = SingleStopRouteRow<'inbound'>;
 export type OutboundRouteRow = SingleStopRouteRow<'outbound'>;
 export type SharedReverseRouteRow = SingleStopRouteRow<'reverse'>;
 
-// export interface InboundRouteRow extends RouteRowBase {
-// 	kind: 'inbound';
-// 	stopLetter: string;
-// 	name: string;
-// 	id: string;
-// 	parentId: string;
-// }
-
-// export interface OutboundRouteRow extends RouteRowBase {
-// 	kind: 'outbound';
-// 	stopLetter: string;
-// 	name: string;
-// 	id: string;
-// 	parentId: string;
-// }
-
-export interface SharedRouteRow extends RouteRowBase {
+export interface SharedRouteRow {
 	kind: 'shared';
 	inboundId: string;
 	outboundId: string;
@@ -73,8 +57,4 @@ export interface SharedRouteRow extends RouteRowBase {
 	outboundStopLetter: string;
 }
 
-export interface RouteRowBase {}
-
 export type RouteRow = InboundRouteRow | OutboundRouteRow | SharedRouteRow;
-
-export type Bleh = RouteRow | SharedReverseRouteRow;

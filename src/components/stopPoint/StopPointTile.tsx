@@ -1,7 +1,7 @@
 import { type JSX } from 'preact';
-import { StopPoint } from '../../model';
+import { type StopPoint } from '../../model';
 import css from './stopPoint.module.css';
-import { getStopCallingBusData, getStopTypeName, hasBusesInTree } from './util';
+import { getStopCallingBusData, hasBusesInTree } from './util';
 import { StopLetterRender } from './StopLetterRender';
 
 interface StopPointTileProps {
@@ -142,7 +142,7 @@ function BusStopPointTile({
 				))}
 			</div>
 
-			{towards && <p>Towards {towards}</p>}
+			{towards !== undefined && <p>Towards {towards}</p>}
 		</div>
 	);
 }

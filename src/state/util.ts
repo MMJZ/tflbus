@@ -1,5 +1,5 @@
-export function zip<A, B>(a: A[], b: B[]): [A, B][] {
-	const ret: [A, B][] = [];
+export function zip<A, B>(a: A[], b: B[]): Array<[A, B]> {
+	const ret: Array<[A, B]> = [];
 	for (let i = 0; i < Math.min(a.length, b.length); i++) {
 		ret.push([a[i], b[i]]);
 	}
@@ -7,8 +7,8 @@ export function zip<A, B>(a: A[], b: B[]): [A, B][] {
 	return ret;
 }
 
-export function zipLax<A, B>(a: A[], b: B[]): [A | undefined, B | undefined][] {
-	const ret: [A, B][] = [];
+export function zipLax<A, B>(a: A[], b: B[]): Array<[A | undefined, B | undefined]> {
+	const ret: Array<[A, B]> = [];
 	for (let i = 0; i < Math.max(a.length, b.length); i++) {
 		ret.push([a[i], b[i]]);
 	}
@@ -45,11 +45,11 @@ export function maxBy<T>(ts: T[], comp: (t: T) => number): T | undefined {
 
 // }
 
-interface LatLonLoc {
-	lat: number;
-	lon: number;
-}
+// interface LatLonLoc {
+// 	lat: number;
+// 	lon: number;
+// }
 
-function distance(a: LatLonLoc, b: LatLonLoc) {
-	return Math.sqrt(a.lat * b.lat + a.lon * b.lon);
-}
+// function distance(a: LatLonLoc, b: LatLonLoc): number {
+// 	return Math.sqrt(a.lat * b.lat + a.lon * b.lon);
+// }

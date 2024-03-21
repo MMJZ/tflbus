@@ -77,8 +77,8 @@ export function BusStopRender({
 				)}
 				<div class={css.eTileGrid}>
 					{lines.map((line) => {
-						let cssClass: string | undefined = undefined;
-						let message: string | undefined = undefined;
+						let cssClass: string | undefined;
+						let message: string | undefined;
 
 						switch (line.specialStatus) {
 							case 'NightBus':
@@ -92,8 +92,8 @@ export function BusStopRender({
 						}
 
 						return (
-							<a href={`/line/${line.number}`}>
-								<div key={line.number} class={`${css.eTile} ${cssClass ?? ''}`}>
+							<a href={`/line/${line.number}`} key={line.number}>
+								<div class={`${css.eTile} ${cssClass ?? ''}`}>
 									<div class={css.eTileMessage}>{message ?? ''}</div>
 									<div class={css.eTileNumber}>{line.number}</div>
 								</div>

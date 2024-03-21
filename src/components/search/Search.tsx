@@ -1,13 +1,8 @@
 import { type JSX } from 'preact';
-import { useCallback, useContext, useEffect, useState } from 'preact/hooks';
+import { useContext, useMemo, useState } from 'preact/hooks';
 import { StateContext } from '../../context';
-import { type AppState } from '../../state/store';
 import css from './search.module.css';
-import {
-	type SearchResult,
-	type StopPoint,
-	type QueryResult,
-} from '../../model';
+import { type SearchResult, type QueryResult } from '../../model';
 import { Loading } from '../loading/Loading';
 
 function debounce<T>(wait: number, fn: (arg: T) => void): (arg: T) => void {
@@ -30,36 +25,37 @@ export function Search(): JSX.Element {
 	const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
 	const [matchedLines, setMatchedLines] = useState<string[]>([]);
 
-	const doSearch = useCallback(
-		debounce<string>(300, (searchTerm) => {
-			if (searchTerm.length > 0) {
-				const cleanedSearchTerm = searchTerm.toLocaleUpperCase();
-				const lines = (state.lineList.value ?? []).filter((i) =>
-					i.includes(cleanedSearchTerm),
-				);
-				lines.sort((a, b) => a.length - b.length);
-				setMatchedLines(lines.slice(0, 20));
-			}
+	const doSearch = useMemo(
+		() =>
+			debounce<string>(300, (searchTerm) => {
+				if (searchTerm.length > 0) {
+					const cleanedSearchTerm = searchTerm.toLocaleUpperCase();
+					const lines = (state.lineList.value ?? []).filter((i) =>
+						i.includes(cleanedSearchTerm),
+					);
+					lines.sort((a, b) => a.length - b.length);
+					setMatchedLines(lines.slice(0, 20));
+				}
 
-			if (searchTerm.length < 3) {
-				return;
-			}
+				if (searchTerm.length < 3) {
+					return;
+				}
 
-			setIsSearching(true);
-			fetch(
-				`https://api.tfl.gov.uk/StopPoint/Search?query=${searchTerm}&modes=bus`,
-			)
-				.then(async (response) => (await response.json()) as QueryResult)
-				.then((json) => {
-					setSearchResults(json.matches);
-					setIsSearching(false);
-				})
-				.catch((err) => {
-					console.log(err);
-					setIsSearching(false);
-				});
-		}),
-		[setSearchResults, setIsSearching],
+				setIsSearching(true);
+				fetch(
+					`https://api.tfl.gov.uk/StopPoint/Search?query=${searchTerm}&modes=bus`,
+				)
+					.then(async (response) => (await response.json()) as QueryResult)
+					.then((json) => {
+						setSearchResults(json.matches);
+						setIsSearching(false);
+					})
+					.catch((err) => {
+						console.log(err);
+						setIsSearching(false);
+					});
+			}),
+		[setSearchResults, setIsSearching, state.lineList],
 	);
 
 	return (
