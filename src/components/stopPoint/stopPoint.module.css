@@ -226,7 +226,7 @@
 	& > .detailsRow {
 		display: flex;
 		gap: 5px;
-		margin: 0 12px 10px;
+		margin: 5px 12px 10px;
 		overflow-x: auto;
 		& > div {
 			min-width: max-content;

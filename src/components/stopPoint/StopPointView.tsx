@@ -51,7 +51,7 @@ function OtherStopPoint({
 						<h6>{stopPointData.naptanId}</h6>
 					</div>
 				</div>
-				{otherChildren.length > 0 && <h5>Details</h5>}
+				{otherChildren.length > 0 && <h5>Parts of this stop point:</h5>}
 				<div class={css.detailsRow}>
 					{otherChildren.map((child) => (
 						<StopPointTile
@@ -61,7 +61,7 @@ function OtherStopPoint({
 						/>
 					))}
 				</div>
-				{selectableChildren.length > 0 && <h5>Children</h5>}
+				{selectableChildren.length > 0 && <h5>Nested stop points:</h5>}
 				<div class={css.tileRow}>
 					{selectableChildren.map((child) => (
 						<a
