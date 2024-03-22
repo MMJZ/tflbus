@@ -5,22 +5,21 @@ import { type AppState } from '../../state/store';
 import { StopPointPage } from '../stopPoint/StopPointPage';
 import css from './main.module.css';
 import { Search } from '../search/Search';
-import { ErrorBoundary, Route, Router, useRoute } from 'preact-iso';
+import { ErrorBoundary, Route, Router } from 'preact-iso';
 import { LinePage } from '../line/LinePage';
 import { Loading } from '../loading/Loading';
 
 function Nothing(): JSX.Element {
 	const _state = useContext(StateContext);
 	if (_state === undefined) {
-		return <>No state context available</>;
+		throw new Error('No state context available');
 	}
 	const state = _state;
-	const route = useRoute();
 
 	useEffect(() => {
 		state.focussedLineId.value = undefined;
 		state.focussedStopPointId.value = undefined;
-	}, [route, state.focussedLineId]);
+	}, [state.focussedLineId, state.focussedStopPointId]);
 
 	return (
 		<div class={css.nothingWrapper}>
@@ -59,7 +58,7 @@ function Nothing(): JSX.Element {
 export function Main(): JSX.Element {
 	const _state = useContext(StateContext);
 	if (_state === undefined) {
-		return <>No state context available</>;
+		throw new Error('No state context available');
 	}
 	const state = _state;
 	(document as unknown as { hackState: AppState }).hackState = state;

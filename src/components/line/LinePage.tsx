@@ -9,7 +9,7 @@ import { StopLetterRender } from '../stopPoint/StopLetterRender';
 export function LinePage(): JSX.Element {
 	const _state = useContext(StateContext);
 	if (_state === undefined) {
-		return <>No state context available</>;
+		throw new Error('No state context available');
 	}
 	const state = _state;
 	const route = useRoute();
@@ -18,14 +18,17 @@ export function LinePage(): JSX.Element {
 		const id = route.params.id;
 		if (id !== undefined) {
 			state.focussedLineId.value = id;
+			state.focussedStopPointId.value = undefined;
 		}
-	}, [route, state.focussedLineId]);
+	}, [route, state.focussedLineId, state.focussedStopPointId]);
 
 	const line = state.focussedLine.value;
 
 	if (line === undefined) {
 		return <Loading />;
 	}
+
+	// https://nominatim.openstreetmap.org/reverse?lat=51.452405&lon=0.128079&format=jsonv2&zoom=12
 
 	return (
 		<div class={css.wrapper}>

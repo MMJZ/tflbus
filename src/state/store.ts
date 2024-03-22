@@ -19,7 +19,7 @@ const localStopPointCacheKey = 'localStopPointCache';
 const localLineCacheKey = 'localLineCache';
 
 export interface AppState {
-	stopPointCache: Signal<Array<StopPoint>>;
+	stopPointCache: Signal<StopPoint[]>;
 	recursiveStopPointCache: ReadonlySignal<Map<string, StopPoint>>;
 	focussedStopPointId: Signal<string | undefined>;
 	focussedStopPoint: ReadonlySignal<StopPoint | undefined>;
@@ -32,12 +32,12 @@ export interface AppState {
 }
 
 export function createAppState(): AppState {
-	let cachedStopPoints: Array<StopPoint>;
+	let cachedStopPoints: StopPoint[];
 	let cachedLines: Map<string, LineData>;
 	try {
 		cachedStopPoints = JSON.parse(
 			localStorage.getItem(localStopPointCacheKey) ?? '[]',
-		) as Array<StopPoint>;
+		) as StopPoint[];
 		cachedLines = new Map(
 			JSON.parse(localStorage.getItem(localLineCacheKey) ?? '[]') as Array<
 				[string, LineData]

@@ -18,7 +18,7 @@ function debounce<T>(wait: number, fn: (arg: T) => void): (arg: T) => void {
 export function Search(): JSX.Element {
 	const _state = useContext(StateContext);
 	if (_state === undefined) {
-		return <>No state context available</>;
+		throw new Error('No state context available');
 	}
 	const state = _state;
 	const [isSearching, setIsSearching] = useState(false);

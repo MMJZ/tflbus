@@ -9,7 +9,7 @@ export function StopPointPage(): JSX.Element {
 	const _state = useContext(StateContext);
 
 	if (_state === undefined) {
-		return <>No state context available</>;
+		throw new Error('No state context available');
 	}
 
 	const state = _state;
@@ -19,8 +19,9 @@ export function StopPointPage(): JSX.Element {
 		const id = route.params.id;
 		if (id !== undefined) {
 			state.focussedStopPointId.value = id;
+			state.focussedLineId.value = undefined;
 		}
-	}, [route, state.focussedStopPointId]);
+	}, [route, state.focussedLineId, state.focussedStopPointId]);
 
 	const focussedStopPoint = state.focussedStopPoint.value;
 	const focussedStopPointPath = state.focussedStopPointPath.value ?? [];
