@@ -329,6 +329,10 @@
 		& > .dlr {
 			background: rgb(0, 175, 173);
 		}
+		& > .tram {
+			background: rgb(118, 188, 33);
+			color: var(--corporate-black);
+		}
 		& > .london-overground {
 			background: rgb(250, 123, 5);
 			color: var(--corporate-black);
@@ -351,6 +355,9 @@
 		}
 		& > .c2c {
 			background: #b7007c;
+		}
+		& > .chiltern-railways {
+			background: #00BFFF;
 		}
 		& > .greater-anglia {
 			background: #d70428;
