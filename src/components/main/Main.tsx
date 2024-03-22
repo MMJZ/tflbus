@@ -5,7 +5,7 @@ import { type AppState } from '../../state/store';
 import { StopPointPage } from '../stopPoint/StopPointPage';
 import css from './main.module.css';
 import { Search } from '../search/Search';
-import { ErrorBoundary, Route, Router } from 'preact-iso';
+import { ErrorBoundary, Route, Router, useLocation } from 'preact-iso';
 import { LinePage } from '../line/LinePage';
 import { Loading } from '../loading/Loading';
 
@@ -64,11 +64,16 @@ export function Main(): JSX.Element {
 	(document as unknown as { hackState: AppState }).hackState = state;
 
 	const [loading, setLoading] = useState(false);
+	const location = useLocation();
 
 	return (
 		<div class={css.wrapper}>
 			<header class={css.header}>
-				<a href="/">
+				<a
+					onClick={() => {
+						location.route('/', true);
+					}}
+				>
 					<h1>BusMupper</h1>
 				</a>
 				<Search />

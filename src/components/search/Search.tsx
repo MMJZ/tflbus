@@ -4,6 +4,7 @@ import { StateContext } from '../../context';
 import css from './search.module.css';
 import { type SearchResult, type QueryResult } from '../../model';
 import { Loading } from '../loading/Loading';
+import { useLocation } from 'preact-iso';
 
 function debounce<T>(wait: number, fn: (arg: T) => void): (arg: T) => void {
 	let timeoutId: number | undefined;
@@ -24,6 +25,7 @@ export function Search(): JSX.Element {
 	const [isSearching, setIsSearching] = useState(false);
 	const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
 	const [matchedLines, setMatchedLines] = useState<string[]>([]);
+	const location = useLocation();
 
 	const doSearch = useMemo(
 		() =>
@@ -83,7 +85,11 @@ export function Search(): JSX.Element {
 				<ul class={css.matchedLines}>
 					{matchedLines.map((matchedLine) => (
 						<li key={matchedLine}>
-							<a href={`/line/${matchedLine}`}>
+							<a
+								onClick={() => {
+									location.route(`/line/${matchedLine}`, true);
+								}}
+							>
 								<h4>{matchedLine.toLocaleUpperCase()}</h4>
 							</a>
 						</li>
@@ -94,7 +100,11 @@ export function Search(): JSX.Element {
 				<ul class={css.searchResults}>
 					{searchResults.map((searchResult) => (
 						<li key={searchResult.id}>
-							<a href={`/stopPoint/${searchResult.id}`}>
+							<a
+								onClick={() => {
+									location.route(`/stopPoint/${searchResult.id}`, true);
+								}}
+							>
 								<h4>{searchResult.name}</h4>
 								<h6>{searchResult.id}</h6>
 							</a>

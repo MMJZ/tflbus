@@ -7,6 +7,7 @@ import {
 	getStopNameLine,
 	getStopTowardsLine,
 } from './util';
+import { useLocation } from 'preact-iso';
 
 interface StopPointProps {
 	stopPoint: StopPoint;
@@ -29,6 +30,7 @@ export function BusStopRender({
 	const towardsLines = getStopTowardsLine(towards);
 	const lines = getStopCallingBusData(stopPoint);
 	const stopLetterData = getStopLetterAndSize(stopPoint.stopLetter);
+	const location = useLocation();
 
 	return (
 		<div style={{ fontSize: `${scale}em` }} class={css.busStopRenderWrapper}>
@@ -92,7 +94,12 @@ export function BusStopRender({
 						}
 
 						return (
-							<a href={`/line/${line.number}`} key={line.number}>
+							<a
+								onClick={() => {
+									location.route(`/line/${line.number}`, true);
+								}}
+								key={line.number}
+							>
 								<div class={`${css.eTile} ${cssClass ?? ''}`}>
 									<div class={css.eTileMessage}>{message ?? ''}</div>
 									<div class={css.eTileNumber}>{line.number}</div>

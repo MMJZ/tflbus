@@ -2,7 +2,7 @@ import { type JSX } from 'preact';
 import { useContext, useEffect } from 'preact/hooks';
 import { StateContext } from '../../context';
 import css from './line.module.css';
-import { useRoute } from 'preact-iso';
+import { useLocation, useRoute } from 'preact-iso';
 import { Loading } from '../loading/Loading';
 import { StopLetterRender } from '../stopPoint/StopLetterRender';
 
@@ -13,6 +13,7 @@ export function LinePage(): JSX.Element {
 	}
 	const state = _state;
 	const route = useRoute();
+	const location = useLocation();
 
 	useEffect(() => {
 		const id = route.params.id;
@@ -46,7 +47,11 @@ export function LinePage(): JSX.Element {
 						{row.kind === 'inbound' ? (
 							<>
 								<div class={css.withLetter}>
-									<a href={`/stopPoint/${row.id}`}>
+									<a
+										onClick={() => {
+											location.route(`/stopPoint/${row.id}`, true);
+										}}
+									>
 										<StopLetterRender
 											stopLetter={row.stopLetter}
 											scale={0.7}
@@ -57,11 +62,12 @@ export function LinePage(): JSX.Element {
 								<div class={css.noStop} />
 								<div class={css.name}>
 									<a
-										href={
-											row.parentId === undefined
-												? undefined
-												: `/stopPoint/${row.parentId}`
-										}
+										class={row.parentId === undefined ? css.noLink : ''}
+										onClick={() => {
+											if (row.parentId !== undefined) {
+												location.route(`/stopPoint/${row.parentId}`, true);
+											}
+										}}
 									>
 										{row.name}
 									</a>
@@ -71,7 +77,11 @@ export function LinePage(): JSX.Element {
 							<>
 								<div class={css.noStop} />
 								<div class={css.withLetter}>
-									<a href={`/stopPoint/${row.id}`}>
+									<a
+										onClick={() => {
+											location.route(`/stopPoint/${row.id}`, true);
+										}}
+									>
 										<StopLetterRender
 											stopLetter={row.stopLetter}
 											scale={0.7}
@@ -81,11 +91,12 @@ export function LinePage(): JSX.Element {
 								</div>
 								<div class={css.name}>
 									<a
-										href={
-											row.parentId === undefined
-												? undefined
-												: `/stopPoint/${row.parentId}`
-										}
+										class={row.parentId === undefined ? css.noLink : ''}
+										onClick={() => {
+											if (row.parentId !== undefined) {
+												location.route(`/stopPoint/${row.parentId}`, true);
+											}
+										}}
 									>
 										{row.name}
 									</a>
@@ -94,7 +105,11 @@ export function LinePage(): JSX.Element {
 						) : (
 							<>
 								<div class={css.withLetter}>
-									<a href={`/stopPoint/${row.inboundId}`}>
+									<a
+										onClick={() => {
+											location.route(`/stopPoint/${row.inboundId}`, true);
+										}}
+									>
 										<StopLetterRender
 											stopLetter={row.inboundStopLetter}
 											scale={0.7}
@@ -103,7 +118,11 @@ export function LinePage(): JSX.Element {
 									</a>
 								</div>
 								<div class={css.withLetter}>
-									<a href={`/stopPoint/${row.outboundId}`}>
+									<a
+										onClick={() => {
+											location.route(`/stopPoint/${row.outboundId}`, true);
+										}}
+									>
 										<StopLetterRender
 											stopLetter={row.outboundStopLetter}
 											scale={0.7}
@@ -113,11 +132,12 @@ export function LinePage(): JSX.Element {
 								</div>
 								<div class={css.name}>
 									<a
-										href={
-											row.parentId === undefined
-												? undefined
-												: `/stopPoint/${row.parentId}`
-										}
+										class={row.parentId === undefined ? css.noLink : ''}
+										onClick={() => {
+											if (row.parentId !== undefined) {
+												location.route(`/stopPoint/${row.parentId}`, true);
+											}
+										}}
 									>
 										{row.inboundName}
 									</a>
