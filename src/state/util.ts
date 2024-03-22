@@ -7,7 +7,10 @@ export function zip<A, B>(a: A[], b: B[]): Array<[A, B]> {
 	return ret;
 }
 
-export function zipLax<A, B>(a: A[], b: B[]): Array<[A | undefined, B | undefined]> {
+export function zipLax<A, B>(
+	a: A[],
+	b: B[],
+): Array<[A | undefined, B | undefined]> {
 	const ret: Array<[A, B]> = [];
 	for (let i = 0; i < Math.max(a.length, b.length); i++) {
 		ret.push([a[i], b[i]]);

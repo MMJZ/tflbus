@@ -18,7 +18,6 @@
 		height: 5em;
 		fill: var(--bus-stop-light-grey);
 		& > path {
-			/* stroke: var(--bus-stop-light-grey); */
 			stroke-width: 2;
 		}
 	}

@@ -170,13 +170,10 @@ export function StopPointTile({
 		case 'NaptanBusCoachStation':
 			return <RailOrMetroOrBusStation stopPoint={stopPoint} />;
 		default:
-			// return <>error! not done yet</>;
 			return (
 				<div class={css.stopPointTile}>
 					<h5>Other entity:</h5>
 					<h5>{stopPoint.stopType}</h5>
-					{/* <h3>{stopPoint.commonName}</h3> */}
-					{/* <h6>{stopPoint.naptanId}</h6> */}
 				</div>
 			);
 	}

@@ -83,9 +83,9 @@ export function Main(): JSX.Element {
 						onLoadEnd={() => {
 							setLoading(false);
 						}}
-						onRouteChange={() => {
-							// window.scrollTo(window.scrollX, state.scrollY.peek())
-						}}
+						// onRouteChange={() => {
+						// 	// window.scrollTo(window.scrollX, state.scrollY.peek())
+						// }}
 					>
 						<Route path="stopPoint/:id" component={StopPointPage} />
 						<Route path="line/:id" component={LinePage} />

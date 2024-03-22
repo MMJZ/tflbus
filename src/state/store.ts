@@ -64,7 +64,10 @@ export function createAppState(): AppState {
 
 	effect(() => {
 		const focussed = focussedStopPointId.value;
-		if (focussed !== undefined && !recursiveStopPointCache.value.has(focussed)) {
+		if (
+			focussed !== undefined &&
+			!recursiveStopPointCache.value.has(focussed)
+		) {
 			fetch(
 				`https://api.tfl.gov.uk/StopPoint/${focussed}?includeCrowdingData=false`,
 			)

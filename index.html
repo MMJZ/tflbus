@@ -20,36 +20,31 @@
 				text-decoration: unset;
 				font-family: unset;
 			}
+
 			button {
 				cursor: pointer;
 				padding: 6px 14px;
 				border-radius: 4px;
 			}
+
 			body {
 				font-family: 'johnston100-medium';
 				background: var(--default-background);
 				color: var(--default-text);
 			}
+
 			@font-face {
 				font-family: johnston100-medium;
-				src:
-					/* url('https://tfl.gov.uk/cdn/static/assets/fonts/Johnston100-Medium.woff2')
-						format('woff2'),
-					url('https://tfl.gov.uk/cdn/static/assets/fonts/Johnston100-Medium.woff2')
-						format('woff'); */ url('/Johnston100-Medium.woff2')
-					format('woff2');
+				src: url('/Johnston100-Medium.woff2') format('woff2');
 			}
+
 			@font-face {
 				font-family: johnston100-light;
-				src:
-					/* url('https://tfl.gov.uk/cdn/static/assets/fonts/Johnston100-Light.woff2')
-						format('woff2'),
-					url('https://tfl.gov.uk/cdn/static/assets/fonts/Johnston100-Light.woff2')
-						format('woff'); */ url('/Johnston100-Light.woff2')
-					format('woff2');
+				src: url('/Johnston100-Light.woff2') format('woff2');
 			}
 		</style>
 	</head>
+
 	<body>
 		<div id="app"></div>
 		<script type="module" src="/src/index.tsx"></script>

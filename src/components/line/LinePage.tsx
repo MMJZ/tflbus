@@ -47,10 +47,6 @@ export function LinePage(): JSX.Element {
 							<>
 								<div class={css.withLetter}>
 									<a href={`/stopPoint/${row.id}`}>
-										{/* <div class={css.letterWrapper}>
-											<span>{row.stopLetter ?? dotChar}</span>
-										</div> */}
-
 										<StopLetterRender
 											stopLetter={row.stopLetter}
 											scale={0.7}
@@ -76,9 +72,6 @@ export function LinePage(): JSX.Element {
 								<div class={css.noStop} />
 								<div class={css.withLetter}>
 									<a href={`/stopPoint/${row.id}`}>
-										{/* <div class={css.letterWrapper}>
-											<span>{row.stopLetter ?? dotChar}</span>
-										</div> */}
 										<StopLetterRender
 											stopLetter={row.stopLetter}
 											scale={0.7}

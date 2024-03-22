@@ -220,7 +220,8 @@
 	}
 	& > h5 {
 		margin: 20px 20px 0;
-		font-size: 1.1em;
+		font-size: 0.9em;
+		font-family: 'johnston100-light';
 	}
 	& > .detailsRow {
 		display: flex;
@@ -244,16 +245,9 @@
 		& > a {
 			min-width: max-content;
 			max-width: 350px;
-			/* &:first-child {
-				margin-left: 10px;
-			}
-			&:last-child {
-				margin-right: 10px;
-			} */
 			& > .tileWrapper {
 				transition: all 0.2s ease-in-out;
 				border: 2px solid transparent;
-				/* overflow: hidden; */
 				height: 100%;
 				background: var(--default-faded-background);
 				&:hover {
@@ -263,7 +257,6 @@
 					background: var(--corporate-blue);
 					color: var(--corporate-white);
 					opacity: 1;
-					/* border-radius: 4px 4px 0 0; */
 				}
 			}
 		}
@@ -357,7 +350,7 @@
 			background: #b7007c;
 		}
 		& > .chiltern-railways {
-			background: #00BFFF;
+			background: #00bfff;
 		}
 		& > .greater-anglia {
 			background: #d70428;
@@ -424,5 +417,4 @@
 .zone {
 	padding: 0 7px;
 	font-family: 'johnston100-light';
-	/* background: var(--corporate-blue); */
 }

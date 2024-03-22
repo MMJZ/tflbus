@@ -220,9 +220,6 @@ export function getStopCallingBusData(stopPoint: StopPoint): CallingBusData[] {
 				: isSuperloopBus
 					? 'Superloop'
 					: undefined,
-			// isNightBus,
-			// isSuperloopBus,
-			// message: isNightBus ? 'Night Bus' : undefined,
 		};
 	});
 
