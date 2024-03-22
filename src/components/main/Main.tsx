@@ -1,15 +1,27 @@
 import { type JSX } from 'preact';
-import { useContext, useState } from 'preact/hooks';
+import { useContext, useEffect, useState } from 'preact/hooks';
 import { StateContext } from '../../context';
 import { type AppState } from '../../state/store';
 import { StopPointPage } from '../stopPoint/StopPointPage';
 import css from './main.module.css';
 import { Search } from '../search/Search';
-import { ErrorBoundary, Route, Router } from 'preact-iso';
+import { ErrorBoundary, Route, Router, useRoute } from 'preact-iso';
 import { LinePage } from '../line/LinePage';
 import { Loading } from '../loading/Loading';
 
 function Nothing(): JSX.Element {
+	const _state = useContext(StateContext);
+	if (_state === undefined) {
+		return <>No state context available</>;
+	}
+	const state = _state;
+	const route = useRoute();
+
+	useEffect(() => {
+		state.focussedLineId.value = undefined;
+		state.focussedStopPointId.value = undefined;
+	}, [route, state.focussedLineId]);
+
 	return (
 		<div class={css.nothingWrapper}>
 			<span>
@@ -47,7 +59,7 @@ function Nothing(): JSX.Element {
 export function Main(): JSX.Element {
 	const _state = useContext(StateContext);
 	if (_state === undefined) {
-		throw new Error('fucked it bro');
+		return <>No state context available</>;
 	}
 	const state = _state;
 	(document as unknown as { hackState: AppState }).hackState = state;
@@ -86,7 +98,7 @@ export function Main(): JSX.Element {
 				<p>Not associated with TfL.</p>
 				<button
 					onClick={() => {
-						state.stopPointCache.value = new Map();
+						state.stopPointCache.value = [];
 						state.lineCache.value = new Map();
 					}}
 				>

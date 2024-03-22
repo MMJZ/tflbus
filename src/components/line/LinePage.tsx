@@ -9,7 +9,7 @@ import { StopLetterRender } from '../stopPoint/StopLetterRender';
 export function LinePage(): JSX.Element {
 	const _state = useContext(StateContext);
 	if (_state === undefined) {
-		throw new Error('fucked it bro');
+		return <>No state context available</>;
 	}
 	const state = _state;
 	const route = useRoute();

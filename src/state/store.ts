@@ -19,7 +19,8 @@ const localStopPointCacheKey = 'localStopPointCache';
 const localLineCacheKey = 'localLineCache';
 
 export interface AppState {
-	stopPointCache: Signal<Map<string, StopPoint>>;
+	stopPointCache: Signal<Array<StopPoint>>;
+	recursiveStopPointCache: ReadonlySignal<Map<string, StopPoint>>;
 	focussedStopPointId: Signal<string | undefined>;
 	focussedStopPoint: ReadonlySignal<StopPoint | undefined>;
 	focussedStopPointPath: ReadonlySignal<string[] | undefined>;
@@ -31,36 +32,39 @@ export interface AppState {
 }
 
 export function createAppState(): AppState {
-	let cachedStopPoints: Map<string, StopPoint>;
+	let cachedStopPoints: Array<StopPoint>;
 	let cachedLines: Map<string, LineData>;
 	try {
-		cachedStopPoints = new Map(
-			JSON.parse(localStorage.getItem(localStopPointCacheKey) ?? '[]') as Array<
-				[string, StopPoint]
-			>,
-		);
+		cachedStopPoints = JSON.parse(
+			localStorage.getItem(localStopPointCacheKey) ?? '[]',
+		) as Array<StopPoint>;
 		cachedLines = new Map(
 			JSON.parse(localStorage.getItem(localLineCacheKey) ?? '[]') as Array<
 				[string, LineData]
 			>,
 		);
 	} catch (_: unknown) {
-		cachedStopPoints = new Map();
+		cachedStopPoints = [];
 		cachedLines = new Map();
 	}
 
 	const stopPointCache = signal(cachedStopPoints);
 	const lineCache = signal(cachedLines);
 	const focussedStopPointId = signal<string | undefined>(undefined);
+
+	const recursiveStopPointCache = computed(
+		() => new Map(stopPointCache.value.map((s) => cacheChildren(s, s)).flat(1)),
+	);
+
 	const focussedStopPoint = computed(() =>
 		focussedStopPointId.value === undefined
 			? undefined
-			: stopPointCache.value.get(focussedStopPointId.value),
+			: recursiveStopPointCache.value.get(focussedStopPointId.value),
 	);
 
 	effect(() => {
 		const focussed = focussedStopPointId.value;
-		if (focussed !== undefined && !stopPointCache.value.has(focussed)) {
+		if (focussed !== undefined && !recursiveStopPointCache.value.has(focussed)) {
 			fetch(
 				`https://api.tfl.gov.uk/StopPoint/${focussed}?includeCrowdingData=false`,
 			)
@@ -69,18 +73,24 @@ export function createAppState(): AppState {
 					const stopPoint =
 						filterStopPointToKnownProperties(extraPropsStopPoint);
 
-					stopPointCache.value = new Map([
-						...stopPointCache.peek(),
-						...cacheChildren(stopPoint, stopPoint),
-					]);
+					stopPointCache.value = [...stopPointCache.peek(), stopPoint];
 
 					try {
 						localStorage.setItem(
 							localStopPointCacheKey,
-							JSON.stringify(Array.from(stopPointCache.peek().entries())),
+							JSON.stringify(Array.from(stopPointCache.peek())),
 						);
 					} catch (e: unknown) {
-						alert(e);
+						try {
+							stopPointCache.value = [stopPoint];
+
+							localStorage.setItem(
+								localStopPointCacheKey,
+								JSON.stringify(Array.from(stopPointCache.peek())),
+							);
+						} catch (e: unknown) {
+							alert(e);
+						}
 					}
 				})
 				.catch((err) => {
@@ -245,7 +255,17 @@ export function createAppState(): AppState {
 							JSON.stringify(Array.from(lineCache.peek().entries())),
 						);
 					} catch (e: unknown) {
-						alert(e);
+						try {
+							lineCache.value = new Map([
+								[focussed, { inboundRoute, outboundRoute }],
+							]);
+							localStorage.setItem(
+								localLineCacheKey,
+								JSON.stringify(Array.from(lineCache.peek().entries())),
+							);
+						} catch (e: unknown) {
+							alert(e);
+						}
 					}
 				}
 			});
@@ -267,6 +287,7 @@ export function createAppState(): AppState {
 
 	return {
 		stopPointCache,
+		recursiveStopPointCache,
 		focussedStopPointId,
 		focussedStopPoint,
 		focussedStopPointPath,
