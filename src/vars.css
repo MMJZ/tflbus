@@ -1,6 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+	font-family: johnston100-medium;
+	src: url('/Johnston100-Medium.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: johnston100-light;
+	src: url('/Johnston100-Light.woff2') format('woff2');
+}
+
 :root {
-	--corporate-red: rgb(216, 48, 31);
 	--corporate-red-t: 216 48 31;
+	--corporate-red: rgb(var(--corporate-red-t));
+	--corporate-yellow: rgb(255, 205, 0);
 	--corporate-black: rgb(25, 26, 27);
 	--bus-stop-dark-grey: rgb(95, 99, 102);
 	--bus-stop-light-grey: rgb(222, 220, 210);
@@ -8,6 +21,7 @@
 	--corporate-blue: rgb(0, 71, 134);
 	--night-bus-blue: rgb(195, 216, 237);
 	--superloop-bus-red: rgb(211, 0, 49);
+	--johnston-medium: 'johnston100-medium';
 
 	@media (prefers-color-scheme: light) {
 		--default-text: var(--corporate-black);

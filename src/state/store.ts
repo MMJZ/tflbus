@@ -17,6 +17,7 @@ import { dovetail, maxBy, zip } from './util';
 
 const localStopPointCacheKey = 'localStopPointCache';
 const localLineCacheKey = 'localLineCache';
+const localVersionKey = 'localVersionKey';
 
 export interface AppState {
 	stopPointCache: Signal<StopPoint[]>;
@@ -32,20 +33,33 @@ export interface AppState {
 }
 
 export function createAppState(): AppState {
-	let cachedStopPoints: StopPoint[];
-	let cachedLines: Map<string, LineData>;
+	let cachedStopPoints: StopPoint[] = [];
+	let cachedLines = new Map<string, LineData>();
+
+	const currentVersion = 'v1';
+	let cacheVersionMatch = false;
+
 	try {
-		cachedStopPoints = JSON.parse(
-			localStorage.getItem(localStopPointCacheKey) ?? '[]',
-		) as StopPoint[];
-		cachedLines = new Map(
-			JSON.parse(localStorage.getItem(localLineCacheKey) ?? '[]') as Array<
-				[string, LineData]
-			>,
-		);
+		if (localStorage.getItem(localVersionKey) === currentVersion) {
+			cacheVersionMatch = true;
+		}
 	} catch (_: unknown) {
-		cachedStopPoints = [];
-		cachedLines = new Map();
+		// nothing to do
+	}
+
+	if (cacheVersionMatch) {
+		try {
+			cachedStopPoints = JSON.parse(
+				localStorage.getItem(localStopPointCacheKey) ?? '[]',
+			) as StopPoint[];
+			cachedLines = new Map(
+				JSON.parse(localStorage.getItem(localLineCacheKey) ?? '[]') as Array<
+					[string, LineData]
+				>,
+			);
+		} catch (_: unknown) {
+			// nothing to do
+		}
 	}
 
 	const stopPointCache = signal(cachedStopPoints);
@@ -126,6 +140,10 @@ export function createAppState(): AppState {
 		if (data === undefined) {
 			return undefined;
 		}
+
+		const hasHiddenBranches =
+			data.inboundRoute.stopPointSequences.length !== 1 ||
+			data.outboundRoute.stopPointSequences.length !== 1;
 
 		// TODO dirty hack: draw the route using the longest sequence available
 		const inboundSequence = (
@@ -222,9 +240,9 @@ export function createAppState(): AppState {
 		);
 
 		return {
-			...data,
-			patch: patches,
 			routeRows,
+			hasHiddenBranches,
+			lineName: data.outboundRoute.lineName,
 		};
 	});
 

@@ -19,6 +19,7 @@
 	justify-content: flex-start;
 	gap: 20px;
 	& > a > h1 {
+		font-weight: 700;
 		font-size: 2em;
 	}
 	& > :last-child {
@@ -59,8 +60,8 @@
 	margin-top: 20px;
 	background: var(--corporate-blue);
 	color: var(--corporate-white);
-	font-family: 'johnston100-light';
-	padding: 10px 20px;
+	font-weight: 300;
+	padding: 10px;
 	display: flex;
 	justify-content: flex-start;
 	gap: 20px;
@@ -72,6 +73,14 @@
 		&:hover {
 			background: var(--corporate-white);
 			color: var(--corporate-black);
+		}
+	}
+	& > div {
+		font-size: 0.8em;
+		& > p {
+			&:not(:last-child) {
+				margin-bottom: 5px;
+			}
 		}
 	}
 }

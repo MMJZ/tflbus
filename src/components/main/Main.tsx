@@ -88,9 +88,6 @@ export function Main(): JSX.Element {
 						onLoadEnd={() => {
 							setLoading(false);
 						}}
-						// onRouteChange={() => {
-						// 	// window.scrollTo(window.scrollX, state.scrollY.peek())
-						// }}
 					>
 						<Route path="stopPoint/:id" component={StopPointPage} />
 						<Route path="line/:id" component={LinePage} />
@@ -99,7 +96,11 @@ export function Main(): JSX.Element {
 				</ErrorBoundary>
 			</main>
 			<footer class={css.footer}>
-				<p>Not associated with TfL.</p>
+				<div>
+					<p>Powered by TfL Open Data</p>
+					<p>Contains OS data © Crown copyright and database rights 2016</p>
+					<p>Geomni UK Map data © and database rights 2019</p>
+				</div>
 				<button
 					onClick={() => {
 						state.stopPointCache.value = [];

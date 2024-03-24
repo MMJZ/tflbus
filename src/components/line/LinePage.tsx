@@ -34,8 +34,16 @@ export function LinePage(): JSX.Element {
 	return (
 		<div class={css.wrapper}>
 			<div class={css.titleBar}>
-				<h2>{line.outboundRoute.lineName}</h2>
+				<h2>{line.lineName}</h2>
 			</div>
+			{line.hasHiddenBranches && (
+				<div class={css.hiddenWarning}>
+					<span>
+						This line has multiple branches. Some stops on some branches will be
+						missing.
+					</span>
+				</div>
+			)}
 			<div class={css.routeGrid}>
 				<div class={css.rounderRow}>
 					<div class={css.firstCorner} />

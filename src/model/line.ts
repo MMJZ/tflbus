@@ -1,5 +1,3 @@
-import { type Patch } from 'fast-array-diff';
-
 export interface LineRoute {
 	lineName: string;
 	lineId: string;
@@ -29,9 +27,10 @@ export interface LineData {
 	outboundRoute: LineRoute;
 }
 
-export interface EnrichedLineData extends LineData {
+export interface EnrichedLineData {
+	lineName: string;
 	routeRows: RouteRow[];
-	patch: Patch<LineSequenceStopPoint>;
+	hasHiddenBranches: boolean;
 }
 
 export interface SingleStopRouteRow<T> {

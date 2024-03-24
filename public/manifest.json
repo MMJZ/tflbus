@@ -3,7 +3,7 @@
 	"name": "BusMupper",
 	"icons": [
 		{
-			"src": "/favicon.svg",
+			"src": "/pwa.svg",
 			"type": "image/svg+xml",
 			"sizes": "any"
 		}
