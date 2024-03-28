@@ -8,6 +8,7 @@ import {
 	getStopTowardsLine,
 } from './util';
 import { useLocation } from 'preact-iso';
+import { changeRoute } from '../util';
 
 interface StopPointProps {
 	stopPoint: StopPoint;
@@ -96,7 +97,7 @@ export function BusStopRender({
 						return (
 							<a
 								onClick={() => {
-									location.route(`/line/${line.number}`, true);
+									changeRoute(location, `/line/${line.number}`);
 								}}
 								key={line.number}
 							>

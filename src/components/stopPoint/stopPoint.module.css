@@ -228,25 +228,25 @@
 			align-items: baseline;
 			justify-content: flex-start;
 			gap: 10px;
-			font-weight: 300;
+			font-weight: var(--default-text-weight);
 			& > h5 {
 				font-size: 1.1em;
-				font-weight: 300;
+				font-weight: var(--default-text-weight);
 			}
 			& > h6 {
 				font-size: 0.7em;
-				font-weight: 300;
+				font-weight: var(--default-text-weight);
 			}
 		}
 		& > h4 {
 			font-size: 1.6em;
-			font-weight: 700;
+			font-weight: var(--default-bold-text-weight);
 		}
 	}
 	& > h5 {
 		margin: 20px 20px 0;
 		font-size: 0.9em;
-		font-weight: 300;
+		font-weight: var(--default-text-weight);
 	}
 	& > .detailsRow {
 		display: flex;
@@ -291,11 +291,11 @@
 .stopPointTile {
 	padding: 8px;
 	& > h6 {
-		font-weight: 300;
+		font-weight: var(--default-text-weight);
 	}
 	& > .railLinesRow {
 		& > span:not(.buses) {
-			font-weight: 300;
+			font-weight: var(--default-text-weight);
 		}
 		& > .southeastern {
 			background: #389cff;
@@ -420,7 +420,7 @@
 		& > span {
 			padding: 0.05em 0.2em;
 			border-radius: 2px;
-			font-weight: 700;
+			font-weight: var(--default-bold-text-weight);
 			color: var(--corporate-white);
 			background: var(--corporate-red);
 		}
@@ -436,11 +436,11 @@
 .busStopTile {
 	& > p {
 		margin-top: 5px;
-		font-weight: 300;
+		font-weight: var(--default-text-weight);
 	}
 }
 
 .zone {
 	padding: 0 7px;
-	font-weight: 300;
+	font-weight: var(--default-text-weight);
 }

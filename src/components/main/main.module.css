@@ -19,7 +19,7 @@
 	justify-content: flex-start;
 	gap: 20px;
 	& > a > h1 {
-		font-weight: 700;
+		font-weight: var(--default-bold-text-weight);
 		font-size: 2em;
 	}
 	& > :last-child {
@@ -60,7 +60,7 @@
 	margin-top: 20px;
 	background: var(--corporate-blue);
 	color: var(--corporate-white);
-	font-weight: 300;
+	font-weight: var(--default-text-weight);
 	padding: 10px;
 	display: flex;
 	justify-content: flex-start;

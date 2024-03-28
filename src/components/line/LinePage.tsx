@@ -5,6 +5,7 @@ import css from './line.module.css';
 import { useLocation, useRoute } from 'preact-iso';
 import { Loading } from '../loading/Loading';
 import { StopLetterRender } from '../stopPoint/StopLetterRender';
+import { changeRoute } from '../util';
 
 export function LinePage(): JSX.Element {
 	const _state = useContext(StateContext);
@@ -44,6 +45,14 @@ export function LinePage(): JSX.Element {
 					</span>
 				</div>
 			)}
+
+			{/* <div>
+				MISSING
+				<br />
+				{line.missingStops.map(([o, i]) => <div key={o?.id ?? i?.id}>{o?.id ?? 'X'} | {i?.id ?? 'X'} | {o?.name ?? i?.name}</div>)}
+				MISSING
+			</div> */}
+
 			<div class={css.routeGrid}>
 				<div class={css.rounderRow}>
 					<div class={css.firstCorner} />
@@ -57,7 +66,7 @@ export function LinePage(): JSX.Element {
 								<div class={css.withLetter}>
 									<a
 										onClick={() => {
-											location.route(`/stopPoint/${row.id}`, true);
+											changeRoute(location, `/stopPoint/${row.id}`);
 										}}
 									>
 										<StopLetterRender
@@ -73,7 +82,7 @@ export function LinePage(): JSX.Element {
 										class={row.parentId === undefined ? css.noLink : ''}
 										onClick={() => {
 											if (row.parentId !== undefined) {
-												location.route(`/stopPoint/${row.parentId}`, true);
+												changeRoute(location, `/stopPoint/${row.parentId}`);
 											}
 										}}
 									>
@@ -87,7 +96,7 @@ export function LinePage(): JSX.Element {
 								<div class={css.withLetter}>
 									<a
 										onClick={() => {
-											location.route(`/stopPoint/${row.id}`, true);
+											changeRoute(location, `/stopPoint/${row.id}`);
 										}}
 									>
 										<StopLetterRender
@@ -102,7 +111,7 @@ export function LinePage(): JSX.Element {
 										class={row.parentId === undefined ? css.noLink : ''}
 										onClick={() => {
 											if (row.parentId !== undefined) {
-												location.route(`/stopPoint/${row.parentId}`, true);
+												changeRoute(location, `/stopPoint/${row.parentId}`);
 											}
 										}}
 									>
@@ -115,7 +124,7 @@ export function LinePage(): JSX.Element {
 								<div class={css.withLetter}>
 									<a
 										onClick={() => {
-											location.route(`/stopPoint/${row.inboundId}`, true);
+											changeRoute(location, `/stopPoint/${row.inboundId}`);
 										}}
 									>
 										<StopLetterRender
@@ -128,7 +137,7 @@ export function LinePage(): JSX.Element {
 								<div class={css.withLetter}>
 									<a
 										onClick={() => {
-											location.route(`/stopPoint/${row.outboundId}`, true);
+											changeRoute(location, `/stopPoint/${row.outboundId}`);
 										}}
 									>
 										<StopLetterRender
@@ -143,7 +152,7 @@ export function LinePage(): JSX.Element {
 										class={row.parentId === undefined ? css.noLink : ''}
 										onClick={() => {
 											if (row.parentId !== undefined) {
-												location.route(`/stopPoint/${row.parentId}`, true);
+												changeRoute(location, `/stopPoint/${row.parentId}`);
 											}
 										}}
 									>

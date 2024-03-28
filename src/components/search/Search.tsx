@@ -5,6 +5,7 @@ import css from './search.module.css';
 import { type SearchResult, type QueryResult } from '../../model';
 import { Loading } from '../loading/Loading';
 import { useLocation } from 'preact-iso';
+import { changeRoute } from '../util';
 
 function debounce<T>(wait: number, fn: (arg: T) => void): (arg: T) => void {
 	let timeoutId: number | undefined;
@@ -87,7 +88,7 @@ export function Search(): JSX.Element {
 						<li key={matchedLine}>
 							<a
 								onClick={() => {
-									location.route(`/line/${matchedLine}`, true);
+									changeRoute(location, `/line/${matchedLine}`);
 								}}
 							>
 								<h4>{matchedLine.toLocaleUpperCase()}</h4>
@@ -102,7 +103,7 @@ export function Search(): JSX.Element {
 						<li key={searchResult.id}>
 							<a
 								onClick={() => {
-									location.route(`/stopPoint/${searchResult.id}`, true);
+									changeRoute(location, `/stopPoint/${searchResult.id}`);
 								}}
 							>
 								<h4>{searchResult.name}</h4>

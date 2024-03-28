@@ -5,6 +5,7 @@ import css from './stopPoint.module.css';
 import { StopPointTile } from './StopPointTile';
 import { getStopTypeName, separateBy } from './util';
 import { useLocation } from 'preact-iso';
+import { changeRoute } from '../util';
 
 interface StopPointProps {
 	stopPointData: StopPoint;
@@ -69,9 +70,9 @@ function OtherStopPoint({
 					{selectableChildren.map((child) => (
 						<a
 							onClick={() => {
-								location.route(
+								changeRoute(
+									location,
 									`/stopPoint/${focussedStopData?.naptanId === child.naptanId ? stopPointData.naptanId : child.naptanId}`,
-									true
 								);
 							}}
 							key={child.naptanId}

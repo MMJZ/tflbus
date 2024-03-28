@@ -31,6 +31,7 @@ export interface EnrichedLineData {
 	lineName: string;
 	routeRows: RouteRow[];
 	hasHiddenBranches: boolean;
+	// missingStops: Array<[LineSequenceStopPoint | undefined, LineSequenceStopPoint | undefined]>;
 }
 
 export interface SingleStopRouteRow<T> {

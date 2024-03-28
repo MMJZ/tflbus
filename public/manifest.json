@@ -6,6 +6,12 @@
 			"src": "/pwa.svg",
 			"type": "image/svg+xml",
 			"sizes": "any"
+		},
+		{
+			"src": "/pwa.svg",
+			"type": "image/svg+xml",
+			"sizes": "any",
+			"purpose": "maskable"
 		}
 	],
 	"start_url": "/",

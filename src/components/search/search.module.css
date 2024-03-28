@@ -12,6 +12,7 @@
 			padding: 10px 20px;
 			border-radius: 4px;
 			flex: 1;
+			font-weight: var(--default-text-weight);
 		}
 		& > button {
 			margin-left: 10px;
@@ -60,7 +61,7 @@
 					font-size: 1.2em;
 				}
 				& > h6 {
-					font-weight: 300;
+					font-weight: var(--default-text-weight);
 					color: var(--bus-stop-light-grey);
 					font-size: 0.7em;
 				}

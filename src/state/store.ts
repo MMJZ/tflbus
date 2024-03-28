@@ -6,6 +6,7 @@ import {
 	effect,
 } from '@preact/signals';
 import {
+	// type LineSequenceStopPoint,
 	type EnrichedLineData,
 	type LineData,
 	type LineRoute,
@@ -239,10 +240,17 @@ export function createAppState(): AppState {
 			[[], [], []],
 		);
 
+		// const mo = outboundSequence.filter((s) => s.parentId === undefined);
+		// const mi = inboundSequence.filter((s) => s.parentId === undefined);
+
+		// const missingStops = mo.map<[LineSequenceStopPoint | undefined, LineSequenceStopPoint | undefined]>(o => [o, mi.find(i => i.name === o.name)])
+		// 	.concat(mi.filter(i => mo.every(o => o.name !== i.name)).map<[undefined, LineSequenceStopPoint]>(i => [undefined, i]));
+
 		return {
 			routeRows,
 			hasHiddenBranches,
 			lineName: data.outboundRoute.lineName,
+			// missingStops,
 		};
 	});
 
