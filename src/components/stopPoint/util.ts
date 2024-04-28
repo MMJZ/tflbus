@@ -297,7 +297,7 @@ export function getStopLetterAndSize(
 			return { stopLetter, stopLetterSize: 'triple' };
 		default:
 			alert(`failed stop letter ${stopLetter}`);
-			throw new Error('fuck');
+			throw new Error('failed to render stop: stop letter length must be 1, 2, or 3');
 	}
 }
 

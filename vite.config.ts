@@ -8,4 +8,14 @@ export default defineConfig({
 			localsConvention: 'camelCase',
 		},
 	},
+	test: {
+    globals: true,
+		environment: 'jsdom',
+		css: {
+      modules: {
+        classNameStrategy: 'non-scoped',
+      },
+    },
+		setupFiles: ['./vitest-setup.ts'],
+	},
 });

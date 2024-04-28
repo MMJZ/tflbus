@@ -9,6 +9,7 @@
 		"lint": "eslint .",
 		"prettier": "prettier -w .",
 		"lint:fix": "eslint --fix .",
+		"test": "vitest",
 		"push": "vite build && rsync -av --delete -e ssh dist/ work:/srv/glydian/busmupper/www"
 	},
 	"dependencies": {
@@ -20,6 +21,8 @@
 	},
 	"devDependencies": {
 		"@preact/preset-vite": "^2.8.2",
+		"@testing-library/jest-dom": "^6.4.2",
+		"@testing-library/preact": "^3.2.3",
 		"@types/css-modules": "^1.0.5",
 		"@typescript-eslint/eslint-plugin": "^6.16.0",
 		"eslint": "^8.57.0",
@@ -27,12 +30,15 @@
 		"eslint-config-standard-with-typescript": "^43.0.0",
 		"eslint-plugin-import": "^2.29.1",
 		"eslint-plugin-jest": "^27.9.0",
+		"eslint-plugin-jest-dom": "^5.4.0",
 		"eslint-plugin-n": "^16.6.0",
 		"eslint-plugin-promise": "^6.1.1",
+		"jsdom": "^24.0.0",
 		"prettier": "^3.2.5",
 		"typescript": "^5.4.3",
 		"typescript-plugin-css-modules": "^5.1.0",
-		"vite": "^5.2.2"
+		"vite": "^5.2.2",
+		"vitest": "^1.5.2"
 	},
 	"prettier": {
 		"useTabs": true,
