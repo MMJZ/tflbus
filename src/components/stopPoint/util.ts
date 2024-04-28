@@ -1,5 +1,7 @@
 import { type StopType, type StopPoint } from '../../model';
 
+export type StopNameIcon = 'NR' | 'LT';
+
 export interface StopNameData {
 	firstLine: string;
 	secondLine?: string;
