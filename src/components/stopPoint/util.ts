@@ -230,7 +230,7 @@ export function getStopCallingBusData(stopPoint: StopPoint): CallingBusData[] {
 	return data;
 }
 
-function compareBusNumbers(a: string, b: string): number {
+export function compareBusNumbers(a: string, b: string): number {
 	const aMatch = a.match(/([A-Z]*)([0-9]+)([A-Z]*)/);
 	const bMatch = b.match(/([A-Z]*)([0-9]+)([A-Z]*)/);
 
