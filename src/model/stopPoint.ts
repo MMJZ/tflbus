@@ -1,8 +1,8 @@
 export interface QueryResult {
-	matches: Array<{
+	matches: {
 		id: string;
 		name: string;
-	}>;
+	}[];
 }
 
 export interface SearchResult {
@@ -39,10 +39,10 @@ export interface StopPoint {
 	lon: number;
 	smsCode: string;
 	additionalProperties: AdditionalProperties[];
-	lines: Array<{
+	lines: {
 		name: string;
 		id: string;
-	}>;
+	}[];
 	children: StopPoint[];
 	stopType: StopType;
 }

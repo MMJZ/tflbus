@@ -53,7 +53,7 @@ export function Search(): JSX.Element {
 						setSearchResults(json.matches);
 						setIsSearching(false);
 					})
-					.catch((err) => {
+					.catch((err: unknown) => {
 						console.log(err);
 						setIsSearching(false);
 					});

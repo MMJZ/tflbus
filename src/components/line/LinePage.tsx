@@ -17,7 +17,7 @@ export function LinePage(): JSX.Element {
 	const location = useLocation();
 
 	useEffect(() => {
-		const id = route.params.id;
+		const id = 'id' in route.params ? route.params.id : undefined;
 		if (id !== undefined) {
 			state.focussedLineId.value = id;
 			state.focussedStopPointId.value = undefined;

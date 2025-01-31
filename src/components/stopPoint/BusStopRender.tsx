@@ -34,7 +34,10 @@ export function BusStopRender({
 	const location = useLocation();
 
 	return (
-		<div style={{ fontSize: `${scale}em` }} class={css.busStopRenderWrapper}>
+		<div
+			style={{ fontSize: `${String(scale)}em` }}
+			class={css.busStopRenderWrapper}
+		>
 			<div class={css.indicators}>
 				{stopLetterData !== undefined && (
 					<div class={css.letterWrapper}>

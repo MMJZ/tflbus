@@ -9,13 +9,13 @@ export default defineConfig({
 		},
 	},
 	test: {
-    globals: true,
+		globals: true,
 		environment: 'jsdom',
 		css: {
-      modules: {
-        classNameStrategy: 'non-scoped',
-      },
-    },
+			modules: {
+				classNameStrategy: 'non-scoped',
+			},
+		},
 		setupFiles: ['./vitest-setup.ts'],
 	},
 });
