@@ -44,7 +44,7 @@ export function createAppState(): AppState {
 		if (localStorage.getItem(localVersionKey) === currentVersion) {
 			cacheVersionMatch = true;
 		}
-	} catch (_: unknown) {
+	} catch {
 		// nothing to do
 	}
 
@@ -54,11 +54,12 @@ export function createAppState(): AppState {
 				localStorage.getItem(localStopPointCacheKey) ?? '[]',
 			) as StopPoint[];
 			cachedLines = new Map(
-				JSON.parse(localStorage.getItem(localLineCacheKey) ?? '[]') as Array<
-					[string, LineData]
-				>,
+				JSON.parse(localStorage.getItem(localLineCacheKey) ?? '[]') as [
+					string,
+					LineData,
+				][],
 			);
-		} catch (_: unknown) {
+		} catch {
 			// nothing to do
 		}
 	}
@@ -98,7 +99,7 @@ export function createAppState(): AppState {
 							localStopPointCacheKey,
 							JSON.stringify(Array.from(stopPointCache.peek())),
 						);
-					} catch (e: unknown) {
+					} catch {
 						try {
 							stopPointCache.value = [stopPoint];
 
@@ -111,7 +112,7 @@ export function createAppState(): AppState {
 						}
 					}
 				})
-				.catch((err) => {
+				.catch((err: unknown) => {
 					console.log(err);
 				});
 		}
@@ -269,8 +270,8 @@ export function createAppState(): AppState {
 			};
 
 			void Promise.all([
-				routeCall('Outbound').catch((_) => undefined),
-				routeCall('Inbound').catch((_) => undefined),
+				routeCall('Outbound').catch(() => undefined),
+				routeCall('Inbound').catch(() => undefined),
 			]).then(([outboundRoute, inboundRoute]) => {
 				if (outboundRoute !== undefined && inboundRoute !== undefined) {
 					lineCache.value = new Map([
@@ -283,7 +284,7 @@ export function createAppState(): AppState {
 							localLineCacheKey,
 							JSON.stringify(Array.from(lineCache.peek().entries())),
 						);
-					} catch (e: unknown) {
+					} catch {
 						try {
 							lineCache.value = new Map([
 								[focussed, { inboundRoute, outboundRoute }],
@@ -305,9 +306,7 @@ export function createAppState(): AppState {
 	effect(() => {
 		if (lineList.value === undefined) {
 			void fetch('https://api.tfl.gov.uk/Line/Mode/bus')
-				.then(
-					async (response) => (await response.json()) as Array<{ id: string }>,
-				)
+				.then(async (response) => (await response.json()) as { id: string }[])
 				.then((lines) => {
 					lineList.value = lines.map((l) => l.id.toLocaleUpperCase());
 				});
@@ -344,7 +343,7 @@ function getPathToStop(target: string, node: StopPoint): string[] | undefined {
 function cacheChildren(
 	root: StopPoint,
 	stopPoint: StopPoint,
-): Array<[string, StopPoint]> {
+): [string, StopPoint][] {
 	return stopPoint.children
 		.map((child: StopPoint) => cacheChildren(root, child))
 		.flat(1)

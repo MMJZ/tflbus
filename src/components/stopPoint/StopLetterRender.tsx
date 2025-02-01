@@ -29,7 +29,7 @@ export function StopLetterRender({
 	}
 
 	return (
-		<div style={{ fontSize: `${scale}em` }} class={css.letterWrapper}>
+		<div style={{ fontSize: `${String(scale)}em` }} class={css.letterWrapper}>
 			<div class={css[stopLetterData.stopLetterSize]}>
 				{stopLetterData.stopLetter}
 			</div>

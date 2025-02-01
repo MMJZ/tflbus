@@ -16,7 +16,7 @@ export function StopPointPage(): JSX.Element {
 	const route = useRoute();
 
 	useEffect(() => {
-		const id = route.params.id;
+		const id = 'id' in route.params ? route.params.id : undefined;
 		if (id !== undefined) {
 			state.focussedStopPointId.value = id;
 			state.focussedLineId.value = undefined;

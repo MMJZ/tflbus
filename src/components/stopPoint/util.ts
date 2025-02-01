@@ -231,8 +231,8 @@ export function getStopCallingBusData(stopPoint: StopPoint): CallingBusData[] {
 }
 
 export function compareBusNumbers(a: string, b: string): number {
-	const aMatch = a.match(/([A-Z]*)([0-9]+)([A-Z]*)/);
-	const bMatch = b.match(/([A-Z]*)([0-9]+)([A-Z]*)/);
+	const aMatch = /([A-Z]*)([0-9]+)([A-Z]*)/.exec(a);
+	const bMatch = /([A-Z]*)([0-9]+)([A-Z]*)/.exec(b);
 
 	if (aMatch === null || bMatch === null) {
 		alert('oh no');
@@ -270,7 +270,7 @@ export interface StopLetterData {
 }
 
 export function getStopLetterAndSize(
-	stopLetter: string,
+	stopLetter: string | undefined,
 ): StopLetterData | undefined {
 	if (
 		stopLetter === undefined ||
@@ -289,7 +289,7 @@ export function getStopLetterAndSize(
 			return {
 				stopLetter,
 				stopLetterSize:
-					containsW && stopLetter.match(/^[A-Z]*$/) !== null
+					containsW && /^[A-Z]*$/.exec(stopLetter) !== null
 						? 'triple'
 						: 'double',
 			};
@@ -297,7 +297,9 @@ export function getStopLetterAndSize(
 			return { stopLetter, stopLetterSize: 'triple' };
 		default:
 			alert(`failed stop letter ${stopLetter}`);
-			throw new Error('failed to render stop: stop letter length must be 1, 2, or 3');
+			throw new Error(
+				'failed to render stop: stop letter length must be 1, 2, or 3',
+			);
 	}
 }
 

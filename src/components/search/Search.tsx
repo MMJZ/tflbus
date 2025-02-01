@@ -26,6 +26,7 @@ export function Search(): JSX.Element {
 	const [isSearching, setIsSearching] = useState(false);
 	const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
 	const [matchedLines, setMatchedLines] = useState<string[]>([]);
+	const [isExpanded, setIsExpanded] = useState(false);
 	const location = useLocation();
 
 	const doSearch = useMemo(
@@ -53,12 +54,17 @@ export function Search(): JSX.Element {
 						setSearchResults(json.matches);
 						setIsSearching(false);
 					})
-					.catch((err) => {
+					.catch((err: unknown) => {
 						console.log(err);
 						setIsSearching(false);
 					});
 			}),
 		[setSearchResults, setIsSearching, state.lineList],
+	);
+
+	const displayedSearchResults = useMemo(
+		() => (isExpanded ? searchResults : searchResults.slice(0, 5)),
+		[isExpanded, searchResults],
 	);
 
 	return (
@@ -69,11 +75,11 @@ export function Search(): JSX.Element {
 					placeholder="Search..."
 					type="search"
 					onInput={(e) => {
-						const searchTerm = (e.target as HTMLInputElement).value;
+						const searchTerm = e.currentTarget.value;
 						doSearch(searchTerm);
 					}}
 					onBlur={(e) => {
-						const searchTerm = (e.target as HTMLInputElement).value;
+						const searchTerm = e.currentTarget.value;
 						if (searchTerm.length === 0) {
 							setSearchResults([]);
 							setMatchedLines([]);
@@ -89,6 +95,7 @@ export function Search(): JSX.Element {
 							<a
 								onClick={() => {
 									changeRoute(location, `/line/${matchedLine}`);
+									document.getElementsByTagName('main')[0].scrollIntoView(true);
 								}}
 							>
 								<h4>{matchedLine.toLocaleUpperCase()}</h4>
@@ -97,21 +104,36 @@ export function Search(): JSX.Element {
 					))}
 				</ul>
 			)}
-			{searchResults.length > 0 && (
+			{displayedSearchResults.length > 0 && (
 				<ul class={css.searchResults}>
-					{searchResults.map((searchResult) => (
+					{displayedSearchResults.map((searchResult) => (
 						<li key={searchResult.id}>
 							<a
 								onClick={() => {
 									changeRoute(location, `/stopPoint/${searchResult.id}`);
+									document.getElementsByTagName('main')[0].scrollIntoView(true);
 								}}
 							>
-								<h4>{searchResult.name}</h4>
+								<div>
+									<h4>{searchResult.name}</h4>
+									{searchResult.towards !== undefined && (
+										<h5>➤ {searchResult.towards}</h5>
+									)}
+								</div>
 								<h6>{searchResult.id}</h6>
 							</a>
 						</li>
 					))}
 				</ul>
+			)}
+			{searchResults.length > 5 && (
+				<button
+					onClick={() => {
+						setIsExpanded(!isExpanded);
+					}}
+				>
+					{isExpanded ? 'Show fewer' : 'Show more'}
+				</button>
 			)}
 		</div>
 	);

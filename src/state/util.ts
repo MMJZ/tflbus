@@ -1,5 +1,5 @@
-export function zip<A, B>(a: A[], b: B[]): Array<[A, B]> {
-	const ret: Array<[A, B]> = [];
+export function zip<A, B>(a: A[], b: B[]): [A, B][] {
+	const ret: [A, B][] = [];
 	for (let i = 0; i < Math.min(a.length, b.length); i++) {
 		ret.push([a[i], b[i]]);
 	}
@@ -7,11 +7,8 @@ export function zip<A, B>(a: A[], b: B[]): Array<[A, B]> {
 	return ret;
 }
 
-export function zipLax<A, B>(
-	a: A[],
-	b: B[],
-): Array<[A | undefined, B | undefined]> {
-	const ret: Array<[A, B]> = [];
+export function zipLax<A, B>(a: A[], b: B[]): [A | undefined, B | undefined][] {
+	const ret: [A, B][] = [];
 	for (let i = 0; i < Math.max(a.length, b.length); i++) {
 		ret.push([a[i], b[i]]);
 	}

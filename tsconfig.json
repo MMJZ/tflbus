@@ -6,7 +6,7 @@
 		"noEmit": true,
 		"allowJs": true,
 		"checkJs": true,
-		"strictNullChecks": true,
+		"strict": true,
 		"jsx": "react-jsx",
 		"jsxImportSource": "preact",
 		"skipLibCheck": true,

@@ -17,7 +17,7 @@ export interface LineSequenceStopPoint {
 	id: string;
 	stopLetter: string;
 	towards: string;
-	lines: Array<{ name: string }>;
+	lines: { name: string }[];
 	topMostParentId: string;
 	parentId: string;
 }
@@ -39,7 +39,7 @@ export interface SingleStopRouteRow<T> {
 	stopLetter: string;
 	name: string;
 	id: string;
-	parentId: string;
+	parentId: string | undefined;
 }
 
 export type InboundRouteRow = SingleStopRouteRow<'inbound'>;
@@ -50,7 +50,7 @@ export interface SharedRouteRow {
 	kind: 'shared';
 	inboundId: string;
 	outboundId: string;
-	parentId: string;
+	parentId: string | undefined;
 	inboundName: string;
 	outboundName: string;
 	inboundStopLetter: string;

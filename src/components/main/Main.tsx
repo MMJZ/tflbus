@@ -1,7 +1,6 @@
 import { type JSX } from 'preact';
 import { useContext, useEffect, useState } from 'preact/hooks';
 import { StateContext } from '../../context';
-import { type AppState } from '../../state/store';
 import { StopPointPage } from '../stopPoint/StopPointPage';
 import css from './main.module.css';
 import { Search } from '../search/Search';
@@ -61,8 +60,6 @@ export function Main(): JSX.Element {
 		throw new Error('No state context available');
 	}
 	const state = _state;
-	(document as unknown as { hackState: AppState }).hackState = state;
-
 	const [loading, setLoading] = useState(false);
 	const location = useLocation();
 
@@ -97,9 +94,11 @@ export function Main(): JSX.Element {
 			</main>
 			<footer class={css.footer}>
 				<div>
-					<p>Powered by TfL Open Data</p>
-					<p>Contains OS data © Crown copyright and database rights 2016</p>
-					<p>Geomni UK Map data © and database rights 2019</p>
+					<p>
+						Powered by TfL Open Data. Contains OS data © Crown copyright and
+						database rights 2016. Geomni UK Map data © and database rights
+						2019.
+					</p>
 				</div>
 				<button
 					onClick={() => {

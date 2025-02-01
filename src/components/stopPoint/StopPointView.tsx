@@ -27,7 +27,7 @@ function OtherStopPoint({
 	focussedStopPointPath,
 }: StopPointProps): JSX.Element {
 	const focussedStopData =
-		focussedStopPointPath[0] !== undefined
+		focussedStopPointPath.length >= 0
 			? stopPointData.children.find(
 					(child) => child.naptanId === focussedStopPointPath[0],
 				)

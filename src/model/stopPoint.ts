@@ -1,13 +1,15 @@
 export interface QueryResult {
-	matches: Array<{
+	matches: {
 		id: string;
 		name: string;
-	}>;
+		towards: string | undefined;
+	}[];
 }
 
 export interface SearchResult {
 	name: string;
 	id: string;
+	towards: string | undefined;
 }
 
 export type StopType =
@@ -39,10 +41,10 @@ export interface StopPoint {
 	lon: number;
 	smsCode: string;
 	additionalProperties: AdditionalProperties[];
-	lines: Array<{
+	lines: {
 		name: string;
 		id: string;
-	}>;
+	}[];
 	children: StopPoint[];
 	stopType: StopType;
 }

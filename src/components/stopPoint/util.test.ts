@@ -5,9 +5,9 @@ describe('stopPoint utils', () => {
 		['A', 'A', 'single'],
 		['W', 'W', 'singleW'],
 		['WW', 'WW', 'triple'],
-    ['W10', 'W10', 'triple'],
-    ['WA', 'WA', 'triple'],
-    ['AB', 'AB', 'double']
+		['W10', 'W10', 'triple'],
+		['WA', 'WA', 'triple'],
+		['AB', 'AB', 'double'],
 	])(
 		'generates stop letter data for %s',
 		(input: string, expectedOutput: string, expectedSize: string) => {
@@ -23,17 +23,17 @@ describe('stopPoint utils', () => {
 		},
 	);
 
-  const lessthan = (x: number) => (x < 0);
+	const lessthan = (x: number) => x < 0;
 	lessthan.toString = () => '<'; // oh god no
-  const equal = (x: number) => x === 0;
+	const equal = (x: number) => x === 0;
 	equal.toString = () => '=='; // lol he did it again
-  const greaterthan = (x: number) => x > 0;
+	const greaterthan = (x: number) => x > 0;
 	greaterthan.toString = () => '>'; // too spicy
 
-  test.each([
-    ['1', lessthan, '2'],
-    ['K1', greaterthan, '2'],
-    ['K1', lessthan, 'K2'],
+	test.each([
+		['1', lessthan, '2'],
+		['K1', greaterthan, '2'],
+		['K1', lessthan, 'K2'],
 		['K1', lessthan, 'N2'],
 		['Z1', lessthan, 'SL2'],
 		['X15A', equal, 'X15A'],
@@ -41,7 +41,7 @@ describe('stopPoint utils', () => {
 		['N21', greaterthan, 'SL3'],
 		['SL4', greaterthan, 'SL3'],
 		['15', greaterthan, '14A'],
-  ])('%s %s %s', (a: string, comp: (x: number) => boolean, b: string) => {
-    expect(comp(compareBusNumbers(a, b))).toBeTruthy();
-  });
+	])('%s %s %s', (a: string, comp: (x: number) => boolean, b: string) => {
+		expect(comp(compareBusNumbers(a, b))).toBeTruthy();
+	});
 });
