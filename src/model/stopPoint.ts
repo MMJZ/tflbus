@@ -2,12 +2,14 @@ export interface QueryResult {
 	matches: {
 		id: string;
 		name: string;
+		towards: string | undefined;
 	}[];
 }
 
 export interface SearchResult {
 	name: string;
 	id: string;
+	towards: string | undefined;
 }
 
 export type StopType =

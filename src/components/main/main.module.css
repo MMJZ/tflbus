@@ -64,15 +64,13 @@
 	padding: 10px;
 	display: flex;
 	justify-content: flex-start;
-	gap: 20px;
+	gap: 10px;
 	align-items: center;
 	& > button {
 		background: var(--corporate-blue);
-		transition: all 0.2s ease-in-out;
-		border: 1px solid var(--corporate-white);
+		padding: 0;
 		&:hover {
-			background: var(--corporate-white);
-			color: var(--corporate-black);
+			text-decoration: underline;
 		}
 	}
 	& > div {

@@ -47,18 +47,35 @@
 	& > .searchResults {
 		margin-top: 10px;
 		& > li {
-			margin-bottom: 10px;
+			&:not(:first-child) > a {
+				border-top: 1px solid var(--corporate-white);
+			}
+			&:first-child > a {
+				border-top-left-radius: 4px;
+				border-top-right-radius: 4px;
+			}
+			&:last-child > a {
+				border-bottom-left-radius: 4px;
+				border-bottom-right-radius: 4px;
+			}
 			& > a {
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
 				text-align: left;
 				gap: 20px;
-				border: 1px solid var(--corporate-white);
-				border-radius: 4px;
-				padding: 8px 20px;
-				& > h4 {
-					font-size: 1.2em;
+				padding: 10px;
+				& > div {
+					display: flex;
+					align-items: center;
+					gap: 10px;
+					& > h4 {
+						font-size: 1.1em;
+					}
+					& > h5 {
+						font-weight: var(--default-text-weight);
+						font-size: 0.8em;
+					}
 				}
 				& > h6 {
 					font-weight: var(--default-text-weight);
@@ -74,5 +91,8 @@
 				}
 			}
 		}
+	}
+	& > button {
+		margin-top: 5px;
 	}
 }
