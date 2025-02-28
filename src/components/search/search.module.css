@@ -94,5 +94,7 @@
 	}
 	& > button {
 		margin-top: 5px;
+		background: var(--corporate-white);
+		color: var(--corporate-black);
 	}
 }
