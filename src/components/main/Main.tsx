@@ -4,9 +4,10 @@ import { StateContext } from '../../context';
 import { StopPointPage } from '../stopPoint/StopPointPage';
 import css from './main.module.css';
 import { Search } from '../search/Search';
-import { ErrorBoundary, Route, Router, useLocation } from 'preact-iso';
+import { ErrorBoundary, Route, Router } from 'preact-iso';
 import { LinePage } from '../line/LinePage';
 import { Loading } from '../loading/Loading';
+import { Link } from '../link/Link';
 
 function Nothing(): JSX.Element {
 	const _state = useContext(StateContext);
@@ -61,23 +62,16 @@ export function Main(): JSX.Element {
 	}
 	const state = _state;
 	const [loading, setLoading] = useState(false);
-	const location = useLocation();
 
 	return (
 		<div class={css.wrapper}>
 			<header class={css.header}>
-				<a href="#main" class={css.skip}>
+				<Link route="#main" anchorClass={css.skip}>
 					Skip to main content
-				</a>
-				<a
-					tabIndex={0}
-					aria-label="Go to home page"
-					onClick={() => {
-						location.route('/', true);
-					}}
-				>
+				</Link>
+				<Link route="/">
 					<h1>BusMupper</h1>
-				</a>
+				</Link>
 				<Search />
 			</header>
 			<main id="main" class={css.main}>

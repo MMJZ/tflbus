@@ -4,8 +4,7 @@ import { StateContext } from '../../context';
 import css from './search.module.css';
 import { type SearchResult, type QueryResult } from '../../model';
 import { Loading } from '../loading/Loading';
-import { useLocation } from 'preact-iso';
-import { changeRoute } from '../util';
+import { Link } from '../link/Link';
 
 function debounce<T>(wait: number, fn: (arg: T) => void): (arg: T) => void {
 	let timeoutId: number | undefined;
@@ -27,7 +26,6 @@ export function Search(): JSX.Element {
 	const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
 	const [matchedLines, setMatchedLines] = useState<string[]>([]);
 	const [isExpanded, setIsExpanded] = useState(false);
-	const location = useLocation();
 
 	const doSearch = useMemo(
 		() =>
@@ -91,15 +89,14 @@ export function Search(): JSX.Element {
 				<ul class={css.matchedLines}>
 					{matchedLines.map((matchedLine) => (
 						<li key={matchedLine}>
-							<a
-								tabIndex={0}
-								onClick={() => {
-									changeRoute(location, `/line/${matchedLine}`);
+							<Link
+								route={`/line/${matchedLine}`}
+								sideEffect={() => {
 									document.getElementsByTagName('main')[0].scrollIntoView(true);
 								}}
 							>
 								<h4>{matchedLine.toLocaleUpperCase()}</h4>
-							</a>
+							</Link>
 						</li>
 					))}
 				</ul>
@@ -108,10 +105,9 @@ export function Search(): JSX.Element {
 				<ul class={css.searchResults}>
 					{displayedSearchResults.map((searchResult) => (
 						<li key={searchResult.id}>
-							<a
-								tabIndex={0}
-								onClick={() => {
-									changeRoute(location, `/stopPoint/${searchResult.id}`);
+							<Link
+								route={`/stopPoint/${searchResult.id}`}
+								sideEffect={() => {
 									document.getElementsByTagName('main')[0].scrollIntoView(true);
 								}}
 							>
@@ -122,7 +118,7 @@ export function Search(): JSX.Element {
 									)}
 								</div>
 								<h6>{searchResult.id}</h6>
-							</a>
+							</Link>
 						</li>
 					))}
 				</ul>

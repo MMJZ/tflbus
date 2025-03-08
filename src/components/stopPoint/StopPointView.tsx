@@ -4,8 +4,7 @@ import { BusStopRender } from './BusStopRender';
 import css from './stopPoint.module.css';
 import { StopPointTile } from './StopPointTile';
 import { getStopTypeName, separateBy } from './util';
-import { useLocation } from 'preact-iso';
-import { changeRoute } from '../util';
+import { Link } from '../link/Link';
 
 interface StopPointProps {
 	stopPointData: StopPoint;
@@ -42,8 +41,6 @@ function OtherStopPoint({
 		(a) => a.key === 'Zone',
 	)?.value;
 
-	const location = useLocation();
-
 	return (
 		<>
 			<div class={css.pointWrapper}>
@@ -68,13 +65,8 @@ function OtherStopPoint({
 				{selectableChildren.length > 0 && <h5>Nested stop points:</h5>}
 				<div class={css.tileRow}>
 					{selectableChildren.map((child) => (
-						<a
-							onClick={() => {
-								changeRoute(
-									location,
-									`/stopPoint/${focussedStopData?.naptanId === child.naptanId ? stopPointData.naptanId : child.naptanId}`,
-								);
-							}}
+						<Link
+							route={`/stopPoint/${focussedStopData?.naptanId === child.naptanId ? stopPointData.naptanId : child.naptanId}`}
 							key={child.naptanId}
 						>
 							<div
@@ -91,7 +83,7 @@ function OtherStopPoint({
 									parentName={stopPointData.commonName}
 								/>
 							</div>
-						</a>
+						</Link>
 					))}
 				</div>
 			</div>

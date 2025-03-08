@@ -12,6 +12,7 @@
 .header {
 	background: var(--corporate-blue);
 	color: var(--corporate-white);
+	outline-color: oklch(from var(--safety-green) calc(l + 0.3) calc(c + 0.3) h);
 	width: 100%;
 	padding: 20px;
 	display: flex;

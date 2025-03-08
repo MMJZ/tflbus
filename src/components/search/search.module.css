@@ -82,7 +82,8 @@
 					color: var(--bus-stop-light-grey);
 					font-size: 0.7em;
 				}
-				&:hover {
+				&:hover,
+				&:focus {
 					background: var(--corporate-white);
 					color: var(--corporate-blue);
 					& > h6 {

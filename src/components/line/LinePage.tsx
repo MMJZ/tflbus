@@ -2,10 +2,10 @@ import { type JSX } from 'preact';
 import { useContext, useEffect } from 'preact/hooks';
 import { StateContext } from '../../context';
 import css from './line.module.css';
-import { useLocation, useRoute } from 'preact-iso';
+import { useRoute } from 'preact-iso';
 import { Loading } from '../loading/Loading';
 import { StopLetterRender } from '../stopPoint/StopLetterRender';
-import { changeRoute } from '../util';
+import { Link } from '../link/Link';
 
 export function LinePage(): JSX.Element {
 	const _state = useContext(StateContext);
@@ -14,7 +14,6 @@ export function LinePage(): JSX.Element {
 	}
 	const state = _state;
 	const route = useRoute();
-	const location = useLocation();
 
 	useEffect(() => {
 		const id = 'id' in route.params ? route.params.id : undefined;
@@ -64,100 +63,71 @@ export function LinePage(): JSX.Element {
 						{row.kind === 'inbound' ? (
 							<>
 								<div class={css.withLetter}>
-									<a
-										onClick={() => {
-											changeRoute(location, `/stopPoint/${row.id}`);
-										}}
-									>
+									<Link route={`/stopPoint/${row.id}`}>
 										<StopLetterRender
 											stopLetter={row.stopLetter}
 											scale={0.7}
 											defaultToDot
 										/>
-									</a>
+									</Link>
 								</div>
 								<div class={css.noStop} />
 								<div class={css.name}>
-									<a
-										class={row.parentId === undefined ? css.noLink : ''}
-										onClick={() => {
-											if (row.parentId !== undefined) {
-												changeRoute(location, `/stopPoint/${row.parentId}`);
-											}
-										}}
-									>
-										{row.name}
-									</a>
+									{row.parentId === undefined ? (
+										<span class={css.noLink}>{row.name}</span>
+									) : (
+										<Link route={`/stopPoint/${row.parentId}`}>{row.name}</Link>
+									)}
 								</div>
 							</>
 						) : row.kind === 'outbound' ? (
 							<>
 								<div class={css.noStop} />
 								<div class={css.withLetter}>
-									<a
-										onClick={() => {
-											changeRoute(location, `/stopPoint/${row.id}`);
-										}}
-									>
+									<Link route={`/stopPoint/${row.id}`}>
 										<StopLetterRender
 											stopLetter={row.stopLetter}
 											scale={0.7}
 											defaultToDot
 										/>
-									</a>
+									</Link>
 								</div>
 								<div class={css.name}>
-									<a
-										class={row.parentId === undefined ? css.noLink : ''}
-										onClick={() => {
-											if (row.parentId !== undefined) {
-												changeRoute(location, `/stopPoint/${row.parentId}`);
-											}
-										}}
-									>
-										{row.name}
-									</a>
+									{row.parentId === undefined ? (
+										<span class={css.noLink}>{row.name}</span>
+									) : (
+										<Link route={`/stopPoint/${row.parentId}`}>{row.name}</Link>
+									)}
 								</div>
 							</>
 						) : (
 							<>
 								<div class={css.withLetter}>
-									<a
-										onClick={() => {
-											changeRoute(location, `/stopPoint/${row.inboundId}`);
-										}}
-									>
+									<Link route={`/stopPoint/${row.inboundId}`}>
 										<StopLetterRender
 											stopLetter={row.inboundStopLetter}
 											scale={0.7}
 											defaultToDot
 										/>
-									</a>
+									</Link>
 								</div>
 								<div class={css.withLetter}>
-									<a
-										onClick={() => {
-											changeRoute(location, `/stopPoint/${row.outboundId}`);
-										}}
-									>
+									<Link route={`/stopPoint/${row.outboundId}`}>
 										<StopLetterRender
 											stopLetter={row.outboundStopLetter}
 											scale={0.7}
 											defaultToDot
 										/>
-									</a>
+									</Link>
 								</div>
 								<div class={css.name}>
-									<a
-										class={row.parentId === undefined ? css.noLink : ''}
-										onClick={() => {
-											if (row.parentId !== undefined) {
-												changeRoute(location, `/stopPoint/${row.parentId}`);
-											}
-										}}
-									>
-										{row.inboundName}
-									</a>
+									{row.parentId === undefined ? (
+										<span class={css.noLink}>{row.inboundName}</span>
+									) : (
+										<Link route={`/stopPoint/${row.parentId}`}>
+											{row.inboundName}
+										</Link>
+									)}
 								</div>
 							</>
 						)}
