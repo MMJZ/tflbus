@@ -12,7 +12,6 @@
 .header {
 	background: var(--corporate-blue);
 	color: var(--corporate-white);
-	outline-color: oklch(from var(--safety-green) calc(l + 0.3) calc(c + 0.3) h);
 	width: 100%;
 	padding: 20px;
 	display: flex;
@@ -25,6 +24,11 @@
 	}
 	& > :last-child {
 		flex: 1;
+	}
+	& * {
+		outline-color: oklch(
+			from var(--safety-green) calc(l + 0.2) calc(c + 0.2) h
+		) !important;
 	}
 	box-shadow: var(--md-ele-4);
 	@media (width <= 1000px) {

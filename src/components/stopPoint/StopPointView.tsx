@@ -45,11 +45,19 @@ function OtherStopPoint({
 		<>
 			<div class={css.pointWrapper}>
 				<div class={css.pointHeader}>
-					<h4>{stopPointData.commonName}</h4>
+					<h4 aria-label={`Stop point ${stopPointData.commonName}`}>
+						{stopPointData.commonName}
+					</h4>
 					<div>
-						<h5>{getStopTypeName(stopPointData.stopType)}</h5>
-						{zone !== undefined && <div class={css.zone}>Zone {zone}</div>}
-						<h6>{stopPointData.naptanId}</h6>
+						<h5 role="note">{getStopTypeName(stopPointData.stopType)}</h5>
+						{zone !== undefined && (
+							<div role="note" class={css.zone}>
+								Zone {zone}
+							</div>
+						)}
+						<h6 role="note" aria-label="Stop point NAPTAN ID">
+							{stopPointData.naptanId}
+						</h6>
 					</div>
 				</div>
 				{otherChildren.length > 0 && <h5>Parts of this stop point:</h5>}
@@ -68,6 +76,7 @@ function OtherStopPoint({
 						<Link
 							route={`/stopPoint/${focussedStopData?.naptanId === child.naptanId ? stopPointData.naptanId : child.naptanId}`}
 							key={child.naptanId}
+							ariaLabel={`Go to nested stop point ${child.commonName} or view details in link content`}
 						>
 							<div
 								class={`${css.tileWrapper} ${focussedStopPointPath[0] === child.naptanId ? css.selectedTile : ''}`}

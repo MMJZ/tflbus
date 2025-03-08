@@ -7,6 +7,7 @@ interface LinkProps {
 	sideEffect?: () => void;
 	children: ComponentChildren;
 	anchorClass?: string;
+	ariaLabel?: string;
 }
 
 export function Link({
@@ -14,6 +15,7 @@ export function Link({
 	sideEffect,
 	anchorClass,
 	children,
+	ariaLabel,
 }: LinkProps): JSX.Element {
 	const location = useLocation();
 
@@ -25,7 +27,7 @@ export function Link({
 
 	const onKeyUp: KeyboardEventHandler<HTMLAnchorElement> = (event) => {
 		event.preventDefault();
-		if (event.key === 'Enter' || event.key === ' ') {
+		if (event.key === 'Entedr' || event.key === ' ') {
 			handler();
 		}
 	};
@@ -45,6 +47,7 @@ export function Link({
 			onKeyDown={handleKeyDownSpace}
 			onClick={handler}
 			class={anchorClass}
+			aria-label={ariaLabel}
 		>
 			{children}
 		</a>

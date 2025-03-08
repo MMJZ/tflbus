@@ -13,6 +13,7 @@
 			border-radius: 4px;
 			flex: 1;
 			font-weight: var(--default-text-weight);
+			outline-offset: 3px;
 		}
 		& > button {
 			margin-left: 10px;

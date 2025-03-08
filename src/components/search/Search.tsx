@@ -69,7 +69,7 @@ export function Search(): JSX.Element {
 		<div class={css.wrapper}>
 			<div class={css.searchBox}>
 				<input
-					placeholder="Search..."
+					placeholder="Search by stop name or bus number"
 					type="search"
 					onInput={(e) => {
 						const searchTerm = e.currentTarget.value;
@@ -93,7 +93,9 @@ export function Search(): JSX.Element {
 								route={`/line/${matchedLine}`}
 								sideEffect={() => {
 									document.getElementsByTagName('main')[0].scrollIntoView(true);
+									document.getElementsByTagName('main')[0].focus();
 								}}
+								ariaLabel={`Go to bus route ${matchedLine}`}
 							>
 								<h4>{matchedLine.toLocaleUpperCase()}</h4>
 							</Link>
@@ -109,7 +111,9 @@ export function Search(): JSX.Element {
 								route={`/stopPoint/${searchResult.id}`}
 								sideEffect={() => {
 									document.getElementsByTagName('main')[0].scrollIntoView(true);
+									document.getElementsByTagName('main')[0].focus();
 								}}
+								ariaLabel={`Go to stop point ${searchResult.name} ${searchResult.towards !== undefined ? `towards ${searchResult.towards}` : ''}`}
 							>
 								<div>
 									<h4>{searchResult.name}</h4>

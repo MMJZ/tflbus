@@ -35,6 +35,7 @@ export function BusStopRender({
 		<div
 			style={{ fontSize: `${String(scale)}em` }}
 			class={css.busStopRenderWrapper}
+			aria-label={`Render of bus stop ${stopPoint.commonName}`}
 		>
 			<div class={css.indicators}>
 				{stopLetterData !== undefined && (
@@ -96,7 +97,11 @@ export function BusStopRender({
 						}
 
 						return (
-							<Link route={`/line/${line.number}`} key={line.number}>
+							<Link
+								route={`/line/${line.number}`}
+								key={line.number}
+								ariaLabel={`Line page for bus ${line.number}`}
+							>
 								<div class={`${css.eTile} ${cssClass ?? ''}`}>
 									<div class={css.eTileMessage}>{message ?? ''}</div>
 									<div class={css.eTileNumber}>{line.number}</div>

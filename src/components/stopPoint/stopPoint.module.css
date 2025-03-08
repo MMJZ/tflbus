@@ -288,7 +288,9 @@
 			& > .tileWrapper:hover {
 				border-color: var(--corporate-blue);
 				&.selectedTile {
-					border-color: var(--safety-green);
+					border-color: oklch(
+						from var(--safety-green) calc(l + 0.2) calc(c + 0.2) h
+					);
 				}
 			}
 			& > .tileWrapper {
@@ -312,7 +314,7 @@
 		font-weight: var(--default-text-weight);
 	}
 	& > .railLinesRow {
-		& > span:not(.buses) {
+		& > li:not(.buses) {
 			font-weight: var(--default-text-weight);
 		}
 		& > .southeastern {
@@ -435,7 +437,7 @@
 		flex-wrap: wrap;
 		gap: 4px;
 		margin: 5px 0;
-		& > span {
+		& > li {
 			padding: 0.05em 0.2em;
 			border-radius: 2px;
 			font-weight: var(--default-bold-text-weight);

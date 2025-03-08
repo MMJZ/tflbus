@@ -34,7 +34,7 @@ export function LinePage(): JSX.Element {
 	return (
 		<div class={css.wrapper}>
 			<div class={css.titleBar}>
-				<h2>{line.lineName}</h2>
+				<h2 aria-label={`Bus route ${line.lineName}`}>{line.lineName}</h2>
 			</div>
 			{line.hasHiddenBranches && (
 				<div class={css.hiddenWarning}>
@@ -59,11 +59,18 @@ export function LinePage(): JSX.Element {
 					<span />
 				</div>
 				{line.routeRows.map((row) => (
-					<div key={row.parentId} class={css.mainRow}>
+					<div
+						key={row.parentId}
+						class={css.mainRow}
+						aria-label={`Stop group ${row.kind === 'shared' ? row.inboundName : row.name}`}
+					>
 						{row.kind === 'inbound' ? (
 							<>
 								<div class={css.withLetter}>
-									<Link route={`/stopPoint/${row.id}`}>
+									<Link
+										route={`/stopPoint/${row.id}`}
+										ariaLabel={`Inbound stop point ${row.name}`}
+									>
 										<StopLetterRender
 											stopLetter={row.stopLetter}
 											scale={0.7}
@@ -84,7 +91,10 @@ export function LinePage(): JSX.Element {
 							<>
 								<div class={css.noStop} />
 								<div class={css.withLetter}>
-									<Link route={`/stopPoint/${row.id}`}>
+									<Link
+										route={`/stopPoint/${row.id}`}
+										ariaLabel={`Outbound stop point ${row.name}`}
+									>
 										<StopLetterRender
 											stopLetter={row.stopLetter}
 											scale={0.7}
@@ -103,7 +113,10 @@ export function LinePage(): JSX.Element {
 						) : (
 							<>
 								<div class={css.withLetter}>
-									<Link route={`/stopPoint/${row.inboundId}`}>
+									<Link
+										route={`/stopPoint/${row.inboundId}`}
+										ariaLabel={`Inbound stop point ${row.inboundName}`}
+									>
 										<StopLetterRender
 											stopLetter={row.inboundStopLetter}
 											scale={0.7}
@@ -112,7 +125,10 @@ export function LinePage(): JSX.Element {
 									</Link>
 								</div>
 								<div class={css.withLetter}>
-									<Link route={`/stopPoint/${row.outboundId}`}>
+									<Link
+										route={`/stopPoint/${row.outboundId}`}
+										ariaLabel={`Outbound stop point ${row.outboundName}`}
+									>
 										<StopLetterRender
 											stopLetter={row.outboundStopLetter}
 											scale={0.7}
@@ -124,7 +140,10 @@ export function LinePage(): JSX.Element {
 									{row.parentId === undefined ? (
 										<span class={css.noLink}>{row.inboundName}</span>
 									) : (
-										<Link route={`/stopPoint/${row.parentId}`}>
+										<Link
+											route={`/stopPoint/${row.parentId}`}
+											ariaLabel={`Stop group ${row.inboundName}`}
+										>
 											{row.inboundName}
 										</Link>
 									)}

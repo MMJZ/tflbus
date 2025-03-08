@@ -16,6 +16,8 @@ function Nothing(): JSX.Element {
 	}
 	const state = _state;
 
+	console.log('what?');
+
 	useEffect(() => {
 		state.focussedLineId.value = undefined;
 		state.focussedStopPointId.value = undefined;
@@ -69,7 +71,7 @@ export function Main(): JSX.Element {
 				<Link route="#main" anchorClass={css.skip}>
 					Skip to main content
 				</Link>
-				<Link route="/">
+				<Link route="/" ariaLabel="Go to homepage">
 					<h1>BusMupper</h1>
 				</Link>
 				<Search />
