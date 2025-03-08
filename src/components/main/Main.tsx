@@ -66,7 +66,12 @@ export function Main(): JSX.Element {
 	return (
 		<div class={css.wrapper}>
 			<header class={css.header}>
+				<a href="#main" class={css.skip}>
+					Skip to main content
+				</a>
 				<a
+					tabIndex={0}
+					aria-label="Go to home page"
 					onClick={() => {
 						location.route('/', true);
 					}}
@@ -75,7 +80,7 @@ export function Main(): JSX.Element {
 				</a>
 				<Search />
 			</header>
-			<main class={css.main}>
+			<main id="main" class={css.main}>
 				{loading && <Loading />}
 				<ErrorBoundary>
 					<Router

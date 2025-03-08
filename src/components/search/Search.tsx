@@ -71,7 +71,6 @@ export function Search(): JSX.Element {
 		<div class={css.wrapper}>
 			<div class={css.searchBox}>
 				<input
-					autofocus
 					placeholder="Search..."
 					type="search"
 					onInput={(e) => {
@@ -93,6 +92,7 @@ export function Search(): JSX.Element {
 					{matchedLines.map((matchedLine) => (
 						<li key={matchedLine}>
 							<a
+								tabIndex={0}
 								onClick={() => {
 									changeRoute(location, `/line/${matchedLine}`);
 									document.getElementsByTagName('main')[0].scrollIntoView(true);
@@ -109,6 +109,7 @@ export function Search(): JSX.Element {
 					{displayedSearchResults.map((searchResult) => (
 						<li key={searchResult.id}>
 							<a
+								tabIndex={0}
 								onClick={() => {
 									changeRoute(location, `/stopPoint/${searchResult.id}`);
 									document.getElementsByTagName('main')[0].scrollIntoView(true);

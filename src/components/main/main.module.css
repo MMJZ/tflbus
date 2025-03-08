@@ -36,6 +36,17 @@
 	}
 }
 
+.skip {
+	position: absolute;
+	top: 10px;
+	left: -10000px;
+	background-color: var(--corporate-blue);
+	padding: 10px 20px;
+	&:focus {
+		left: 10px;
+	}
+}
+
 .main {
 	flex: 1;
 	box-shadow: var(--md-ele-8);
