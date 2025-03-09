@@ -142,6 +142,11 @@ export function Search({ focusMain }: SearchProps): JSX.Element {
 							}
 						}, 0);
 					}}
+					aria-label={
+						isExpanded
+							? `Show only the first five results and move focus to the first result`
+							: `Show all ${String(searchResults.length)} results and move focus to the first new result`
+					}
 				>
 					{isExpanded ? 'Show fewer' : 'Show more'}
 				</button>
