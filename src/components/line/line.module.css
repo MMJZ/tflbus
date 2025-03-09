@@ -116,12 +116,12 @@
 					background-image: linear-gradient(
 						var(--corporate-red) 0%,
 						var(--corporate-red) 12.5%,
-						rgba(var(--corporate-red-t) / 0.6) 12.5%,
-						rgba(var(--corporate-red-t) / 0.6) 37.5%,
+						var(--corporate-red-lighter) 12.5%,
+						var(--corporate-red-lighter) 37.5%,
 						var(--corporate-red) 37.5%,
 						var(--corporate-red) 62.5%,
-						rgba(var(--corporate-red-t) / 0.6) 62.5%,
-						rgba(var(--corporate-red-t) / 0.6) 87.5%,
+						var(--corporate-red-lighter) 62.5%,
+						var(--corporate-red-lighter) 87.5%,
 						var(--corporate-red) 87.5%,
 						var(--corporate-red) 100%
 					);
@@ -137,7 +137,8 @@
 				font-weight: var(--default-text-weight);
 				display: flex;
 				align-items: center;
-				& > a {
+				& > a,
+				& > .noLink {
 					border-radius: 4px;
 					padding: 0.3em 0.7em;
 					transition: all 0.2s ease-in-out;

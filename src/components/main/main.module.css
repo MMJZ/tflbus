@@ -25,6 +25,11 @@
 	& > :last-child {
 		flex: 1;
 	}
+	& * {
+		outline-color: oklch(
+			from var(--safety-green) calc(l + 0.2) calc(c + 0.2) h
+		) !important;
+	}
 	box-shadow: var(--md-ele-4);
 	@media (width <= 1000px) {
 		padding: 20px 10px 10px;
@@ -33,6 +38,17 @@
 		& > a > h1 {
 			margin-bottom: 20px;
 		}
+	}
+}
+
+.skip {
+	position: absolute;
+	top: 10px;
+	left: -10000px;
+	background-color: var(--corporate-blue);
+	padding: 10px 20px;
+	&:focus {
+		left: 10px;
 	}
 }
 

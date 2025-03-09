@@ -4,8 +4,7 @@ import { BusStopRender } from './BusStopRender';
 import css from './stopPoint.module.css';
 import { StopPointTile } from './StopPointTile';
 import { getStopTypeName, separateBy } from './util';
-import { useLocation } from 'preact-iso';
-import { changeRoute } from '../util';
+import { Link } from '../link/Link';
 
 interface StopPointProps {
 	stopPointData: StopPoint;
@@ -42,17 +41,23 @@ function OtherStopPoint({
 		(a) => a.key === 'Zone',
 	)?.value;
 
-	const location = useLocation();
-
 	return (
 		<>
 			<div class={css.pointWrapper}>
 				<div class={css.pointHeader}>
-					<h4>{stopPointData.commonName}</h4>
+					<h4 aria-label={`Stop point ${stopPointData.commonName}`}>
+						{stopPointData.commonName}
+					</h4>
 					<div>
-						<h5>{getStopTypeName(stopPointData.stopType)}</h5>
-						{zone !== undefined && <div class={css.zone}>Zone {zone}</div>}
-						<h6>{stopPointData.naptanId}</h6>
+						<h5 role="note">{getStopTypeName(stopPointData.stopType)}</h5>
+						{zone !== undefined && (
+							<div role="note" class={css.zone}>
+								Zone {zone}
+							</div>
+						)}
+						<h6 role="note" aria-label="Stop point NAPTAN ID">
+							{stopPointData.naptanId}
+						</h6>
 					</div>
 				</div>
 				{otherChildren.length > 0 && <h5>Parts of this stop point:</h5>}
@@ -68,14 +73,10 @@ function OtherStopPoint({
 				{selectableChildren.length > 0 && <h5>Nested stop points:</h5>}
 				<div class={css.tileRow}>
 					{selectableChildren.map((child) => (
-						<a
-							onClick={() => {
-								changeRoute(
-									location,
-									`/stopPoint/${focussedStopData?.naptanId === child.naptanId ? stopPointData.naptanId : child.naptanId}`,
-								);
-							}}
+						<Link
+							route={`/stopPoint/${focussedStopData?.naptanId === child.naptanId ? stopPointData.naptanId : child.naptanId}`}
 							key={child.naptanId}
+							ariaLabel={`Go to nested stop point ${child.commonName} or view details in link content`}
 						>
 							<div
 								class={`${css.tileWrapper} ${focussedStopPointPath[0] === child.naptanId ? css.selectedTile : ''}`}
@@ -91,7 +92,7 @@ function OtherStopPoint({
 									parentName={stopPointData.commonName}
 								/>
 							</div>
-						</a>
+						</Link>
 					))}
 				</div>
 			</div>

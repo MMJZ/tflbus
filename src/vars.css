@@ -11,17 +11,21 @@
 }
 
 :root {
-	--corporate-red-t: 216 48 31;
-	--corporate-red: rgb(var(--corporate-red-t));
+	--corporate-red: oklch(51.25% 0.2285 30.18);
+	--corporate-red-lighter: oklch(
+		from var(--corporate-red) calc(l + 0.2) calc(c - 0.1) h
+	);
 	--corporate-yellow: rgb(255, 205, 0);
 	--corporate-black: rgb(25, 26, 27);
 	--bus-stop-dark-grey: rgb(95, 99, 102);
 	--bus-stop-light-grey: rgb(222, 220, 210);
 	--corporate-white: rgb(241, 239, 235);
-	--corporate-blue: rgb(0, 71, 134);
+	--corporate-blue: oklch(39.79% 0.1567 252.83);
+	/* --corporate-blue: oklch(45.88% 0.1767 252.83); */
 	--night-bus-blue: rgb(195, 216, 237);
 	--superloop-bus-red: rgb(211, 0, 49);
 	--johnston-medium: 'johnston100-medium';
+	--safety-green: oklch(50.61% 0.198 149.2);
 
 	--default-bold-text-weight: 650;
 	--default-text-weight: 350;

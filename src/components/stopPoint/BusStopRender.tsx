@@ -7,8 +7,7 @@ import {
 	getStopNameLine,
 	getStopTowardsLine,
 } from './util';
-import { useLocation } from 'preact-iso';
-import { changeRoute } from '../util';
+import { Link } from '../link/Link';
 
 interface StopPointProps {
 	stopPoint: StopPoint;
@@ -31,12 +30,12 @@ export function BusStopRender({
 	const towardsLines = getStopTowardsLine(towards);
 	const lines = getStopCallingBusData(stopPoint);
 	const stopLetterData = getStopLetterAndSize(stopPoint.stopLetter);
-	const location = useLocation();
 
 	return (
 		<div
 			style={{ fontSize: `${String(scale)}em` }}
 			class={css.busStopRenderWrapper}
+			aria-label={`Render of bus stop ${stopPoint.commonName}`}
 		>
 			<div class={css.indicators}>
 				{stopLetterData !== undefined && (
@@ -98,23 +97,22 @@ export function BusStopRender({
 						}
 
 						return (
-							<a
-								onClick={() => {
-									changeRoute(location, `/line/${line.number}`);
-								}}
+							<Link
+								route={`/line/${line.number}`}
 								key={line.number}
+								ariaLabel={`Line page for bus ${line.number}`}
 							>
 								<div class={`${css.eTile} ${cssClass ?? ''}`}>
 									<div class={css.eTileMessage}>{message ?? ''}</div>
 									<div class={css.eTileNumber}>{line.number}</div>
 								</div>
-							</a>
+							</Link>
 						);
 					})}
 				</div>
 				{lines.some((l) => l.specialStatus === 'Superloop') && (
 					<div class={css.superloopWrapper}>
-						<img src="/sls.svg" />
+						<img src="/sls.svg" alt="SuperLoop logo" />
 						<span>SUPERLOOP</span>
 					</div>
 				)}

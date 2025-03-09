@@ -153,11 +153,21 @@
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	border-bottom: var(--border-size) solid var(--corporate-black);
-	gap: 1px;
+	/* gap: 1px; */
 	& > a {
+		&:focus,
+		&:focus-visible {
+			outline-offset: -2px;
+		}
+		&:not(:nth-child(3n)) > .eTile {
+			/* background: red; */
+			border-right: var(--border-size) solid var(--corporate-black);
+		}
+		&:not(:nth-child(3n + 1):nth-last-child(-n + 3)) {
+			border-bottom: var(--border-size) solid var(--corporate-black);
+		}
 		& > .eTile {
 			display: block;
-			outline: var(--border-size) solid var(--corporate-black);
 			background: var(--corporate-white);
 			height: 1.25em;
 			text-align: center;
@@ -270,14 +280,25 @@
 		& > a {
 			min-width: max-content;
 			max-width: 350px;
+			&:focus-visible {
+				outline: none;
+			}
+			&:focus > .tileWrapper,
+			&:focus-visible > .tileWrapper {
+				border-color: oklch(
+					from var(--safety-green) calc(l + 0.2) calc(c + 0.2) h
+				);
+			}
+
+			& > .tileWrapper:hover {
+				border-color: var(--corporate-blue);
+			}
+
 			& > .tileWrapper {
 				transition: all 0.2s ease-in-out;
 				border: 2px solid transparent;
 				height: 100%;
 				background: var(--default-faded-background);
-				&:hover {
-					border-color: var(--corporate-blue);
-				}
 				&.selectedTile {
 					background: var(--corporate-blue);
 					color: var(--corporate-white);
@@ -294,7 +315,7 @@
 		font-weight: var(--default-text-weight);
 	}
 	& > .railLinesRow {
-		& > span:not(.buses) {
+		& > li:not(.buses) {
 			font-weight: var(--default-text-weight);
 		}
 		& > .southeastern {
@@ -417,7 +438,7 @@
 		flex-wrap: wrap;
 		gap: 4px;
 		margin: 5px 0;
-		& > span {
+		& > li {
 			padding: 0.05em 0.2em;
 			border-radius: 2px;
 			font-weight: var(--default-bold-text-weight);

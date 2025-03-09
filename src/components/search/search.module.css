@@ -13,6 +13,7 @@
 			border-radius: 4px;
 			flex: 1;
 			font-weight: var(--default-text-weight);
+			outline-offset: 3px;
 		}
 		& > button {
 			margin-left: 10px;
@@ -82,7 +83,8 @@
 					color: var(--bus-stop-light-grey);
 					font-size: 0.7em;
 				}
-				&:hover {
+				&:hover,
+				&:focus {
 					background: var(--corporate-white);
 					color: var(--corporate-blue);
 					& > h6 {

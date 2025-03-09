@@ -19,20 +19,20 @@ function RailOrMetroOrBusStation({
 		stopPoint.stopType !== 'NaptanBusCoachStation' && hasBusesInTree(stopPoint);
 
 	return (
-		<div class={css.stopPointTile}>
-			<div class={css.titleRow}>
+		<div class={css.stopPointTile} aria-label="Stop point details">
+			<div class={css.titleRow} aria-label="Stop point name">
 				<h5>{stopPoint.commonName}</h5>
 			</div>
-			<div
+			<ul
 				class={`${css.linesRow} ${stopPoint.stopType !== 'NaptanBusCoachStation' ? css.railLinesRow : ''}`}
 			>
-				{busesFlag && <span class={css.buses}>Buses</span>}
+				{busesFlag && <li class={css.buses}>Buses</li>}
 				{stopPoint.lines.map((l) => (
-					<span key={l.id} class={css[l.id]}>
+					<li key={l.id} class={css[l.id]}>
 						{l.name}
-					</span>
+					</li>
 				))}
-			</div>
+			</ul>
 		</div>
 	);
 }
@@ -43,13 +43,13 @@ function MetroPlatformTile({ stopPoint }: StopPointTileProps): JSX.Element {
 			<div class={css.titleRow}>
 				<h5>Metro platform</h5>
 			</div>
-			<div class={`${css.linesRow} ${css.railLinesRow}`}>
+			<ul class={`${css.linesRow} ${css.railLinesRow}`}>
 				{stopPoint.lines.map((l) => (
-					<span key={l.id} class={css[l.id]}>
+					<li key={l.id} class={css[l.id]}>
 						{l.name}
-					</span>
+					</li>
 				))}
-			</div>
+			</ul>
 		</div>
 	);
 }
@@ -58,21 +58,24 @@ function RailOrMetroAccessAreaTile({
 	stopPoint,
 }: StopPointTileProps): JSX.Element {
 	return (
-		<div class={css.stopPointTile}>
-			<div class={css.titleRow}>
+		<div class={css.stopPointTile} aria-label="Stop point details">
+			<div class={css.titleRow} aria-label="Stop point kind">
 				<h5>
 					{stopPoint.stopType === 'NaptanRailAccessArea'
 						? 'Rail access area'
 						: 'Metro access area'}
 				</h5>
 			</div>
-			<div class={`${css.linesRow} ${css.railLinesRow}`}>
+			<ul
+				class={`${css.linesRow} ${css.railLinesRow}`}
+				aria-label="Services serving this stop point"
+			>
 				{stopPoint.lines.map((l) => (
-					<span key={l.id} class={css[l.id]}>
+					<li key={l.id} class={css[l.id]}>
 						{l.name}
-					</span>
+					</li>
 				))}
-			</div>
+			</ul>
 		</div>
 	);
 }
@@ -81,8 +84,8 @@ function RailOrMetroEntranceTile({
 	stopPoint,
 }: StopPointTileProps): JSX.Element {
 	return (
-		<div class={css.stopPointTile}>
-			<div class={css.titleRow}>
+		<div class={css.stopPointTile} aria-label="Stop point details">
+			<div class={css.titleRow} aria-label="Stop point kind">
 				<h5>
 					{stopPoint.stopType === 'NaptanRailEntrance'
 						? 'Rail entrance'
@@ -100,19 +103,22 @@ function BusStopPairOrClusterTile({
 	const lines = getStopCallingBusData(stopPoint);
 
 	return (
-		<div class={`${css.stopPointTile} ${css.busStopTile}`}>
-			<div class={css.titleRow}>
+		<div
+			class={`${css.stopPointTile} ${css.busStopTile}`}
+			aria-label="Stop point details"
+		>
+			<div class={css.titleRow} aria-label="Stop point name">
 				<h5>
 					{stopPoint.stopType === 'NaptanOnstreetBusCoachStopCluster'
 						? 'Bus Stop Cluster'
 						: 'Bus Stop Pair'}
 				</h5>
 			</div>
-			<div class={css.linesRow}>
+			<ul class={css.linesRow} aria-label="Bus routes serving this stop point">
 				{lines.map((l) => (
-					<span key={l.number}>{l.number}</span>
+					<li key={l.number}>{l.number}</li>
 				))}
-			</div>
+			</ul>
 		</div>
 	);
 }
@@ -128,19 +134,22 @@ function BusStopPointTile({
 	const lines = getStopCallingBusData(stopPoint);
 
 	return (
-		<div class={`${css.stopPointTile} ${css.busStopTile}`}>
-			<div class={css.titleRow}>
+		<div
+			class={`${css.stopPointTile} ${css.busStopTile}`}
+			aria-label="Stop point details"
+		>
+			<div class={css.titleRow} aria-label="Stop point name">
 				<h5>
 					Bus stop{' '}
 					{stopPoint.commonName !== parentName && <>({stopPoint.commonName})</>}
 				</h5>
 				<StopLetterRender stopLetter={stopPoint.stopLetter} scale={0.6} />
 			</div>
-			<div class={css.linesRow}>
+			<ul class={css.linesRow}>
 				{lines.map((l) => (
-					<span key={l.number}>{l.number}</span>
+					<li key={l.number}>{l.number}</li>
 				))}
-			</div>
+			</ul>
 
 			{towards !== undefined && <p>Towards {towards}</p>}
 		</div>
