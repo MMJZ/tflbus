@@ -1,5 +1,5 @@
 import { type JSX } from 'preact';
-import { useContext, useMemo, useState } from 'preact/hooks';
+import { useContext, useMemo, useRef, useState } from 'preact/hooks';
 import { StateContext } from '@state';
 import css from './search.module.css';
 import { type SearchResult, type QueryResult } from '@model';
@@ -29,6 +29,7 @@ export function Search({ focusMain }: SearchProps): JSX.Element {
 	const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
 	const [matchedLines, setMatchedLines] = useState<string[]>([]);
 	const [isExpanded, setIsExpanded] = useState(false);
+	const stopResultsRef = useRef<HTMLUListElement | null>(null);
 
 	const doSearch = useMemo(
 		() =>
@@ -105,7 +106,7 @@ export function Search({ focusMain }: SearchProps): JSX.Element {
 				</ul>
 			)}
 			{displayedSearchResults.length > 0 && (
-				<ul class={css.searchResults}>
+				<ul ref={stopResultsRef} class={css.searchResults}>
 					{displayedSearchResults.map((searchResult) => (
 						<li key={searchResult.id}>
 							<Link
@@ -128,7 +129,18 @@ export function Search({ focusMain }: SearchProps): JSX.Element {
 			{searchResults.length > 5 && (
 				<button
 					onClick={() => {
+						const expandedNow = isExpanded;
+
 						setIsExpanded(!isExpanded);
+
+						setTimeout(() => {
+							const target =
+								stopResultsRef.current?.children[expandedNow ? 0 : 5]
+									?.children[0];
+							if (target instanceof HTMLElement) {
+								target.focus();
+							}
+						}, 0);
 					}}
 				>
 					{isExpanded ? 'Show fewer' : 'Show more'}

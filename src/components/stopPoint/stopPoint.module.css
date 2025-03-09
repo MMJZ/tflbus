@@ -277,10 +277,6 @@
 			&:focus-visible {
 				outline: none;
 			}
-			&:focus > .tileWrapper,
-			&:focus-visible > .tileWrapper {
-				border-color: var(--safety-green-lighter);
-			}
 			& > .tileWrapper:hover {
 				border-color: var(--corporate-blue);
 			}
@@ -299,10 +295,10 @@
 	}
 }
 
-[data-whatintent='mouse'] .pointWrapper > .tileRow > a {
+[data-whatintent='keyboard'] .pointWrapper > .tileRow > a {
 	&:focus > .tileWrapper,
 	&:focus-visible > .tileWrapper {
-		border-color: var(--corporate-blue);
+		border-color: var(--safety-green-lighter);
 	}
 }
 
