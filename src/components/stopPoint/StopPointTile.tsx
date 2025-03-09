@@ -1,8 +1,8 @@
 import { type JSX } from 'preact';
-import { type StopPoint } from '../../model';
+import { type StopPoint } from '@model';
 import css from './stopPoint.module.css';
 import { getStopCallingBusData, hasBusesInTree } from './util';
-import { StopLetterRender } from './StopLetterRender';
+import { StopLetterRender } from '@components';
 
 interface StopPointTileProps {
 	stopPoint: StopPoint;

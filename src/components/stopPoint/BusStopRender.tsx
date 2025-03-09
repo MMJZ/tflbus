@@ -1,5 +1,5 @@
 import { type JSX } from 'preact';
-import { type StopPoint } from '../../model';
+import { type StopPoint } from '@model';
 import css from './stopPoint.module.css';
 import {
 	getStopCallingBusData,
@@ -7,7 +7,7 @@ import {
 	getStopNameLine,
 	getStopTowardsLine,
 } from './util';
-import { Link } from '../link/Link';
+import { Link } from '@components';
 
 interface StopPointProps {
 	stopPoint: StopPoint;

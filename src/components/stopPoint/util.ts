@@ -1,4 +1,4 @@
-import { type StopType, type StopPoint } from '../../model';
+import { type StopType, type StopPoint } from '@model';
 
 export type StopNameIcon = 'NR' | 'LT';
 

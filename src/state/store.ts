@@ -12,7 +12,7 @@ import {
 	type LineRoute,
 	type RouteRow,
 	type StopPoint,
-} from '../model';
+} from '@model';
 import { getPatch } from 'fast-array-diff';
 import { dovetail, maxBy, zip } from './util';
 

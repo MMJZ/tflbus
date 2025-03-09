@@ -1,10 +1,9 @@
 import { type JSX } from 'preact';
 import { useContext, useMemo, useState } from 'preact/hooks';
-import { StateContext } from '../../context';
+import { StateContext } from '@state';
 import css from './search.module.css';
-import { type SearchResult, type QueryResult } from '../../model';
-import { Loading } from '../loading/Loading';
-import { Link } from '../link/Link';
+import { type SearchResult, type QueryResult } from '@model';
+import { Link, Loading } from '@components';
 
 function debounce<T>(wait: number, fn: (arg: T) => void): (arg: T) => void {
 	let timeoutId: number | undefined;

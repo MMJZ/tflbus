@@ -1,8 +1,7 @@
 import { type JSX, render } from 'preact';
-import { Main } from './components/main/Main';
-import { createAppState } from './state/store';
-import { StateContext } from './context';
+import { Main } from '@components';
 import { LocationProvider } from 'preact-iso';
+import { createAppState, StateContext } from '@state';
 
 const appElement = document.getElementById('app');
 

@@ -1,11 +1,9 @@
 import { type JSX } from 'preact';
 import { useContext, useEffect } from 'preact/hooks';
-import { StateContext } from '../../context';
+import { StateContext } from '@state';
 import css from './line.module.css';
 import { useRoute } from 'preact-iso';
-import { Loading } from '../loading/Loading';
-import { StopLetterRender } from '../stopPoint/StopLetterRender';
-import { Link } from '../link/Link';
+import { Link, Loading, StopLetterRender } from '@components';
 
 export function LinePage(): JSX.Element {
 	const _state = useContext(StateContext);

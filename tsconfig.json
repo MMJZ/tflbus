@@ -10,9 +10,11 @@
 		"jsx": "react-jsx",
 		"jsxImportSource": "preact",
 		"skipLibCheck": true,
+		"baseUrl": "./src",
 		"paths": {
-			"react": ["./node_modules/preact/compat/"],
-			"react-dom": ["./node_modules/preact/compat/"]
+			"@components": ["components"],
+			"@model": ["model"],
+			"@state": ["state"]
 		},
 		"plugins": [{ "name": "typescript-plugin-css-modules" }],
 		"types": ["vitest/globals"]

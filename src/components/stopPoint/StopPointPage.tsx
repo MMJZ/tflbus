@@ -1,9 +1,8 @@
 import { type JSX } from 'preact';
 import { useRoute } from 'preact-iso';
 import { useContext, useEffect } from 'preact/hooks';
-import { StateContext } from '../../context';
-import { StopPointView } from './StopPointView';
-import { Loading } from '../loading/Loading';
+import { StateContext } from '@state';
+import { Loading, StopPointView } from '@components';
 
 export function StopPointPage(): JSX.Element {
 	const _state = useContext(StateContext);
