@@ -7,6 +7,7 @@ interface LinkProps {
 	children: ComponentChildren;
 	anchorClass?: string;
 	ariaLabel?: string;
+	skipStateSave?: true;
 }
 
 export function Link({
@@ -15,12 +16,15 @@ export function Link({
 	anchorClass,
 	children,
 	ariaLabel,
+	skipStateSave,
 }: LinkProps): JSX.Element {
 	const location = useLocation();
 
 	const handler = (event: MouseEvent) => {
 		event.preventDefault();
-		history.pushState(undefined, '', route);
+		if (skipStateSave !== true) {
+			history.pushState(undefined, '', route);
+		}
 		location.route(route, true);
 		sideEffect?.();
 	};

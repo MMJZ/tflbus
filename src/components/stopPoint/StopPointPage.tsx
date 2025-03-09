@@ -26,6 +26,13 @@ export function StopPointPage(): JSX.Element {
 	const focussedStopPoint = state.focussedStopPoint.value;
 	const focussedStopPointPath = state.focussedStopPointPath.value ?? [];
 
+	useEffect(() => {
+		document.title =
+			focussedStopPoint === undefined
+				? `Loading stop point — BusMupper`
+				: `Stop point ${focussedStopPoint.commonName} — BusMupper`;
+	}, [focussedStopPoint, state]);
+
 	return focussedStopPoint !== undefined ? (
 		<StopPointView
 			stopPointData={focussedStopPoint}

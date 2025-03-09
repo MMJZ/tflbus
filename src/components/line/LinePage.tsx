@@ -25,6 +25,13 @@ export function LinePage(): JSX.Element {
 
 	const line = state.focussedLine.value;
 
+	useEffect(() => {
+		document.title =
+			line === undefined
+				? `Loading route ${state.focussedLineId.peek() ?? ''} — BusMupper`
+				: `Route ${line.lineName} — BusMupper`;
+	}, [line, state]);
+
 	if (line === undefined) {
 		return <Loading />;
 	}

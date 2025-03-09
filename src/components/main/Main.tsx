@@ -1,11 +1,9 @@
 import { type JSX } from 'preact';
 import { useContext, useEffect, useState } from 'preact/hooks';
 import { StateContext } from '../../context';
-import { StopPointPage } from '../stopPoint/StopPointPage';
 import css from './main.module.css';
 import { Search } from '../search/Search';
-import { ErrorBoundary, Route, Router } from 'preact-iso';
-import { LinePage } from '../line/LinePage';
+import { ErrorBoundary, lazy, Route, Router } from 'preact-iso';
 import { Loading } from '../loading/Loading';
 import { Link } from '../link/Link';
 
@@ -20,6 +18,10 @@ function Nothing(): JSX.Element {
 		state.focussedLineId.value = undefined;
 		state.focussedStopPointId.value = undefined;
 	}, [state.focussedLineId, state.focussedStopPointId]);
+
+	useEffect(() => {
+		document.title = 'Home — BusMupper';
+	}, []);
 
 	return (
 		<div class={css.nothingWrapper}>
@@ -63,10 +65,18 @@ export function Main(): JSX.Element {
 	const state = _state;
 	const [loading, setLoading] = useState(false);
 
+	const StopPointPage = lazy(() =>
+		import('../stopPoint/StopPointPage').then((module) => module.StopPointPage),
+	);
+
+	const LinePage = lazy(() =>
+		import('../line/LinePage').then((module) => module.LinePage),
+	);
+
 	return (
 		<div class={css.wrapper}>
 			<header class={css.header}>
-				<Link route="#main" anchorClass={css.skip}>
+				<Link route="#main" anchorClass={css.skip} skipStateSave>
 					Skip to main content
 				</Link>
 				<Link route="/" ariaLabel="Go to homepage">
