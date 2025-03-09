@@ -2,6 +2,7 @@ import { type JSX, render } from 'preact';
 import { Main } from '@components';
 import { LocationProvider } from 'preact-iso';
 import { createAppState, StateContext } from '@state';
+import 'what-input';
 
 const appElement = document.getElementById('app');
 

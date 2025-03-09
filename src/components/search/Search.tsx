@@ -1,5 +1,5 @@
 import { type JSX } from 'preact';
-import { useContext, useMemo, useState } from 'preact/hooks';
+import { useContext, useMemo, useRef, useState } from 'preact/hooks';
 import { StateContext } from '@state';
 import css from './search.module.css';
 import { type SearchResult, type QueryResult } from '@model';
@@ -15,7 +15,11 @@ function debounce<T>(wait: number, fn: (arg: T) => void): (arg: T) => void {
 	};
 }
 
-export function Search(): JSX.Element {
+interface SearchProps {
+	focusMain: () => void;
+}
+
+export function Search({ focusMain }: SearchProps): JSX.Element {
 	const _state = useContext(StateContext);
 	if (_state === undefined) {
 		throw new Error('No state context available');
@@ -25,6 +29,7 @@ export function Search(): JSX.Element {
 	const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
 	const [matchedLines, setMatchedLines] = useState<string[]>([]);
 	const [isExpanded, setIsExpanded] = useState(false);
+	const stopResultsRef = useRef<HTMLUListElement | null>(null);
 
 	const doSearch = useMemo(
 		() =>
@@ -91,10 +96,7 @@ export function Search(): JSX.Element {
 						<li key={matchedLine}>
 							<Link
 								route={`/line/${matchedLine}`}
-								sideEffect={() => {
-									document.getElementsByTagName('main')[0].scrollIntoView(true);
-									document.getElementsByTagName('main')[0].focus();
-								}}
+								sideEffect={focusMain}
 								ariaLabel={`Go to bus route ${matchedLine}`}
 							>
 								<h4>{matchedLine.toLocaleUpperCase()}</h4>
@@ -104,15 +106,12 @@ export function Search(): JSX.Element {
 				</ul>
 			)}
 			{displayedSearchResults.length > 0 && (
-				<ul class={css.searchResults}>
+				<ul ref={stopResultsRef} class={css.searchResults}>
 					{displayedSearchResults.map((searchResult) => (
 						<li key={searchResult.id}>
 							<Link
 								route={`/stopPoint/${searchResult.id}`}
-								sideEffect={() => {
-									document.getElementsByTagName('main')[0].scrollIntoView(true);
-									document.getElementsByTagName('main')[0].focus();
-								}}
+								sideEffect={focusMain}
 								ariaLabel={`Go to stop point ${searchResult.name} ${searchResult.towards !== undefined ? `towards ${searchResult.towards}` : ''}`}
 							>
 								<div>
@@ -130,8 +129,24 @@ export function Search(): JSX.Element {
 			{searchResults.length > 5 && (
 				<button
 					onClick={() => {
+						const expandedNow = isExpanded;
+
 						setIsExpanded(!isExpanded);
+
+						setTimeout(() => {
+							const target =
+								stopResultsRef.current?.children[expandedNow ? 0 : 5]
+									?.children[0];
+							if (target instanceof HTMLElement) {
+								target.focus();
+							}
+						}, 0);
 					}}
+					aria-label={
+						isExpanded
+							? `Show only the first five results and move focus to the first result`
+							: `Show all ${String(searchResults.length)} results and move focus to the first new result`
+					}
 				>
 					{isExpanded ? 'Show fewer' : 'Show more'}
 				</button>

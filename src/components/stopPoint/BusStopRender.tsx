@@ -40,7 +40,10 @@ export function BusStopRender({
 			<div class={css.indicators}>
 				{stopLetterData !== undefined && (
 					<div class={css.letterWrapper}>
-						<div class={css[stopLetterData.stopLetterSize]}>
+						<div
+							class={css[stopLetterData.stopLetterSize]}
+							aria-label="Stop letter"
+						>
 							{stopLetterData.stopLetter}
 						</div>
 					</div>
@@ -48,17 +51,20 @@ export function BusStopRender({
 				{compassDirection !== undefined && (
 					<div
 						class={`${css.compassWrapper} ${css[`dir${compassDirection.toLocaleLowerCase()}`]}`}
+						aria-label={`Stop compass direction is ${compassDirection}`}
 					>
-						<div class={css.compass}>➤</div>
+						<div aria-hidden class={css.compass}>
+							➤
+						</div>
 					</div>
 				)}
 			</div>
 			<div class={css.stopView}>
-				<div class={css.logoPanel}>
+				<div class={css.logoPanel} aria-hidden>
 					<div class={css.logoTitleBar}>BUS STOP</div>
 					<div class={css.logoRoundel} />
 				</div>
-				<div class={css.namePanel}>
+				<div class={css.namePanel} aria-label="Stop name">
 					<div class={css.nameLine}>{nameLines.firstLine}</div>
 					{nameLines.secondLine !== undefined && (
 						<div class={css.nameLine}>{nameLines.secondLine}</div>
@@ -68,7 +74,7 @@ export function BusStopRender({
 					)}
 				</div>
 				{towardsLines !== undefined && (
-					<div class={css.towardsPanel}>
+					<div class={css.towardsPanel} aria-label="Stop 'towards' details">
 						{towardsLines.firstLine !== undefined && (
 							<div class={css.towardsLine}>{towardsLines.firstLine}</div>
 						)}
@@ -80,7 +86,7 @@ export function BusStopRender({
 						)}
 					</div>
 				)}
-				<div class={css.eTileGrid}>
+				<div class={css.eTileGrid} aria-label="Buses serving this stop">
 					{lines.map((line) => {
 						let cssClass: string | undefined;
 						let message: string | undefined;

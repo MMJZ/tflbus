@@ -83,8 +83,7 @@
 					color: var(--bus-stop-light-grey);
 					font-size: 0.7em;
 				}
-				&:hover,
-				&:focus {
+				&:hover {
 					background: var(--corporate-white);
 					color: var(--corporate-blue);
 					& > span {
@@ -98,5 +97,13 @@
 		margin-top: 5px;
 		background: var(--corporate-white);
 		color: var(--corporate-black);
+	}
+}
+
+[data-whatintent='keyboard'] .wrapper > .searchResults > li > a:focus {
+	background: var(--corporate-white);
+	color: var(--corporate-blue);
+	& > span {
+		color: var(--bus-stop-dark-grey);
 	}
 }

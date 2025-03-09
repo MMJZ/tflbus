@@ -1,3 +1,4 @@
+export * from './landing/LandingPage';
 export * from './line/LinePage';
 export * from './link/Link';
 export * from './loading/Loading';
