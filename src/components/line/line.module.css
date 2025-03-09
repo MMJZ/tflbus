@@ -116,12 +116,12 @@
 					background-image: linear-gradient(
 						var(--corporate-red) 0%,
 						var(--corporate-red) 12.5%,
-						oklch(from var(--corporate-red) calc(l + 0.15) c h) 12.5%,
-						oklch(from var(--corporate-red) calc(l + 0.15) c h) 37.5%,
+						var(--corporate-red-lighter) 12.5%,
+						var(--corporate-red-lighter) 37.5%,
 						var(--corporate-red) 37.5%,
 						var(--corporate-red) 62.5%,
-						oklch(from var(--corporate-red) calc(l + 0.15) c h) 62.5%,
-						oklch(from var(--corporate-red) calc(l + 0.15) c h) 87.5%,
+						var(--corporate-red-lighter) 62.5%,
+						var(--corporate-red-lighter) 87.5%,
 						var(--corporate-red) 87.5%,
 						var(--corporate-red) 100%
 					);

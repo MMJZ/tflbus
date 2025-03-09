@@ -1,6 +1,5 @@
 import { ComponentChildren, type JSX } from 'preact';
 import { useLocation } from 'preact-iso';
-import { KeyboardEventHandler } from 'preact/compat';
 
 interface LinkProps {
 	route: string;
@@ -19,7 +18,9 @@ export function Link({
 }: LinkProps): JSX.Element {
 	const location = useLocation();
 
-	const handler = () => {
+	const handler = (event: MouseEvent) => {
+		event.preventDefault();
+		history.pushState(undefined, '', route);
 		location.route(route, true);
 		sideEffect?.();
 	};
@@ -27,9 +28,9 @@ export function Link({
 	return (
 		<a
 			href={route}
-			onClick={handler}
 			class={anchorClass}
 			aria-label={ariaLabel}
+			onClick={handler}
 		>
 			{children}
 		</a>

@@ -16,8 +16,6 @@ function Nothing(): JSX.Element {
 	}
 	const state = _state;
 
-	console.log('what?');
-
 	useEffect(() => {
 		state.focussedLineId.value = undefined;
 		state.focussedStopPointId.value = undefined;

@@ -284,15 +284,16 @@
 				outline: none;
 			}
 			&:focus > .tileWrapper,
-			&:focus-visible > .tileWrapper,
+			&:focus-visible > .tileWrapper {
+				border-color: oklch(
+					from var(--safety-green) calc(l + 0.2) calc(c + 0.2) h
+				);
+			}
+
 			& > .tileWrapper:hover {
 				border-color: var(--corporate-blue);
-				&.selectedTile {
-					border-color: oklch(
-						from var(--safety-green) calc(l + 0.2) calc(c + 0.2) h
-					);
-				}
 			}
+
 			& > .tileWrapper {
 				transition: all 0.2s ease-in-out;
 				border: 2px solid transparent;
