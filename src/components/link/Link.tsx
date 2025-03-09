@@ -20,31 +20,13 @@ export function Link({
 	const location = useLocation();
 
 	const handler = () => {
-		history.pushState({}, '', route);
 		location.route(route, true);
 		sideEffect?.();
-	};
-
-	const onKeyUp: KeyboardEventHandler<HTMLAnchorElement> = (event) => {
-		event.preventDefault();
-		if (event.key === 'Entedr' || event.key === ' ') {
-			handler();
-		}
-	};
-
-	const handleKeyDownSpace: KeyboardEventHandler<HTMLAnchorElement> = (
-		event,
-	) => {
-		if (event.key === ' ') {
-			event.preventDefault();
-		}
 	};
 
 	return (
 		<a
 			href={route}
-			onKeyUp={onKeyUp}
-			onKeyDown={handleKeyDownSpace}
 			onClick={handler}
 			class={anchorClass}
 			aria-label={ariaLabel}
