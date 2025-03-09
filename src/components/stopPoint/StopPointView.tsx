@@ -43,22 +43,24 @@ function OtherStopPoint({
 		<>
 			<div class={css.pointWrapper}>
 				<div class={css.pointHeader}>
-					<h4 aria-label={`Stop point ${stopPointData.commonName}`}>
+					<h2 aria-label={`Stop point ${stopPointData.commonName}`}>
 						{stopPointData.commonName}
-					</h4>
+					</h2>
 					<div>
-						<h5 role="note">{getStopTypeName(stopPointData.stopType)}</h5>
+						<span class={css.stopType} aria-label="Stop point type">
+							{getStopTypeName(stopPointData.stopType)}
+						</span>
 						{zone !== undefined && (
-							<div role="note" class={css.zone}>
+							<span aria-label="Stop point fare zone" class={css.zone}>
 								Zone {zone}
-							</div>
+							</span>
 						)}
-						<h6 role="note" aria-label="Stop point NAPTAN ID">
+						<span class={css.stopId} aria-label="Stop point NAPTAN ID">
 							{stopPointData.naptanId}
-						</h6>
+						</span>
 					</div>
 				</div>
-				{otherChildren.length > 0 && <h5>Parts of this stop point:</h5>}
+				{otherChildren.length > 0 && <h3>Parts of this stop point:</h3>}
 				<div class={css.detailsRow}>
 					{otherChildren.map((child) => (
 						<StopPointTile
@@ -68,7 +70,7 @@ function OtherStopPoint({
 						/>
 					))}
 				</div>
-				{selectableChildren.length > 0 && <h5>Nested stop points:</h5>}
+				{selectableChildren.length > 0 && <h3>Nested stop points:</h3>}
 				<div class={css.tileRow}>
 					{selectableChildren.map((child) => (
 						<Link

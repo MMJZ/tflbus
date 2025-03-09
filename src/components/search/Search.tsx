@@ -70,6 +70,7 @@ export function Search(): JSX.Element {
 				<input
 					placeholder="Search by stop name or bus number"
 					type="search"
+					name="searchterm"
 					onInput={(e) => {
 						const searchTerm = e.currentTarget.value;
 						doSearch(searchTerm);
@@ -120,7 +121,7 @@ export function Search(): JSX.Element {
 										<h5>➤ {searchResult.towards}</h5>
 									)}
 								</div>
-								<h6>{searchResult.id}</h6>
+								<span>{searchResult.id}</span>
 							</Link>
 						</li>
 					))}

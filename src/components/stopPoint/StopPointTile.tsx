@@ -21,7 +21,7 @@ function RailOrMetroOrBusStation({
 	return (
 		<div class={css.stopPointTile} aria-label="Stop point details">
 			<div class={css.titleRow} aria-label="Stop point name">
-				<h5>{stopPoint.commonName}</h5>
+				<h4>{stopPoint.commonName}</h4>
 			</div>
 			<ul
 				class={`${css.linesRow} ${stopPoint.stopType !== 'NaptanBusCoachStation' ? css.railLinesRow : ''}`}
@@ -41,7 +41,7 @@ function MetroPlatformTile({ stopPoint }: StopPointTileProps): JSX.Element {
 	return (
 		<div class={css.stopPointTile}>
 			<div class={css.titleRow}>
-				<h5>Metro platform</h5>
+				<h4>Metro platform</h4>
 			</div>
 			<ul class={`${css.linesRow} ${css.railLinesRow}`}>
 				{stopPoint.lines.map((l) => (
@@ -60,11 +60,11 @@ function RailOrMetroAccessAreaTile({
 	return (
 		<div class={css.stopPointTile} aria-label="Stop point details">
 			<div class={css.titleRow} aria-label="Stop point kind">
-				<h5>
+				<h4>
 					{stopPoint.stopType === 'NaptanRailAccessArea'
 						? 'Rail access area'
 						: 'Metro access area'}
-				</h5>
+				</h4>
 			</div>
 			<ul
 				class={`${css.linesRow} ${css.railLinesRow}`}
@@ -86,13 +86,13 @@ function RailOrMetroEntranceTile({
 	return (
 		<div class={css.stopPointTile} aria-label="Stop point details">
 			<div class={css.titleRow} aria-label="Stop point kind">
-				<h5>
+				<h4>
 					{stopPoint.stopType === 'NaptanRailEntrance'
 						? 'Rail entrance'
 						: 'Metro entrance'}
-				</h5>
+				</h4>
 			</div>
-			<h6>{stopPoint.indicator}</h6>
+			{stopPoint.indicator !== undefined && <p>{stopPoint.indicator}</p>}
 		</div>
 	);
 }
@@ -108,11 +108,11 @@ function BusStopPairOrClusterTile({
 			aria-label="Stop point details"
 		>
 			<div class={css.titleRow} aria-label="Stop point name">
-				<h5>
+				<h4>
 					{stopPoint.stopType === 'NaptanOnstreetBusCoachStopCluster'
 						? 'Bus Stop Cluster'
 						: 'Bus Stop Pair'}
-				</h5>
+				</h4>
 			</div>
 			<ul class={css.linesRow} aria-label="Bus routes serving this stop point">
 				{lines.map((l) => (
@@ -139,10 +139,10 @@ function BusStopPointTile({
 			aria-label="Stop point details"
 		>
 			<div class={css.titleRow} aria-label="Stop point name">
-				<h5>
+				<h4>
 					Bus stop{' '}
 					{stopPoint.commonName !== parentName && <>({stopPoint.commonName})</>}
-				</h5>
+				</h4>
 				<StopLetterRender stopLetter={stopPoint.stopLetter} scale={0.6} />
 			</div>
 			<ul class={css.linesRow}>
@@ -181,7 +181,7 @@ export function StopPointTile({
 		default:
 			return (
 				<div class={css.stopPointTile}>
-					<h5>Other entity:</h5>
+					<h4>Other entity:</h4>
 					<h5>{stopPoint.stopType}</h5>
 				</div>
 			);

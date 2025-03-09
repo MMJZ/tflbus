@@ -34,7 +34,7 @@ export interface AdditionalProperties {
 export interface StopPoint {
 	naptanId: string;
 	stopLetter: string;
-	indicator: string;
+	indicator: string | undefined;
 	modes: string[];
 	commonName: string;
 	lat: number;

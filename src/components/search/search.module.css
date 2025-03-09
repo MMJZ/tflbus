@@ -78,7 +78,7 @@
 						font-size: 0.8em;
 					}
 				}
-				& > h6 {
+				& > span {
 					font-weight: var(--default-text-weight);
 					color: var(--bus-stop-light-grey);
 					font-size: 0.7em;
@@ -87,7 +87,7 @@
 				&:focus {
 					background: var(--corporate-white);
 					color: var(--corporate-blue);
-					& > h6 {
+					& > span {
 						color: var(--bus-stop-dark-grey);
 					}
 				}

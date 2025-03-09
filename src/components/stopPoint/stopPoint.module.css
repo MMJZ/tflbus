@@ -239,21 +239,13 @@
 			justify-content: flex-start;
 			gap: 10px;
 			font-weight: var(--default-text-weight);
-			& > h5 {
-				font-size: 1.1em;
-				font-weight: var(--default-text-weight);
-			}
-			& > h6 {
-				font-size: 0.7em;
-				font-weight: var(--default-text-weight);
-			}
 		}
-		& > h4 {
+		& > h2 {
 			font-size: 1.6em;
 			font-weight: var(--default-bold-text-weight);
 		}
 	}
-	& > h5 {
+	& > h3 {
 		margin: 20px 20px 0;
 		font-size: 0.9em;
 		font-weight: var(--default-text-weight);
@@ -311,27 +303,28 @@
 
 .stopPointTile {
 	padding: 8px;
-	& > h6 {
-		font-weight: var(--default-text-weight);
-	}
 	& > .railLinesRow {
 		& > li:not(.buses) {
 			font-weight: var(--default-text-weight);
 		}
 		& > .southeastern {
 			background: #389cff;
+			color: var(--corporate-black);
 		}
 		& > .thameslink {
 			background: #ff5aa4;
+			color: var(--corporate-black);
 		}
 		& > .elizabeth {
 			background: #6950a1;
 		}
 		& > .bakerloo {
 			background: rgb(178, 99, 0);
+			color: black;
 		}
 		& > .central {
 			background: rgb(220, 36, 31);
+			color: white;
 		}
 		& > .circle {
 			background: rgb(255, 200, 10);
@@ -358,15 +351,18 @@
 		}
 		& > .jubilee {
 			background: rgb(131, 141, 147);
+			color: black;
 		}
 		& > .victoria {
 			background: rgb(3, 155, 229);
 		}
 		& > .waterloo-city {
 			background: rgb(118, 208, 189);
+			color: var(--corporate-black);
 		}
 		& > .dlr {
 			background: rgb(0, 175, 173);
+			color: var(--corporate-black);
 		}
 		& > .tram {
 			background: rgb(118, 188, 33);
@@ -428,6 +424,7 @@
 		}
 		& > .lumo {
 			background: #2b6ef5;
+			color: white;
 		}
 		& > .south-western-railway {
 			background: #24398c;
@@ -461,7 +458,17 @@
 	}
 }
 
+.stopType {
+	font-size: 1.1em;
+	font-weight: var(--default-text-weight);
+}
+
 .zone {
 	padding: 0 7px;
+	font-weight: var(--default-text-weight);
+}
+
+.stopId {
+	font-size: 0.7em;
 	font-weight: var(--default-text-weight);
 }
