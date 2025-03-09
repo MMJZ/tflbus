@@ -17,7 +17,8 @@
 		"fast-array-diff": "^1.1.0",
 		"preact": "^10.26.4",
 		"preact-iso": "^2.9.1",
-		"preact-render-to-string": "^6.5.13"
+		"preact-render-to-string": "^6.5.13",
+		"what-input": "^5.2.12"
 	},
 	"devDependencies": {
 		"@preact/preset-vite": "^2.10.1",

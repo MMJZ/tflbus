@@ -159,14 +159,16 @@
 		&:focus-visible {
 			outline-offset: -2px;
 		}
+		/* https://keithclark.co.uk/articles/targeting-first-and-last-rows-in-css-grid-layouts */
 		&:not(:nth-child(3n)) > .eTile {
-			/* background: red; */
 			border-right: var(--border-size) solid var(--corporate-black);
 		}
-		&:not(:nth-child(3n + 1):nth-last-child(-n + 3)) {
-			border-bottom: var(--border-size) solid var(--corporate-black);
+		&:nth-child(3n + 1):nth-last-child(-n + 3) > .eTile,
+		&:nth-child(3n + 1):nth-last-child(-n + 3) ~ a > .eTile {
+			border-bottom: none;
 		}
 		& > .eTile {
+			border-bottom: var(--border-size) solid var(--corporate-black);
 			display: block;
 			background: var(--corporate-white);
 			height: 1.25em;
@@ -277,15 +279,11 @@
 			}
 			&:focus > .tileWrapper,
 			&:focus-visible > .tileWrapper {
-				border-color: oklch(
-					from var(--safety-green) calc(l + 0.2) calc(c + 0.2) h
-				);
+				border-color: var(--safety-green-lighter);
 			}
-
 			& > .tileWrapper:hover {
 				border-color: var(--corporate-blue);
 			}
-
 			& > .tileWrapper {
 				transition: all 0.2s ease-in-out;
 				border: 2px solid transparent;
@@ -298,6 +296,13 @@
 				}
 			}
 		}
+	}
+}
+
+[data-whatintent='mouse'] .pointWrapper > .tileRow > a {
+	&:focus > .tileWrapper,
+	&:focus-visible > .tileWrapper {
+		border-color: var(--corporate-blue);
 	}
 }
 

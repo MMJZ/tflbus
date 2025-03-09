@@ -15,7 +15,11 @@ function debounce<T>(wait: number, fn: (arg: T) => void): (arg: T) => void {
 	};
 }
 
-export function Search(): JSX.Element {
+interface SearchProps {
+	focusMain: () => void;
+}
+
+export function Search({ focusMain }: SearchProps): JSX.Element {
 	const _state = useContext(StateContext);
 	if (_state === undefined) {
 		throw new Error('No state context available');
@@ -91,10 +95,7 @@ export function Search(): JSX.Element {
 						<li key={matchedLine}>
 							<Link
 								route={`/line/${matchedLine}`}
-								sideEffect={() => {
-									document.getElementsByTagName('main')[0].scrollIntoView(true);
-									document.getElementsByTagName('main')[0].focus();
-								}}
+								sideEffect={focusMain}
 								ariaLabel={`Go to bus route ${matchedLine}`}
 							>
 								<h4>{matchedLine.toLocaleUpperCase()}</h4>
@@ -109,10 +110,7 @@ export function Search(): JSX.Element {
 						<li key={searchResult.id}>
 							<Link
 								route={`/stopPoint/${searchResult.id}`}
-								sideEffect={() => {
-									document.getElementsByTagName('main')[0].scrollIntoView(true);
-									document.getElementsByTagName('main')[0].focus();
-								}}
+								sideEffect={focusMain}
 								ariaLabel={`Go to stop point ${searchResult.name} ${searchResult.towards !== undefined ? `towards ${searchResult.towards}` : ''}`}
 							>
 								<div>

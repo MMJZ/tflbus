@@ -1,0 +1,38 @@
+.wrapper {
+	margin: 50px auto;
+	padding: 10px;
+	max-width: 800px;
+	& > h2 {
+		font-size: 1.5em;
+	}
+	p {
+		margin: 10px 0;
+	}
+	& > div {
+		display: inline-flex;
+		flex-wrap: wrap;
+		gap: 30px;
+		flex: 1;
+		min-width: 400px;
+		& > div {
+			background-color: var(--default-faded-background);
+			padding: 10px;
+			border-radius: 2px;
+			& > h4 {
+				margin-bottom: 5px;
+			}
+			& > ul {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+				& > li > a {
+					background-color: var(--corporate-red);
+					padding: 5px 10px;
+					display: block;
+					border-radius: 2px;
+					color: var(--corporate-white);
+				}
+			}
+		}
+	}
+}

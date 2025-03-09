@@ -26,9 +26,7 @@
 		flex: 1;
 	}
 	& * {
-		outline-color: oklch(
-			from var(--safety-green) calc(l + 0.2) calc(c + 0.2) h
-		) !important;
+		outline-color: var(--safety-green-lighter);
 	}
 	box-shadow: var(--md-ele-4);
 	@media (width <= 1000px) {
@@ -55,21 +53,6 @@
 .main {
 	flex: 1;
 	box-shadow: var(--md-ele-8);
-}
-
-.nothingWrapper {
-	margin-top: 100px;
-	text-align: center;
-	& > span {
-		& > svg {
-			width: 7em;
-			height: 7em;
-			& > path {
-				stroke: var(--default-faded-background);
-				stroke-width: 2;
-			}
-		}
-	}
 }
 
 .footer {
