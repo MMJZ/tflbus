@@ -269,14 +269,11 @@ export function createAppState(): AppState {
 				);
 			};
 
-			void Promise.all([
-				routeCall('Outbound').catch(() => undefined),
-				routeCall('Inbound').catch(() => undefined),
-			]).then(([outboundRoute, inboundRoute]) => {
-				if (outboundRoute !== undefined && inboundRoute !== undefined) {
+			void Promise.allSettled([routeCall('Outbound'),routeCall('Inbound')]).then(([outboundRoute, inboundRoute]) => {
+				if (outboundRoute.status === 'fulfilled' && inboundRoute.status === 'fulfilled') {
 					lineCache.value = new Map([
 						...lineCache.peek(),
-						[focussed, { inboundRoute, outboundRoute }],
+						[focussed, { inboundRoute: inboundRoute.value, outboundRoute: outboundRoute.value }],
 					]);
 
 					try {
@@ -287,7 +284,7 @@ export function createAppState(): AppState {
 					} catch {
 						try {
 							lineCache.value = new Map([
-								[focussed, { inboundRoute, outboundRoute }],
+								[focussed, { inboundRoute: inboundRoute.value, outboundRoute: outboundRoute.value }],
 							]);
 							localStorage.setItem(
 								localLineCacheKey,
